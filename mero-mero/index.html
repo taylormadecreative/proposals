@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="tc-build" content="3d2ec8890f93">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mero Mero Tex Mex × Taylormade Creative — Everyone Faces the Middle</title>
+<meta name="description" content="A content-day concept for Mero Mero Tex Mex, Frisco — one day, one rig, built around the middle of a round booth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Hind:wght@400;500;600&family=Tilt+Neon&display=swap" rel="stylesheet">
+
+<script>
+/* hide seats only when the arc can actually run; everything else stays seated */
+(function(d){try{
+  var ok=!window.matchMedia('(prefers-reduced-motion: reduce)').matches && ('IntersectionObserver' in window) &&
+    ((window.CSS&&CSS.supports&&CSS.supports('offset-path','path("M0 0 L1 0")')) || typeof Element.prototype.animate==='function');
+  if(ok){d.classList.add('seating');setTimeout(function(){if(!window.__seated)d.classList.remove('seating');},2500);}
+}catch(e){}})(document.documentElement);
+</script>
+<style>
+:root{
+  --night:#1F0A0E; --velvet:#5C1424; --brass:#C99A4B; --cream:#F3E6CF; --coral:#FF5A4E;
+  --cream-2:rgba(243,230,207,.8); --cream-3:rgba(243,230,207,.6); --brass-soft:rgba(201,154,75,.4);
+  --disp:'Gilda Display',Georgia,'Times New Roman',serif;
+  --body:'Hind',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --label:'Tilt Neon','Hind',system-ui,sans-serif;
+  --pad:clamp(20px,5.5vw,88px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--cream);font-family:var(--body);font-size:17.5px;line-height:1.7;
+  font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--disp);font-weight:400;margin:0;line-height:1.06;letter-spacing:-.005em}
+p{margin:0 0 18px}
+a{color:inherit}
+section{position:relative;padding:clamp(84px,10vw,156px) var(--pad);overflow-x:clip}
+.velvet{background:radial-gradient(140% 90% at 12% 0%,#6B1B2D 0%,var(--velvet) 42%,#4B1020 100%)}
+.cream{background:var(--cream);color:var(--night)}
+
+/* small accent labels — Tilt Neon, static */
+.lab{display:block;font-family:var(--label);font-size:12px;line-height:1.5;letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.cream .lab{color:var(--velvet)}
+
+/* ---------- THE BRASS RING (section headers) ---------- */
+.head{position:relative;z-index:2;display:grid;gap:30px;align-items:center;margin-bottom:clamp(48px,6vw,84px)}
+@media(min-width:900px){.head{grid-template-columns:auto minmax(0,560px);gap:clamp(48px,6vw,96px)}}
+.ring{position:relative;z-index:2;width:clamp(270px,33vw,430px);aspect-ratio:1/1;border-radius:50%;border:1px solid var(--brass);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14%}
+.ring::before{content:"";position:absolute;inset:8px;border-radius:50%;border:1px solid var(--brass-soft);pointer-events:none}
+.ring .lab{margin-bottom:14px}
+.ring h2{font-size:clamp(28px,3.1vw,44px)}
+.lede{position:relative;z-index:2;font-size:clamp(19px,1.8vw,23px);line-height:1.5;color:var(--cream-2);margin:0}
+.cream .lede{color:rgba(31,10,14,.78)}
+
+/* ---------- THE ROUND BOOTH — circles and booth backs ---------- */
+.round,.half{position:relative;z-index:2;margin:0;overflow:hidden;
+  background:radial-gradient(circle at 50% 38%,#6B1B2D 0%,var(--velvet) 55%,#3A0C17 100%)}
+.round{border-radius:50%;aspect-ratio:1/1}
+.half{border-radius:999px 999px 0 0;aspect-ratio:2/1}
+.round img,.half img{width:100%;height:100%;object-fit:cover;object-position:var(--p,50% 50%);transform:scale(var(--z,1))}
+.ringed{position:relative;z-index:2;border:1px solid var(--brass);border-radius:50%;padding:12px}
+.ringed .round{width:100%}
+.cap{position:relative;z-index:2;display:block;font-size:11px;font-weight:500;line-height:1.5;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cream-3);margin-top:20px}
+.cream .cap{color:rgba(31,10,14,.62)}
+.neon{display:block;height:2px;border-radius:2px;background:var(--coral);
+  box-shadow:0 0 4px rgba(255,90,78,.95),0 0 14px rgba(255,90,78,.55),0 0 30px rgba(255,90,78,.25)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;
+  gap:30px;padding:22px var(--pad) 28px;isolation:isolate;overflow-x:clip}
+.hero-bed{position:absolute;inset:0;z-index:0;background:var(--night)}
+.hero-bed img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.hero-bed::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(31,10,14,.84) 0%,rgba(31,10,14,.18) 22%,rgba(31,10,14,.22) 68%,rgba(31,10,14,.94) 100%),
+  linear-gradient(90deg,rgba(31,10,14,.93) 0%,rgba(31,10,14,.72) 46%,rgba(31,10,14,.34) 100%)}
+.nav,.hero-grid,.hero-foot{position:relative;z-index:2}
+.nav{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.mark{font-family:var(--body);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cream)}
+.nav .meta{text-align:right;font-family:var(--label);color:var(--cream-2);line-height:1.7}
+.hero-grid{display:grid;gap:34px;align-items:center}
+@media(min-width:900px){.hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px}}
+.hero .lab{margin-bottom:22px}
+.hero h1{font-size:clamp(48px,7.6vw,124px);line-height:.98;max-width:9.5em}
+.hero-sub{font-size:clamp(18px,1.7vw,22px);line-height:1.55;color:var(--cream-2);max-width:560px;margin:26px 0 0}
+.hero-plates{position:relative;z-index:2;display:flex;align-items:flex-end;gap:14px}
+.hero-plates .ringed{width:50vw;max-width:440px}
+.hero-plates .half{width:32vw;max-width:290px;margin-bottom:7vw}
+@media(min-width:900px){
+  .hero-plates{flex-direction:column;align-items:flex-end;gap:24px}
+  .hero-plates .ringed{width:clamp(260px,29vw,450px)}
+  .hero-plates .half{width:clamp(170px,18vw,290px);margin:0 clamp(110px,16vw,270px) 0 0}
+}
+.hero-foot{display:grid;gap:14px}
+.hero-foot .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 24px;font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--cream-2)}
+.hero-foot p{margin:0}
+
+/* ---------- columns + copy ---------- */
+.cols{position:relative;z-index:2;display:grid;gap:52px;align-items:start}
+@media(min-width:980px){.cols{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(56px,6vw,96px)}}
+.copy{position:relative;z-index:2;max-width:640px}
+.copy .lab{margin-bottom:12px}
+.q{margin:34px 0 0;padding:24px 0 0;border-top:1px solid var(--brass-soft);max-width:560px}
+.q cite{display:block;font-family:var(--disp);font-style:normal;font-size:clamp(25px,2.5vw,34px);line-height:1.22;color:var(--cream)}
+.q small{display:block;margin-top:12px;font-family:var(--label);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+
+/* 01 — a table and a booth back on one arc */
+.pair{position:relative;z-index:2;display:grid;justify-items:end;gap:18px}
+.pair .round{width:min(78vw,440px)}
+.pair .half{width:min(56vw,300px);justify-self:start;margin-top:-6%}
+
+/* 02 — three plates on an arc, the middle one dropped */
+.plates{position:relative;z-index:2;margin-bottom:clamp(56px,7vw,100px)}
+.arc3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,3vw,52px);max-width:1180px}
+.arc3 > :nth-child(2){margin-top:clamp(26px,8vw,120px)}
+
+/* 03 — the day: six stops stepping out and back along a curve */
+.beats{position:relative;z-index:2;display:grid;gap:clamp(52px,6.5vw,92px)}
+.beat{display:grid;gap:22px;align-items:center;margin-left:calc(var(--x,0) * .5vw)}
+.beat-fig .round,.beat-fig .half{width:min(66vw,320px)}
+@media(min-width:880px){
+  .beat{grid-template-columns:clamp(230px,24vw,340px) minmax(0,620px);gap:clamp(36px,4.5vw,72px);margin-left:calc(var(--x,0) * 1vw)}
+  .beat-fig .round,.beat-fig .half{width:100%}
+}
+.beat-txt .lab{margin-bottom:10px}
+.beat h3{font-size:clamp(26px,2.6vw,36px);margin-bottom:14px}
+.beat p{color:var(--cream-2);margin:0}
+
+/* 04 — scope */
+.scope-grid{position:relative;z-index:2;display:grid;gap:56px;align-items:center}
+@media(min-width:960px){.scope-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(56px,6vw,100px)}}
+.scope{list-style:none;margin:0;padding:0}
+.scope li{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid rgba(31,10,14,.16)}
+.scope li:first-child{border-top:1px solid rgba(31,10,14,.16)}
+.scope li b{font-family:var(--label);font-weight:400;font-size:15px;color:var(--velvet);letter-spacing:.08em;padding-top:4px}
+.scope li strong{display:block;font-family:var(--disp);font-weight:400;font-size:23px;line-height:1.2;margin-bottom:4px}
+.scope li span span{display:block;color:rgba(31,10,14,.74);font-size:16px}
+.booth{display:grid;justify-items:center}
+.booth .half{width:min(84vw,460px)}
+.booth .round{width:min(54vw,290px);margin-top:-17%;box-shadow:0 0 0 9px var(--cream)}
+
+/* 05 — who */
+.creds{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.cred{display:flex;align-items:baseline;gap:10px;border:1px solid var(--brass-soft);border-radius:999px;padding:11px 20px}
+.cred b{font-family:var(--disp);font-weight:400;font-size:24px;line-height:1;color:var(--brass)}
+.cred span{font-family:var(--label);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-3)}
+.who-fig .ringed{width:min(80vw,440px);margin-left:auto}
+.who-fig .cap{text-align:right}
+
+/* 06 — close */
+.close{isolation:isolate;min-height:90vh;display:flex;align-items:center}
+.close-bed{position:absolute;inset:0;z-index:0;background:var(--night)}
+.close-bed img{width:100%;height:100%;object-fit:cover;object-position:60% 50%;opacity:.4}
+.close-bed::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(31,10,14,.97) 0%,rgba(31,10,14,.84) 55%,rgba(31,10,14,.5) 100%)}
+.close .wrap{position:relative;z-index:2;max-width:900px}
+.close .ring{margin-bottom:clamp(40px,5vw,64px)}
+.close p{color:var(--cream-2);max-width:640px}
+.cta{display:inline-block;margin:26px 0 34px;padding:17px 32px;border-radius:999px;background:var(--brass);color:var(--night);
+  text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;transition:background-color .2s linear}
+.cta:hover,.cta:focus-visible{background:var(--cream)}
+.sig{font-size:15px;line-height:1.8;color:var(--cream-2)}
+.sig b{font-family:var(--disp);font-weight:400;font-size:24px;color:var(--cream)}
+.disc{margin-top:34px;max-width:680px}
+.disc .neon{width:120px;margin-bottom:16px}
+.disc p{font-size:13px;line-height:1.7;color:var(--cream-3)}
+
+/* ---------- footer ---------- */
+.foot{position:relative;z-index:2;padding:30px var(--pad) 40px;background:var(--night);font-size:12.5px;line-height:1.7;color:var(--cream-3)}
+.foot .neon{margin-bottom:24px;opacity:.9}
+.foot p{margin:0 0 6px}
+.foot .mark{font-size:12px}
+
+/* ---------- AROUND THE BOOTH — every seat travels in along an arc ---------- */
+.seating .seat{opacity:0;transition:opacity .6s ease-out}
+.seating-path .seat{offset-distance:0%;offset-rotate:0deg;
+  transition:offset-distance 1.15s cubic-bezier(.3,.7,.2,1),opacity .6s ease-out}
+.seating .seat.sat{opacity:1}
+.seating-path .seat.sat{offset-distance:100%}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .seating .seat{opacity:1!important;transition:none!important;offset-path:none!important}
+}
+@media print{.seating .seat{opacity:1!important;offset-path:none!important}}
+</style>
+</head>
+<body>
+
+
+<header class="hero">
+  <div class="hero-bed"><img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — a round maroon-velvet booth around a dark table, a skillet sizzling at the centre under warm chandelier light, no one seated"></div>
+
+  <div class="nav">
+    <span class="mark">Taylormade Creative</span>
+    <span class="meta">Mero Mero Tex Mex · Frisco<br>Content Day</span>
+  </div>
+
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="lab seat" data-from="l">A content-day concept for Sanjay</span>
+      <h1 class="seat" data-from="l">Everyone faces the middle.</h1>
+      <p class="hero-sub seat" data-from="l">A round booth points every seat at one spot. That's where the skillet lands — and it's exactly where I'd put the camera.</p>
+    </div>
+    <div class="hero-plates" data-seats>
+      <div class="ringed seat">
+        <figure class="round" style="--p:50% 50%"><img src="images/frame-01.png" width="1024" height="1536" alt="Treatment frame — overhead of a sizzling fajita skillet in the middle of a round table, hands reaching in with a warm tortilla"></figure>
+      </div>
+      <figure class="half seat" data-from="l" style="--p:50% 35%"><img src="images/frame-02.png" width="1024" height="1536" alt="Treatment frame — a margarita set down on a dark bar top, velvet stools and brass light soft behind it"></figure>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <i class="neon" aria-hidden="true"></i>
+    <div class="row">
+      <p>Frisco · Dallas Parkway · One room, one day</p>
+      <p>Creative direction — treatment frames, not final footage</p>
+    </div>
+  </div>
+</header>
+
+
+<section id="read">
+  <div class="head">
+    <div class="ring seat"><span class="lab">01 · The read</span><h2>A room built in circles.</h2></div>
+    <p class="lede seat" data-from="l">Maroon velvet, chandelier light, Western paintings, a neon longhorn — and booths that are round. That last part is the one I can't stop thinking about.</p>
+  </div>
+
+  <div class="cols">
+    <div class="copy seat" data-from="l">
+      <p>Sanjay — I'm Nelson, a creative director and shooter in Dallas–Fort Worth. I read CultureMap's piece on Mero Mero, and the room stayed with me: circular booths upholstered in maroon velvet, chandelier-style light, moody Western paintings, a neon longhorn in a cowboy hat, padded stools along the bar, and a landscaped patio for about sixty-five.</p>
+      <p>Here's why the booths matter to somebody who points cameras for a living. A round booth is the most camera-friendly piece of furniture a restaurant can own, because every seat in it already looks at the same place — the middle of the table. The blocking is done before anyone sets up a light.</p>
+      <p>And it's a new room, one I'd love to put on film.</p>
+      <div class="q">
+        <cite>“not your average Tex-Mex spot”</cite>
+        <small>— Sanjay Regmi, to CultureMap Dallas</small>
+      </div>
+    </div>
+
+    <div>
+      <div class="pair" data-seats>
+        <figure class="round seat" style="--p:50% 58%"><img src="images/frame-01.png" width="1024" height="1536" alt="Treatment frame — the middle of a round table from above, a skillet ringed by small bowls of salsa"></figure>
+        <figure class="half seat" data-from="l" style="--p:50% 62%"><img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — the curve of a maroon velvet booth back in warm, low light"></figure>
+      </div>
+      <span class="cap">Creative direction — treatment frames, not final footage</span>
+    </div>
+  </div>
+</section>
+
+
+<section id="middle" class="velvet">
+  <div class="head">
+    <div class="ring seat"><span class="lab">02 · The middle</span><h2>Where the skillet lands.</h2></div>
+    <p class="lede seat" data-from="l">Chicken, shrimp, Wagyu sirloin flap, mixed — four fajitas, and one spot on the table every one of them arrives at.</p>
+  </div>
+
+  <div class="plates">
+    <div class="arc3" data-seats>
+      <figure class="round seat" data-from="l" style="--p:50% 45%;--z:1.15"><img src="images/frame-01.png" width="1024" height="1536" alt="Treatment frame — a skillet landing in the centre of the table, steam rising"></figure>
+      <figure class="round seat" style="--p:46% 60%;--z:1.5"><img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — steam lifting off a skillet into chandelier light"></figure>
+      <figure class="round seat" style="--p:50% 40%;--z:1.2"><img src="images/frame-02.png" width="1024" height="1536" alt="Treatment frame — a salt-rimmed glass catching warm brass light"></figure>
+    </div>
+    <span class="cap">Creative direction — treatment frames, not final footage</span>
+  </div>
+
+  <div class="cols">
+    <div class="copy seat" data-from="l">
+      <span class="lab">The frame</span>
+      <p>In a round booth, the middle of the table is the one point every seat is aimed at. So that's where the camera locks: one position straight down over the booth, a second at booth height with the lens just over the velvet.</p>
+      <p>Then everything lands there — the skillet still sizzling, steam lifting into the chandelier light, hands reaching in with a warm tortilla, the salsas set down in an arc around it.</p>
+    </div>
+    <div class="copy seat">
+      <span class="lab">The format</span>
+      <p>Shoot that properly once and it stops being a shot and becomes a format: same booth, same light, same frame, a new plate every time.</p>
+      <p>The fajitas go first. Then the shrimp aguachile, the branzino, the lamb barbacoa and the cochinita pibil each take their turn in the middle. The menu writes the series; the booth holds it together.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="day">
+  <div class="head">
+    <div class="ring seat"><span class="lab">03 · The day</span><h2>One day, around the booth.</h2></div>
+    <p class="lede seat" data-from="l">One room, one date. Six stops, in the order the light gives them to us — every one of them cut vertical.</p>
+  </div>
+
+  <div class="beats">
+
+    <article class="beat" style="--x:0" data-seats>
+      <div class="beat-fig">
+        <figure class="half seat" data-from="l" style="--p:50% 40%"><img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — an empty dining room, velvet booths and chandelier-style light before the doors open"></figure>
+        <span class="cap">Creative direction — treatment frames, not final footage</span>
+      </div>
+      <div class="beat-txt seat">
+        <span class="lab">Stop 01 · Before the doors</span>
+        <h3>The room with nobody in it.</h3>
+        <p>Chandeliers on, the velvet in raking light, slow push-ins across the Western paintings, the neon longhorn warming up against the dark. No people, no plates. These are the establishing shots that open everything you post this season.</p>
+      </div>
+    </article>
+
+    <article class="beat" style="--x:4" data-seats>
+      <div class="beat-fig">
+        <figure class="round seat" data-from="l" style="--p:50% 50%"><img src="images/frame-01.png" width="1024" height="1536" alt="Treatment frame — a fajita skillet from directly above, peppers and steak still sizzling"></figure>
+        <span class="cap">Creative direction — treatment frames, not final footage</span>
+      </div>
+      <div class="beat-txt seat">
+        <span class="lab">Stop 02 · The middle</span>
+        <h3>The skillet lands.</h3>
+        <p>The core of the day. Overhead and at booth height, in real time and slowed right down for the steam. Every fajita in the same frame, then the plates beyond them. This is the format — once it exists, every new dish already has somewhere to go.</p>
+      </div>
+    </article>
+
+    <article class="beat" style="--x:7" data-seats>
+      <div class="beat-fig">
+        <figure class="round seat" data-from="l" style="--p:30% 72%;--z:1.6"><img src="images/frame-01.png" width="1024" height="1536" alt="Treatment frame — close on a warm tortilla and a small bowl of fresh salsa"></figure>
+        <span class="cap">Creative direction — treatment frames, not final footage</span>
+      </div>
+      <div class="beat-txt seat">
+        <span class="lab">Stop 03 · The bowls and the fold</span>
+        <h3>Tortillas and salsas, close.</h3>
+        <p>House-made tortillas and fresh salsas: the stack, the cloth, the fold, a chip going into a bowl. Small, tactile details that cut into anything — and if the tortillas are made where a camera can see, they get their own few minutes.</p>
+      </div>
+    </article>
+
+    <article class="beat" style="--x:7" data-seats>
+      <div class="beat-fig">
+        <figure class="half seat" data-from="l" style="--p:50% 38%"><img src="images/frame-02.png" width="1024" height="1536" alt="Treatment frame — a hand setting down a salt-rimmed margarita on a dark bar top"></figure>
+        <span class="cap">Creative direction — treatment frames, not final footage</span>
+      </div>
+      <div class="beat-txt seat">
+        <span class="lab">Stop 04 · The bar</span>
+        <h3>Built by hand.</h3>
+        <p>A margarita, a mai tai, an espresso martini, made along the bar — ice, the shake, the pour, the glass set down. Padded stools soft in the background, brass catching the light. Hands only.</p>
+      </div>
+    </article>
+
+    <article class="beat" style="--x:4" data-seats>
+      <div class="beat-fig">
+        <figure class="round seat" data-from="l" style="--p:88% 50%;--z:1.3"><img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — warm light and deep shadow at the edge of the room as evening comes on"></figure>
+        <span class="cap">Creative direction — treatment frames, not final footage</span>
+      </div>
+      <div class="beat-txt seat">
+        <span class="lab">Stop 05 · The patio, at dusk</span>
+        <h3>Gold, then night.</h3>
+        <p>About sixty-five seats and the landscaping at blue hour — the room glowing through the glass, a glass on a patio table, the light going from gold to dark. The outdoor half of the room, in its best twenty minutes.</p>
+      </div>
+    </article>
+
+    <article class="beat" style="--x:0" data-seats>
+      <div class="beat-fig">
+        <figure class="half seat" data-from="l" style="--p:50% 82%;--z:1.2"><img src="images/frame-02.png" width="1024" height="1536" alt="Treatment frame — velvet bar stools and brass bokeh, the room at full evening glow"></figure>
+        <span class="cap">Creative direction — treatment frames, not final footage</span>
+      </div>
+      <div class="beat-txt seat">
+        <span class="lab">Stop 06 · Service, hands only</span>
+        <h3>The room, full.</h3>
+        <p>Once people arrive: hands passing a skillet, a toast over the middle of a booth, backs and silhouettes against the chandeliers. No guests' faces — anyone who ends up in frame is a conversation about releases first. The A7RV runs a stills bank all day alongside it.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<section id="scope" class="cream">
+  <div class="head">
+    <div class="ring seat"><span class="lab">04 · The scope</span><h2>What the day is.</h2></div>
+    <p class="lede seat" data-from="l">Written out plainly. This is all of it.</p>
+  </div>
+
+  <div class="scope-grid">
+    <ul class="scope seat" data-from="l">
+      <li><b>01</b><span><strong>One shoot day at Mero Mero</strong><span>Nelson directing and shooting. One person and one rig, working around your team and your prep.</span></span></li>
+      <li><b>02</b><span><strong>Sony FX6 + Sony A7RV</strong><span>Cinema camera for motion; the A7RV for stills and hybrid.</span></span></li>
+      <li><b>03</b><span><strong>Vertical-first</strong><span>Every deliverable cut 9:16 for Reels, TikTok and Shorts.</span></span></li>
+      <li><b>04</b><span><strong>An edited social video set + a stills bank</strong><span>Both from the same day.</span></span></li>
+      <li><b>05</b><span><strong>Two rounds of edits</strong><span>About a two-week turnaround.</span></span></li>
+      <li><b>06</b><span><strong>Investment</strong><span>We talk about it on a call.</span></span></li>
+    </ul>
+
+    <div>
+      <div class="booth" data-seats>
+        <figure class="half seat" style="--p:50% 22%"><img src="images/frame-01.png" width="1024" height="1536" alt="Treatment frame — the curve of a velvet booth back seen from above"></figure>
+        <figure class="round seat" data-from="l" style="--p:50% 52%"><img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — the round table at the centre of the booth, skillet in the middle"></figure>
+      </div>
+      <span class="cap" style="text-align:center">Creative direction — treatment frames, not final footage</span>
+    </div>
+  </div>
+</section>
+
+
+<section id="who" class="velvet">
+  <div class="head">
+    <div class="ring seat"><span class="lab">05 · Who</span><h2>One person behind the lens.</h2></div>
+    <p class="lede seat" data-from="l">Direct, shoot, cut — the same person from the first frame to the last round of edits.</p>
+  </div>
+
+  <div class="cols">
+    <div class="copy seat" data-from="l">
+      <p>I'm Nelson Taylor — Taylormade Creative, Dallas–Fort Worth. Fourteen years in design and creative direction, and these days most of that goes into directing and shooting brand content for rooms with real craft in them.</p>
+      <p>Client work includes Toni &amp; Guy, Lava Cantina, KFC, IAS Academy and Curls, plus one shipped iOS app, Run It UP! Dallas. I shoot on a Sony FX6 for motion and a Sony A7RV for stills, and I cut everything I shoot — which is why I think in formats rather than one-off posts.</p>
+      <div class="creds">
+        <div class="cred"><b>14</b><span>Years</span></div>
+        <div class="cred"><b>FX6</b><span>Cinema</span></div>
+        <div class="cred"><b>A7RV</b><span>Stills</span></div>
+        <div class="cred"><b>9:16</b><span>Vertical</span></div>
+      </div>
+    </div>
+    <div class="who-fig">
+      <div class="ringed seat">
+        <figure class="round" style="--p:50% 30%;--z:1.1"><img src="images/frame-02.png" width="1024" height="1536" alt="Treatment frame — a glass on the bar in warm brass light, stools soft behind"></figure>
+      </div>
+      <span class="cap">Creative direction — treatment frames, not final footage</span>
+    </div>
+  </div>
+</section>
+
+
+<section id="close" class="close">
+  <div class="close-bed"><img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — the round booth and the skillet, low and warm"></div>
+  <div class="wrap">
+    <div class="ring seat"><span class="lab">06 · If useful</span><h2>Pull up a seat.</h2></div>
+    <div class="seat" data-from="l">
+      <p>If the idea lands, I'd love fifteen minutes — a call, or at one of the booths before service, whenever the first weeks settle. I'd bring the frame and the plan; you'd tell me what the room needs. Nothing to sign and nothing to decide on the spot.</p>
+      <p>And if the answer is “not yet,” that's a completely good answer. The booths will still face the middle whenever you're ready.</p>
+    </div>
+    <div class="seat">
+      <a class="cta" href="mailto:taylormademd@gmail.com?subject=Mero%20Mero%20%C3%97%20Taylormade%20Creative%20%E2%80%94%20Everyone%20Faces%20the%20Middle">Start a conversation</a>
+      <div class="sig">
+        <b>Nelson Taylor</b><br>
+        Founder &amp; Creative Director · Taylormade Creative<br>
+        taylormademd@gmail.com · (817) 707‑1291<br>
+        @taylormade_creative · www.taylormadecreative.net
+      </div>
+    </div>
+    <div class="disc">
+      <i class="neon" aria-hidden="true"></i>
+      <p>Creative direction — treatment frames, not final footage. Every image on this page is a mood frame, not a photograph of Mero Mero's room, food or guests.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <i class="neon" aria-hidden="true"></i>
+  <p><span class="mark">Taylormade Creative</span></p>
+  <p>Prepared for Mero Mero Tex Mex by Taylormade Creative · Dallas–Fort Worth</p>
+  <p>All frames are creative direction — treatment frames, not final footage, and not photographs of Mero Mero's space.</p>
+</footer>
+
+<script>
+/* AROUND THE BOOTH — each block, ring and round frame slides into its seat along a curved arc,
+   like moving around a circular booth. CSS offset-path carries it (offset-rotate 0: nothing spins);
+   the arc is calibrated at trigger time so 100% lands exactly on the resting position, then cleared.
+   Fallback: the same quadratic arc as a curved translate via the Web Animations API. 90ms stagger. */
+(function(){
+  var root = document.documentElement;
+  if (!root.classList.contains('seating')) return;          /* reduced motion / no support: all seated */
+  window.__seated = true;
+
+  var hasPath = !!(window.CSS && CSS.supports && CSS.supports('offset-path', 'path("M0 0 L1 0")'));
+  if (hasPath) root.classList.add('seating-path');
+  var DUR = 1150, STEP = 90, started = false;
+
+  function r(n){ return Math.round(n * 10) / 10; }
+
+  /* a quarter-turn around the booth: start low and to one side, bow out past the seat, slide in level */
+  function arc(el){
+    var side = el.getAttribute('data-from') === 'l' ? -1 : 1;
+    var c = el.classList;
+    var big = c.contains('round') || c.contains('half') || c.contains('ringed') || c.contains('ring');
+    var a = Math.max(.45, Math.min(1, window.innerWidth / 1280)) * (big ? 1 : .6);
+    return { sx: side * 170 * a, sy: 150 * a, cx: side * 185 * a, cy: -10 * a };
+  }
+
+  function viaPath(el, delay){
+    var g = arc(el);
+    el.style.offsetPath = 'none';
+    var rest = el.getBoundingClientRect();
+    el.style.offsetRotate = '0deg';
+    el.style.offsetPath = 'path("M0 0 L1 0")';               /* probe: where does path point 0,0 put it? */
+    var probe = el.getBoundingClientRect();
+    var px = rest.left - probe.left, py = rest.top - probe.top;   /* the path point that equals "seated" */
+    el.style.offsetPath = 'path("M' + r(px + g.sx) + ' ' + r(py + g.sy) +
+                          ' Q' + r(px + g.cx) + ' ' + r(py + g.cy) + ' ' + r(px) + ' ' + r(py) + '")';
+    el.getBoundingClientRect();                                /* commit the start of the arc */
+    el.style.transitionDelay = delay + 'ms';
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ el.classList.add('sat'); }); });
+    setTimeout(function(){ el.style.offsetPath = 'none'; el.style.transitionDelay = ''; }, delay + DUR + 300);
+  }
+
+  function viaWA(el, delay){
+    var g = arc(el), k = [];
+    for (var i = 0; i <= 12; i++){
+      var t = i / 12, u = 1 - t;
+      k.push({ transform: 'translate(' + r(u * u * g.sx + 2 * u * t * g.cx) + 'px,' + r(u * u * g.sy + 2 * u * t * g.cy) + 'px)' });
+    }
+    el.style.transitionDelay = delay + 'ms';
+    el.classList.add('sat');
+    el.animate(k, { duration: DUR, delay: delay, easing: 'cubic-bezier(.3,.7,.2,1)', fill: 'backwards' });
+  }
+
+  function start(){
+    if (started) return;
+    started = true;
+    try {
+      var io = new IntersectionObserver(function(entries){
+        var batch = [];
+        entries.forEach(function(e){
+          if (!e.isIntersecting) return;
+          io.unobserve(e.target);
+          if (e.target.hasAttribute('data-seats')) batch.push.apply(batch, [].slice.call(e.target.querySelectorAll('.seat')));
+          else batch.push(e.target);
+        });
+        batch.forEach(function(el, i){ (hasPath ? viaPath : viaWA)(el, i * STEP); });
+      }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+
+      [].slice.call(document.querySelectorAll('.seat')).forEach(function(el){
+        if (!el.parentNode.closest('[data-seats]')) io.observe(el);
+      });
+      [].slice.call(document.querySelectorAll('[data-seats]')).forEach(function(g){ io.observe(g); });
+    } catch (err) {
+      root.classList.remove('seating', 'seating-path');
+    }
+  }
+
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(start, start);
+  setTimeout(start, 900);
+})();
+</script>
+</body>
+</html>
