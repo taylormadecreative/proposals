@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="tc-build" content="6db2a405b778">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Rollout — a Content Day for Cadence Cyclery · Taylormade Creative</title>
+<meta name="description" content="A one-day content concept for Cadence Cyclery's new McKinney shop, prepared by Taylormade Creative, Dallas–Fort Worth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Saira+Extra+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+/* Failsafe: if the roll-in script never runs or IntersectionObserver never fires, show everything. */
+(function(d){d.documentElement.className+=' js';setTimeout(function(){if(!window.__rolled){d.documentElement.className+=' done';}},3500);})(document);
+</script>
+<style>
+:root{
+  --tape:#101214;      /* bar-tape black */
+  --asph:#2A2D31;      /* asphalt */
+  --chalk:#F3F2EE;     /* chalk */
+  --chrome:#D9DCDF;    /* chrome */
+  --yel:#F4C431;       /* jersey yellow — accents only */
+  --mute:rgba(243,242,238,.7);
+  --soft:rgba(243,242,238,.86);
+  --hair:rgba(217,220,223,.22);
+  --pad:clamp(20px,5.2vw,84px);
+  --coast:cubic-bezier(.16,.68,.26,1);
+  --open:cubic-bezier(.55,0,.2,1);
+}
+*{box-sizing:border-box}
+html{background:var(--tape);color:var(--chalk);-webkit-text-size-adjust:100%}
+body{margin:0;font:400 17px/1.62 'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',sans-serif;overflow-x:hidden}
+@supports (overflow:clip){body{overflow-x:clip}}
+a{color:inherit}
+p{margin:0 0 1.05em;max-width:40em;color:var(--soft)}
+h1,h2,h3{font-family:'Saira Extra Condensed',Impact,'Arial Narrow',sans-serif;text-transform:uppercase;margin:0;font-weight:800;letter-spacing:.004em}
+h2{font-size:clamp(46px,8vw,118px);line-height:.9}
+h2 em,h1 em{font-style:italic;color:var(--chrome)}
+h3{font-size:clamp(28px,3.3vw,40px);line-height:.95;font-weight:700}
+.txt{position:relative;z-index:3}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- nav ---------- */
+.nav{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:28px 0 0;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase}
+.nav .mark{font-weight:700;color:var(--chalk);text-decoration:none}
+.nav .for{color:var(--mute);text-align:right}
+
+/* ---------- hero (Prologue) ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;padding:0 var(--pad);isolation:isolate}
+.hero .bed{position:absolute;inset:10px;margin:0;z-index:0}
+.hero .bed .frame{position:absolute;inset:0;width:auto;aspect-ratio:auto}
+.scrim{position:absolute;inset:10px;z-index:1;border-radius:6px;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(16,18,20,.82) 0%,rgba(16,18,20,.2) 20%,rgba(16,18,20,.1) 42%,rgba(16,18,20,.84) 74%,rgba(16,18,20,.97) 100%),
+    linear-gradient(90deg,rgba(16,18,20,.72) 0%,rgba(16,18,20,.25) 48%,rgba(16,18,20,0) 70%)}
+.hero-copy{position:relative;z-index:3;margin-top:auto;padding:12vh 0 34px}
+.eyebrow{font-family:'Saira Extra Condensed',sans-serif;font-style:italic;font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:clamp(14px,1.5vw,18px);color:var(--chrome);margin:0 0 6px}
+.eyebrow b{color:var(--yel);font-weight:800}
+h1{font-size:clamp(96px,22vw,320px);line-height:.8;font-weight:900;font-style:italic;letter-spacing:-.005em;margin-left:-.02em}
+h1 .dot{color:var(--yel)}
+.hero .lede{font-size:clamp(18px,2vw,23px);line-height:1.5;max-width:31em;margin:22px 0 0;color:var(--chalk)}
+.hero .lede + .lede{margin-top:10px;color:var(--soft)}
+.hero-foot{position:relative;z-index:3;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;border-top:1px solid var(--hair);padding:14px 0 26px;font-size:12.5px;letter-spacing:.05em;color:var(--mute)}
+.hero-foot .tf{margin:0;font-size:12.5px}
+
+/* ---------- chainline ---------- */
+.chainline{position:relative;z-index:2;background:var(--tape);padding:20px 0}
+.chain{height:14px;opacity:.92;
+  background:
+    radial-gradient(circle at 7px 7px,var(--chrome) 0 1.4px,#0b0c0e 1.9px 2.6px,transparent 3px) 0 0/14px 14px repeat-x,
+    radial-gradient(circle at 7px 7px,#666b72 0 5px,transparent 5.5px) 0 0/14px 14px repeat-x,
+    repeating-linear-gradient(90deg,#aeb2b7 0 14px,#474c52 14px 28px) 7px 4px/100% 6px no-repeat}
+
+/* ---------- stages ---------- */
+.stage{position:relative;padding:clamp(64px,10vw,140px) var(--pad)}
+.stage.alt{background:var(--asph)}
+.stage-head{margin-bottom:clamp(28px,4vw,52px)}
+.stage-no{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin:0 0 12px;max-width:none;font-family:'Saira Extra Condensed',sans-serif;font-style:italic;text-transform:uppercase}
+.stage-no b{color:var(--yel);font-size:clamp(20px,2vw,26px);font-weight:800;letter-spacing:.06em}
+.stage-no span{color:var(--mute);font-size:15px;font-weight:600;letter-spacing:.18em}
+.profile{display:block;width:min(340px,82%);height:auto;margin:20px 0 0;overflow:visible}
+.profile .base{stroke:var(--hair);stroke-width:1}
+.profile .area{fill:rgba(217,220,223,.07)}
+.profile polyline{fill:none;stroke:var(--chrome);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+.profile .fin{fill:var(--yel)}
+.profile .go{fill:var(--chrome)}
+.lede{font-size:clamp(18px,1.9vw,22px);line-height:1.55;color:var(--chalk);max-width:36em}
+.tf{font-size:12px;letter-spacing:.05em;color:var(--mute);font-style:italic;margin:12px 0 0}
+
+/* ---------- image frames: wheels + stage banners ---------- */
+.fx{position:relative;z-index:2;margin:0}
+.frame{position:relative}
+.morph{position:absolute;top:var(--t,0px);bottom:var(--t,0px);left:var(--l,0px);right:var(--l,0px);overflow:hidden;background:var(--asph);isolation:isolate;transform:none;will-change:transform}
+.morph img{position:absolute;z-index:0;top:calc(var(--t,0px) * -1);left:calc(var(--l,0px) * -1);width:var(--W,100%);height:var(--H,100%);max-width:none;object-fit:cover;object-position:var(--px,50%) var(--py,50%);transform:scale(var(--z,1));transform-origin:var(--px,50%) var(--py,50%);background:var(--asph);color:transparent;display:block}
+.spokes{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.morph::after{content:"";position:absolute;inset:0;z-index:2;border-radius:inherit;pointer-events:none;
+  box-shadow:inset 0 0 0 var(--tyre,7px) #0b0c0e,inset 0 0 0 calc(var(--tyre,7px) + 1.5px) rgba(217,220,223,.9)}
+
+.wheel{--tyre:clamp(5px,1.1vw,9px)}
+.wheel .frame{width:var(--ws,220px);aspect-ratio:1/1}
+.wheel .morph{border-radius:50%;box-shadow:0 0 0 1px rgba(217,220,223,.28),0 18px 40px -18px rgba(0,0,0,.7)}
+
+.banner{--tyre:clamp(7px,1.2vw,12px);--ar:16/9}
+.banner .frame{width:100%;aspect-ratio:var(--ar)}
+.banner .morph{border-radius:6px}
+.banner .spokes,.banner .morph::after{opacity:0}
+@media (min-width:760px){.banner{--ar:16/6}.banner.long{--ar:16/5}}
+
+/* hidden state: off the left edge, pre-wound by distance ÷ radius */
+html.js .fx:not(.in) .morph{transform:translateX(var(--dx,-130vw)) rotate(var(--rot,-720deg))}
+html.js .banner:not(.in){--t:var(--mt,0px);--l:var(--ml,0px)}
+html.js .banner:not(.in) .morph{border-radius:50%}
+html.js .banner:not(.in) .spokes,html.js .banner:not(.in) .morph::after{opacity:1}
+/* motion only once measured */
+html.armed .fx .morph{transition:
+  transform 1.5s var(--coast) var(--d,0s),
+  top .75s var(--open) calc(var(--d,0s) + 1.42s),
+  bottom .75s var(--open) calc(var(--d,0s) + 1.42s),
+  left .75s var(--open) calc(var(--d,0s) + 1.42s),
+  right .75s var(--open) calc(var(--d,0s) + 1.42s),
+  border-radius .75s var(--open) calc(var(--d,0s) + 1.42s)}
+html.armed .banner .morph img{transition:top .75s var(--open) calc(var(--d,0s) + 1.42s),left .75s var(--open) calc(var(--d,0s) + 1.42s)}
+html.armed .banner .spokes,html.armed .banner .morph::after{transition:opacity .45s ease calc(var(--d,0s) + 1.42s)}
+/* text only fades */
+html.js .fade{opacity:0}
+html.armed .fade{transition:opacity .9s ease var(--d,0s)}
+html.js .fade.in{opacity:1}
+/* failsafe */
+html.done .fx .morph{transform:none!important}
+html.done .fx{--t:0px!important;--l:0px!important}
+html.done .banner .morph{border-radius:6px!important}
+html.done .banner .spokes,html.done .banner .morph::after{opacity:0!important}
+html.done .fade{opacity:1!important}
+@media (prefers-reduced-motion:reduce){
+  html.js .fx .morph{transform:none!important;transition:none!important}
+  html.js .fx{--t:0px!important;--l:0px!important}
+  html.js .banner .morph{border-radius:6px!important}
+  html.js .banner .morph img{transition:none!important}
+  html.js .banner .spokes,html.js .banner .morph::after{opacity:0!important;transition:none!important}
+  html.js .fade{opacity:1!important;transition:none!important}
+}
+
+/* ---------- Stage 1 ---------- */
+.s1 .banner{margin-top:clamp(36px,5vw,64px)}
+
+/* ---------- Stage 2 ---------- */
+.s2-grid{display:grid;gap:44px}
+.pair{display:flex;align-items:flex-end;gap:clamp(14px,3vw,44px);flex-wrap:wrap}
+.pair .wheel:first-child{--ws:clamp(150px,42vw,360px)}
+.pair .wheel:last-child{--ws:clamp(130px,36vw,300px)}
+@media (min-width:980px){.s2-grid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:center;gap:64px}}
+
+/* ---------- Stage 3 — the route ---------- */
+.route{margin-top:clamp(30px,4vw,56px)}
+.route > .tf{margin:0 0 28px}
+.shots{display:grid;gap:44px 72px;margin:0;padding:0;list-style:none}
+.shot{display:grid;grid-template-columns:var(--ws) minmax(0,1fr);gap:18px 26px;align-items:center;--ws:clamp(112px,30vw,196px)}
+.shot .no{display:block;font-family:'Saira Extra Condensed',sans-serif;font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:14px;color:var(--yel);margin:0 0 6px}
+.shot h3{margin-bottom:10px}
+.shot p{margin:0;font-size:16px}
+@media (max-width:479px){.shot{grid-template-columns:1fr;--ws:150px}}
+@media (min-width:980px){.shots{grid-template-columns:1fr 1fr}}
+.stills{margin-top:clamp(36px,4vw,56px);padding-top:22px;border-top:1px solid var(--hair)}
+
+/* ---------- Stage 4 — the day ---------- */
+.spec{margin:0;display:grid;gap:0;max-width:56em;border-top:1px solid var(--hair)}
+.spec div{display:grid;grid-template-columns:1fr;gap:2px 28px;padding:16px 0;border-bottom:1px solid var(--hair)}
+.spec dt{font-family:'Saira Extra Condensed',sans-serif;font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--chrome);font-size:15px}
+.spec dd{margin:0;color:var(--chalk)}
+@media (min-width:700px){.spec div{grid-template-columns:150px 1fr}}
+.s4 .note{margin-top:26px}
+.s4 .banner{margin-top:clamp(36px,5vw,64px)}
+
+/* ---------- Stage 5 — who ---------- */
+.who{display:grid;gap:40px;align-items:center}
+.who .wheel{--ws:clamp(200px,52vw,360px);order:2}
+.creds{list-style:none;margin:22px 0 0;padding:0;max-width:40em}
+.creds li{padding:11px 0;border-top:1px solid var(--hair);color:var(--chalk)}
+.creds li:last-child{border-bottom:1px solid var(--hair)}
+.creds b{font-family:'Saira Extra Condensed',sans-serif;font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--chrome);margin-right:10px;font-size:15px}
+@media (min-width:900px){.who{grid-template-columns:auto minmax(0,1fr);gap:72px}.who .wheel{order:0}}
+
+/* ---------- Stage 6 — the finish ---------- */
+.s6 .banner{margin-bottom:clamp(40px,5vw,72px)}
+.contact{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:8px;font-size:17px}
+.contact span{display:inline-block;min-width:92px;font-family:'Saira Extra Condensed',sans-serif;font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--mute);font-size:14px}
+.contact a{text-decoration:none;border-bottom:1px solid var(--hair)}
+.contact a:hover,.contact a:focus-visible{border-color:var(--yel)}
+.cta{display:inline-block;margin-top:30px;padding:15px 30px 14px;background:var(--yel);color:var(--tape);text-decoration:none;font-family:'Saira Extra Condensed',sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:19px;border-radius:999px}
+.cta:hover,.cta:focus-visible{background:var(--chalk)}
+a:focus-visible{outline:2px solid var(--yel);outline-offset:3px}
+
+/* ---------- footer ---------- */
+.foot{position:relative;z-index:3;padding:34px var(--pad) 44px;border-top:1px solid var(--hair);font-size:13px;color:var(--mute)}
+.foot .mark{font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--chalk);font-size:12.5px;margin:0 0 10px}
+.foot p{max-width:60em;margin:0 0 8px;color:var(--mute)}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="wheel" viewBox="-100 -100 200 200">
+      <g fill="none" stroke="#F3F2EE" stroke-opacity=".58" stroke-width=".8" vector-effect="non-scaling-stroke">
+        <path id="sp" d="M-10.8 -63.1L0 -95.5M22.9 -59.8L18.6 -93.7" vector-effect="non-scaling-stroke"/>
+        <use href="#sp" transform="rotate(22.5)"/>
+        <use href="#sp" transform="rotate(45)"/>
+        <use href="#sp" transform="rotate(67.5)"/>
+        <use href="#sp" transform="rotate(90)"/>
+        <use href="#sp" transform="rotate(112.5)"/>
+        <use href="#sp" transform="rotate(135)"/>
+        <use href="#sp" transform="rotate(157.5)"/>
+        <use href="#sp" transform="rotate(180)"/>
+        <use href="#sp" transform="rotate(202.5)"/>
+        <use href="#sp" transform="rotate(225)"/>
+        <use href="#sp" transform="rotate(247.5)"/>
+        <use href="#sp" transform="rotate(270)"/>
+        <use href="#sp" transform="rotate(292.5)"/>
+        <use href="#sp" transform="rotate(315)"/>
+        <use href="#sp" transform="rotate(337.5)"/>
+      </g>
+      <circle r="95.5" fill="none" stroke="#D9DCDF" stroke-opacity=".75" stroke-width="1" vector-effect="non-scaling-stroke"/>
+      <circle r="89" fill="none" stroke="#D9DCDF" stroke-opacity=".3" stroke-width=".8" vector-effect="non-scaling-stroke"/>
+    </symbol>
+  </defs>
+</svg>
+
+
+<header class="hero" id="top">
+  <figure class="fx banner bed" style="--px:50%;--py:50%">
+    <div class="frame">
+      <div class="morph">
+        <img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — an early-morning bike workshop: a road bike clamped in a workstand in the foreground, a mechanic seen only from behind reaching for a wrench, bicycles hung along the wall in soft focus">
+        <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+      </div>
+    </div>
+  </figure>
+  <div class="scrim" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Taylormade Creative">
+    <a class="mark" href="#top">Taylormade Creative</a>
+    <span class="for">Content Day · Cadence Cyclery</span>
+  </nav>
+
+  <div class="hero-copy">
+    <p class="eyebrow fade"><b>Prologue</b> · A content day for Cadence Cyclery, McKinney</p>
+    <h1 class="fade">Rollout<span class="dot">.</span></h1>
+    
+    <p class="lede fade">This October the McKinney shop moves to 210 N. Tennessee St. — a bigger room, still downtown.</p>
+    <p class="lede fade">Here's one day of filming the new shop the way a good shop actually works: at hand height.</p>
+  </div>
+
+  <div class="hero-foot">
+    <span>Prepared for Cadence Cyclery by Taylormade Creative · Dallas–Fort Worth</span>
+    <p class="tf">Creative direction — treatment frames, not final footage.</p>
+  </div>
+</header>
+
+<div class="chainline" aria-hidden="true"><div class="chain"></div></div>
+
+
+<section class="stage s1" id="read" aria-labelledby="h-read">
+  <header class="stage-head txt fade">
+    <p class="stage-no"><b>Stage 1</b><span>Flat · The read</span></p>
+    <h2 id="h-read">Same street. <em>Bigger room.</em></h2>
+    <svg class="profile" viewBox="0 0 300 46" aria-hidden="true">
+      <path class="base" d="M0 45.5H300"/>
+      <polygon class="area" points="0,38 30,37 60,38 90,36 120,37 150,35 180,36 210,34 240,35 270,33 300,34 300,46 0,46"/>
+      <polyline points="0,38 30,37 60,38 90,36 120,37 150,35 180,36 210,34 240,35 270,33 300,34"/>
+      <circle class="go" cx="0" cy="38" r="2.4"/><circle class="fin" cx="300" cy="34" r="3.4"/>
+    </svg>
+  </header>
+  <div class="txt">
+    <p class="lede fade">I read Jackson's comments in Community Impact: fifteen years on the square, and a move to 210 N. Tennessee St. — "a bigger and better space," in his words. A downtown shop choosing to stay downtown and grow there is about the best kind of moving news a town gets.</p>
+    <p class="fade">A new room also starts with a fresh camera roll. The first pictures of it set the tone for how people meet the shop there, and I think the strongest ones are the work, not the walls.</p>
+  </div>
+  <figure class="fx banner" style="--px:50%;--py:84%;--z:1.3">
+    <div class="frame">
+      <div class="morph">
+        <img src="images/hero.png" width="1536" height="1024" alt="Treatment frame, cropped wide — morning light raking across a concrete workshop floor beneath a wall of bicycles">
+        <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+      </div>
+    </div>
+    <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+  </figure>
+</section>
+
+<div class="chainline" aria-hidden="true"><div class="chain"></div></div>
+
+
+<section class="stage alt s2" id="angle" aria-labelledby="h-angle">
+  <div class="s2-grid">
+    <div class="txt">
+      <header class="stage-head fade">
+        <p class="stage-no"><b>Stage 2</b><span>Rolling · The angle</span></p>
+        <h2 id="h-angle">The service <em>is the story.</em></h2>
+        <svg class="profile" viewBox="0 0 300 46" aria-hidden="true">
+          <path class="base" d="M0 45.5H300"/>
+          <polygon class="area" points="0,38 25,31 45,35 70,26 95,33 120,24 145,31 170,22 195,30 225,20 250,28 275,21 300,26 300,46 0,46"/>
+          <polyline points="0,38 25,31 45,35 70,26 95,33 120,24 145,31 170,22 195,30 225,20 250,28 275,21 300,26"/>
+          <circle class="go" cx="0" cy="38" r="2.4"/><circle class="fin" cx="300" cy="26" r="3.4"/>
+        </svg>
+      </header>
+      <p class="lede fade">Your site puts the whole shop in five words: "Modern Cycling. Old-School Service." The modern half lives on the floor, and good bikes photograph themselves.</p>
+      <p class="fade">The old-school half happens at hand height — a wheel in the truing stand, a bike in the workstand, a fit dialed in a few millimeters at a time, a build going from bare frame to finished bike. That's the half people trust a shop for, and it's where the camera lives for the day.</p>
+      <p class="fade">Hands, wheels, tools and backs — no faces — and every frame composed for a phone held upright.</p>
+    </div>
+    <div>
+      <div class="pair">
+        <figure class="fx wheel" style="--px:50%;--py:48%;--z:1.08">
+          <div class="frame">
+            <div class="morph">
+              <img src="images/frame-01.png" width="1024" height="1536" alt="Treatment frame — a wheel spinning in a truing stand, a hand holding a spoke key at the rim">
+              <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+            </div>
+          </div>
+        </figure>
+        <figure class="fx wheel" style="--px:50%;--py:74%;--z:1.25">
+          <div class="frame">
+            <div class="morph">
+              <img src="images/frame-02.png" width="1024" height="1536" alt="Treatment frame — a rear wheel and a cleated shoe seen from behind as a rider rolls away down a downtown street">
+              <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <p class="tf">Creative direction — treatment frames, not final footage.</p>
+    </div>
+  </div>
+</section>
+
+<div class="chainline" aria-hidden="true"><div class="chain"></div></div>
+
+
+<section class="stage s3" id="route" aria-labelledby="h-route">
+  <header class="stage-head txt fade">
+    <p class="stage-no"><b>Stage 3</b><span>Mountain · The route</span></p>
+    <h2 id="h-route">One day. <em>Six checkpoints.</em></h2>
+    <svg class="profile" viewBox="0 0 300 46" aria-hidden="true">
+      <path class="base" d="M0 45.5H300"/>
+      <polygon class="area" points="0,40 30,38 55,33 75,35 100,22 115,26 140,10 160,18 180,14 200,24 225,8 245,15 270,4 300,6 300,46 0,46"/>
+      <polyline points="0,40 30,38 55,33 75,35 100,22 115,26 140,10 160,18 180,14 200,24 225,8 245,15 270,4 300,6"/>
+      <circle class="go" cx="0" cy="40" r="2.4"/><circle class="fin" cx="300" cy="6" r="3.4"/>
+    </svg>
+  </header>
+  <p class="lede txt fade">One day in the new shop, on a day you pick. Here's the route — it bends around your service queue, never the other way round.</p>
+
+  <div class="route">
+    <p class="tf txt">Creative direction — treatment frames, not final footage.</p>
+    <ol class="shots">
+      <li class="shot">
+        <figure class="fx wheel" style="--px:16%;--py:38%;--z:1.5">
+          <div class="frame"><div class="morph">
+            <img src="images/hero.png" width="1536" height="1024" alt="Treatment frame, cropped — window light falling into the workshop before opening">
+            <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+          </div></div>
+        </figure>
+        <div class="txt fade">
+          <span class="no">01 · Wide · slow</span>
+          <h3>First light</h3>
+          <p>The new room before the door opens: lights coming on, the floor before anyone walks it, a lock turning from the inside. Wide and slow on the cinema camera — the opener every reel can cut from.</p>
+        </div>
+      </li>
+      <li class="shot">
+        <figure class="fx wheel" style="--px:38%;--py:58%;--z:1.7">
+          <div class="frame"><div class="morph">
+            <img src="images/hero.png" width="1536" height="1024" alt="Treatment frame, cropped — a road bike clamped at hand height in a workstand">
+            <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+          </div></div>
+        </figure>
+        <div class="txt fade">
+          <span class="no">02 · Macro · sound</span>
+          <h3>The workstand</h3>
+          <p>A bike clamped at hand height. Cable ends, a torque wrench, a chain going on, a shift clicking into place. Close and unhurried — the sound carries as much as the picture.</p>
+        </div>
+      </li>
+      <li class="shot">
+        <figure class="fx wheel" style="--px:50%;--py:52%;--z:1.15">
+          <div class="frame"><div class="morph">
+            <img src="images/frame-01.png" width="1024" height="1536" alt="Treatment frame, cropped — spokes blurred into fine lines as a wheel spins in the truing stand">
+            <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+          </div></div>
+        </figure>
+        <div class="txt fade">
+          <span class="no">03 · High frame rate</span>
+          <h3>The truing stand</h3>
+          <p>The signature shot. A wheel spinning in the stand, the gap at the caliper closing a quarter-turn of the spoke key at a time — real-time, then slowed right down. Framed once, it's a shot the shop can come back to every time a wheel comes through.</p>
+        </div>
+      </li>
+      <li class="shot">
+        <figure class="fx wheel" style="--px:50%;--py:90%;--z:1.6">
+          <div class="frame"><div class="morph">
+            <img src="images/frame-02.png" width="1024" height="1536" alt="Treatment frame, cropped — a cleated shoe clipped into a pedal, seen from behind">
+            <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+          </div></div>
+        </figure>
+        <div class="txt fade">
+          <span class="no">04 · Hands only</span>
+          <h3>The fit</h3>
+          <p>The fit from the shoulders down: saddle height, cleats, the small adjustments that make a bike feel like yours. The fitter's hands and the bike — the rider is never shown face-on.</p>
+        </div>
+      </li>
+      <li class="shot">
+        <figure class="fx wheel" style="--px:86%;--py:30%;--z:1.9">
+          <div class="frame"><div class="morph">
+            <img src="images/hero.png" width="1536" height="1024" alt="Treatment frame, cropped — wrenches hung on a pegboard wall behind the workstand">
+            <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+          </div></div>
+        </figure>
+        <div class="txt fade">
+          <span class="no">05 · A short film</span>
+          <h3>The build</h3>
+          <p>A custom build from the bare frame up. Parts laid out on the bench, the last bolt torqued, the finished bike wheeled out under the lights. A build has a beginning, a middle and an end, so it gets cut as its own piece.</p>
+        </div>
+      </li>
+      <li class="shot">
+        <figure class="fx wheel" style="--px:50%;--py:44%;--z:1.05">
+          <div class="frame"><div class="morph">
+            <img src="images/frame-02.png" width="1024" height="1536" alt="Treatment frame, cropped — riders seen only from behind rolling away from a brick storefront at dawn">
+            <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+          </div></div>
+        </figure>
+        <div class="txt fade">
+          <span class="no">06 · From the curb</span>
+          <h3>The rollout</h3>
+          <p>If the day lands on a ride morning: the group leaving the shop, filmed from behind — cleats clicking in, wheels turning over, backs heading off down the street. If it doesn't, one finished bike wheeled out the front door does the same job.</p>
+        </div>
+      </li>
+    </ol>
+    <p class="stills txt fade">The A7RV shoots stills all day alongside — new-room photos for the site, the grid and the newsletter, ready for anyone who asks what the new place looks like.</p>
+  </div>
+</section>
+
+<div class="chainline" aria-hidden="true"><div class="chain"></div></div>
+
+
+<section class="stage alt s4" id="day" aria-labelledby="h-day">
+  <header class="stage-head txt fade">
+    <p class="stage-no"><b>Stage 4</b><span>Hilly · The day</span></p>
+    <h2 id="h-day">The day, <em>plainly.</em></h2>
+    <svg class="profile" viewBox="0 0 300 46" aria-hidden="true">
+      <path class="base" d="M0 45.5H300"/>
+      <polygon class="area" points="0,38 35,32 60,35 90,24 115,30 145,20 170,27 200,16 230,25 260,18 300,22 300,46 0,46"/>
+      <polyline points="0,38 35,32 60,35 90,24 115,30 145,20 170,27 200,16 230,25 260,18 300,22"/>
+      <circle class="go" cx="0" cy="38" r="2.4"/><circle class="fin" cx="300" cy="22" r="3.4"/>
+    </svg>
+  </header>
+  <dl class="spec txt fade">
+    <div><dt>Where</dt><dd>One shoot day at the McKinney shop. I direct and shoot.</dd></div>
+    <div><dt>Rig</dt><dd>Sony FX6 for cinema footage · Sony A7RV for stills and hybrid.</dd></div>
+    <div><dt>Format</dt><dd>Vertical first — every deliverable cut 9:16 for Reels, TikTok and Shorts.</dd></div>
+    <div><dt>You get</dt><dd>An edited set of social videos, plus a stills bank from the same day.</dd></div>
+    <div><dt>Edits</dt><dd>Two rounds of edits, and roughly a two-week turnaround.</dd></div>
+    <div><dt>Investment</dt><dd>We talk about it on a call.</dd></div>
+  </dl>
+  <p class="note txt fade">Staff, riders and customers stay hands and backs unless someone wants to be on camera — and if they do, releases are a conversation first. You pick the day; the shoot works around the service queue.</p>
+  <figure class="fx banner" style="--px:50%;--py:60%;--z:1.1">
+    <div class="frame">
+      <div class="morph">
+        <img src="images/frame-02.png" width="1024" height="1536" alt="Treatment frame, cropped wide — a small group of riders seen from behind on wet asphalt, long shadows at dawn">
+        <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+      </div>
+    </div>
+    <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+  </figure>
+</section>
+
+<div class="chainline" aria-hidden="true"><div class="chain"></div></div>
+
+
+<section class="stage s5" id="who" aria-labelledby="h-who">
+  <div class="who">
+    <figure class="fx wheel" style="--px:58%;--py:78%;--z:1.4">
+      <div class="frame">
+        <div class="morph">
+          <img src="images/frame-01.png" width="1024" height="1536" alt="Treatment frame, cropped — a hand turning a spoke key at the rim of a wheel">
+          <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+        </div>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+    <div class="txt">
+      <header class="stage-head fade">
+        <p class="stage-no"><b>Stage 5</b><span>Rolling · Behind the camera</span></p>
+        <h2 id="h-who">Who's <em>shooting.</em></h2>
+        <svg class="profile" viewBox="0 0 300 46" aria-hidden="true">
+          <path class="base" d="M0 45.5H300"/>
+          <polygon class="area" points="0,36 40,30 70,33 105,26 135,30 170,23 200,28 235,21 270,25 300,22 300,46 0,46"/>
+          <polyline points="0,36 40,30 70,33 105,26 135,30 170,23 200,28 235,21 270,25 300,22"/>
+          <circle class="go" cx="0" cy="36" r="2.4"/><circle class="fin" cx="300" cy="22" r="3.4"/>
+        </svg>
+      </header>
+      <p class="lede fade">I'm Nelson Taylor — Taylormade Creative, Dallas–Fort Worth. On a content day I direct, shoot and cut, so the person who frames the truing stand is the same person who edits it.</p>
+      <ul class="creds fade">
+        <li><b>14 years</b>Design and creative direction</li>
+        <li><b>Rig</b>Sony FX6 + Sony A7RV</li>
+        <li><b>Clients</b>Toni &amp; Guy, Lava Cantina, KFC, IAS Academy, Curls</li>
+        <li><b>Shipped</b>One iOS app — Run It UP! Dallas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="chainline" aria-hidden="true"><div class="chain"></div></div>
+
+
+<section class="stage alt s6" id="finish" aria-labelledby="h-finish">
+  <figure class="fx banner long" style="--px:50%;--py:30%;--z:1.12">
+    <div class="frame">
+      <div class="morph">
+        <img src="images/hero.png" width="1536" height="1024" alt="Treatment frame, cropped wide — a row of bicycles along a workshop wall in warm morning light">
+        <svg class="spokes" viewBox="0 0 200 200" aria-hidden="true"><use href="#wheel" width="200" height="200"/></svg>
+      </div>
+    </div>
+    <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+  </figure>
+  <header class="stage-head txt fade">
+    <p class="stage-no"><b>Stage 6</b><span>Flat finish · The finish</span></p>
+    <h2 id="h-finish">No rush. <em>Just a look.</em></h2>
+    <svg class="profile" viewBox="0 0 300 46" aria-hidden="true">
+      <path class="base" d="M0 45.5H300"/>
+      <polygon class="area" points="0,20 40,24 80,29 120,33 160,35 200,36 240,37 270,37 300,37 300,46 0,46"/>
+      <polyline points="0,20 40,24 80,29 120,33 160,35 200,36 240,37 270,37 300,37"/>
+      <circle class="go" cx="0" cy="20" r="2.4"/><circle class="fin" cx="300" cy="37" r="3.4"/>
+    </svg>
+  </header>
+  <div class="txt">
+    <p class="lede fade">A move is a lot to carry, and the last thing it needs is a deadline from me. If this is useful, I'd be glad to talk for fifteen minutes once the new room has settled in.</p>
+    <p class="fade">If it's "not yet," that's a perfectly good answer — the page will keep.</p>
+    <ul class="contact fade">
+      <li><span>Email</span><a href="mailto:taylormademd@gmail.com">taylormademd@gmail.com</a></li>
+      <li><span>Phone</span><a href="tel:+18177071291">(817) 707-1291</a></li>
+      <li><span>Instagram</span><a href="https://www.instagram.com/taylormade_creative/">@taylormade_creative</a></li>
+      <li><span>Web</span><a href="https://www.taylormadecreative.net">www.taylormadecreative.net</a></li>
+    </ul>
+    <a class="cta fade" href="mailto:taylormademd@gmail.com?subject=Cadence%20Cyclery%20%E2%80%94%20Content%20Day">Email Nelson</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <p class="mark">Taylormade Creative</p>
+  <p>Prepared for Cadence Cyclery by Taylormade Creative · Dallas–Fort Worth</p>
+  <p>All imagery on this page is creative direction — treatment frames, not final footage. None of it is a photograph of Cadence Cyclery's shop, team, riders or bikes.</p>
+</footer>
+
+<script>
+(function(){
+  var d=document.documentElement;
+  var figs=[].slice.call(document.querySelectorAll('.fx'));
+  var fades=[].slice.call(document.querySelectorAll('.fade'));
+  var all=figs.concat(fades);
+  function revealAll(){all.forEach(function(el){el.classList.add('in');});window.__rolled=true;}
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){d.classList.add('done');revealAll();return;}
+
+  /* the roll: distance to travel from off the left edge, and the matching
+     rotation (distance ÷ radius) so the wheel rolls without slipping */
+  function measure(f){
+    var fr=f.querySelector('.frame');if(!fr)return;
+    var r=fr.getBoundingClientRect(),W=r.width,H=r.height;if(!W||!H)return;
+    var D=Math.min(W,H),ml=0,mt=0;
+    if(f.classList.contains('banner')){ml=(W-D)/2;mt=(H-D)/2;}
+    var dist=r.left+ml+D+48;
+    var rot=-(dist/(D/2))*180/Math.PI;
+    var s=f.style;
+    s.setProperty('--W',W+'px');s.setProperty('--H',H+'px');
+    s.setProperty('--ml',ml+'px');s.setProperty('--mt',mt+'px');
+    s.setProperty('--dx',(-dist).toFixed(1)+'px');s.setProperty('--rot',rot.toFixed(1)+'deg');
+  }
+  function measureAll(){figs.forEach(measure);}
+  measureAll();
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(measureAll);}
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(measureAll,140);});
+
+  var io=new IntersectionObserver(function(entries){
+    window.__rolled=true;
+    var k=0,j=0;
+    entries.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target;
+      if(el.classList.contains('fx')){el.style.setProperty('--d',(k++*90)+'ms');}
+      else{el.style.setProperty('--d',(j++*80)+'ms');}
+      el.classList.add('in');io.unobserve(el);
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+
+  requestAnimationFrame(function(){requestAnimationFrame(function(){
+    d.classList.add('armed');
+    all.forEach(function(el){io.observe(el);});
+  });});
+})();
+</script>
+</body>
+</html>
