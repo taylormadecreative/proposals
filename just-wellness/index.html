@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta name="tc-build" content="0f5e79091c99">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Just Wellness × Taylormade Creative — Five climates, one roof</title>
+<meta name="description" content="A content-day concept for Just Wellness, Grapevine: five rooms filmed as atmospheres, from cold to heat, cut vertical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;300;600&family=Ysabeau+Office:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+<style>
+:root{
+  --frost:#F2F5F4; --frost-deep:#E3EAEA; --mist:#FAFCFB;
+  --slate:#1D2934; --slate-74:rgba(29,41,52,.74); --slate-hair:rgba(29,41,52,.3);
+  --glacier:#9DC1CF; --red:#B8322E; --red-deep:#962622; --salt:#E8C2AE; --cedar:#A8693A;
+  --on-slate:#EEF3F2; --on-slate-80:rgba(238,243,242,.82);
+  --disp:'Hahmlet',Georgia,'Times New Roman',serif;
+  --body:'Ysabeau Office','Segoe UI',Helvetica,Arial,sans-serif;
+  --pad:clamp(24px,6vw,104px);
+  --spectrum:linear-gradient(90deg,var(--glacier) 0%,var(--salt) 40%,var(--red) 70%,var(--cedar) 100%);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{margin:0;background:var(--frost);color:var(--slate);font-family:var(--body);font-size:18px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2{font-family:var(--disp);font-weight:200;margin:0;letter-spacing:.006em;overflow-wrap:normal}
+h1{font-size:clamp(42px,11vw,164px);line-height:1}
+h2{font-size:clamp(40px,7.2vw,100px);line-height:1.04}
+h3{font-family:var(--disp);font-weight:600;margin:0;font-size:clamp(20px,1.7vw,24px);line-height:1.2}
+p{margin:0 0 18px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+
+/* ---------- labels: Ysabeau caps, a short spectrum hairline ahead of each eyebrow ---------- */
+.eyebrow{display:flex;align-items:center;gap:14px;margin:0 0 22px;font-weight:600;font-size:13px;
+  letter-spacing:.2em;text-transform:uppercase}
+.eyebrow::before{content:"";flex:none;width:38px;height:2px;background:var(--spectrum)}
+
+/* ---------- sections ---------- */
+.sec{position:relative;z-index:2;padding:clamp(76px,9vw,150px) var(--pad);overflow:hidden}
+.alt{background:var(--frost-deep)}
+.dark{background:var(--slate);color:var(--on-slate)}
+.dark p{color:var(--on-slate-80)}
+.lede{font-size:clamp(19px,1.7vw,23px);line-height:1.5;max-width:800px;margin-top:24px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr);gap:56px;margin-top:46px;align-items:center}
+@media(min-width:960px){.cols{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(56px,6vw,120px)}}
+.measure{max-width:640px;position:relative;z-index:2}
+
+/* ---------- THE CAPSULE: a chamber window with a frosted double rim ---------- */
+.cfig{position:relative;z-index:2;margin:0}
+.cfig.v{width:min(100%,400px);justify-self:center}
+.capsule{position:relative;overflow:hidden;border-radius:999px;background:var(--frost-deep);isolation:isolate;
+  box-shadow:0 0 0 5px var(--mist),0 0 0 6px var(--slate-hair),0 26px 44px -30px rgba(29,41,52,.55)}
+.capsule::after{content:"";position:absolute;inset:7px;z-index:4;border-radius:999px;pointer-events:none;
+  border:1px solid rgba(255,255,255,.84)}
+.capsule.h{aspect-ratio:var(--ar,2.4/1)}
+.capsule.v{aspect-ratio:var(--ar,1/1.7)}
+.capsule img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--frost-deep);
+  color:var(--slate-74);font-size:13px;object-position:var(--px,50%) var(--py,50%);
+  transform:scale(var(--z,1));transform-origin:var(--px,50%) var(--py,50%)}
+.dark .capsule{background:#26333F;
+  box-shadow:0 0 0 5px rgba(238,243,242,.12),0 0 0 6px rgba(238,243,242,.34),0 26px 44px -30px rgba(0,0,0,.6)}
+.tf{display:block;margin:18px 0 0;font-weight:600;font-size:11.5px;line-height:1.45;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--slate-74)}
+.dark .tf{color:var(--on-slate-80)}
+
+/* ---------- THE VAPOUR ROLL: soft cold-white bands roll off each window, lowest first ---------- */
+.vapour{position:absolute;inset:0;z-index:3;pointer-events:none}
+.vapour i{position:absolute;left:-24%;width:150%;display:block;opacity:1;transform:translateX(0);
+  background:
+    radial-gradient(ellipse 30% 50% at 18% 52%,rgba(255,255,255,.9),rgba(255,255,255,0) 72%),
+    radial-gradient(ellipse 34% 58% at 44% 46%,rgba(250,252,251,.88),rgba(250,252,251,0) 72%),
+    radial-gradient(ellipse 30% 52% at 70% 56%,rgba(255,255,255,.86),rgba(255,255,255,0) 72%),
+    radial-gradient(ellipse 26% 46% at 92% 48%,rgba(246,249,249,.82),rgba(246,249,249,0) 70%);
+  transition:transform var(--d,1200ms) cubic-bezier(.18,.66,.32,1),opacity var(--d,1200ms) cubic-bezier(.3,.4,.5,1)}
+.vapour.roll i{transform:translateX(var(--x,125%));opacity:0}
+
+/* text only fades */
+.js .fade{opacity:0;transition:opacity .9s ease}
+.js .fade.on{opacity:1}
+.js:not(.live) .fade{animation:rescue 0s linear 4.5s forwards}
+@keyframes rescue{to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .fade{opacity:1;transition:none;animation:none}
+  .vapour{display:none!important}
+}
+
+/* ---------- HERO: the long window ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  padding:28px var(--pad) 36px;overflow:hidden;background:var(--frost)}
+.hero > *{position:relative;z-index:2}
+.nav{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;font-weight:600;font-size:13px;
+  letter-spacing:.2em;text-transform:uppercase}
+.nav .meta{text-align:right;color:var(--slate-74);line-height:1.55}
+.hero-body{padding:clamp(44px,8vh,96px) 0 clamp(30px,4.5vh,48px)}
+.hero-grid{display:grid;gap:26px}
+@media(min-width:1100px){.hero-grid{grid-template-columns:auto minmax(0,440px);align-items:end;gap:clamp(48px,5vw,96px)}}
+.hero-tag{font-size:clamp(19px,1.7vw,23px);line-height:1.5;margin:0}
+.hero-sub{font-size:16px;line-height:1.55;color:var(--slate-74);margin:14px 0 0}
+.hero-fig{margin:auto 0 0}
+.hero-fig .capsule{height:clamp(170px,min(40vh,34vw),460px)}
+.hero-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 28px;margin-top:24px;
+  font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate-74)}
+.hero-foot p{margin:0}
+
+/* ---------- 03 the spectrum: a temperature rail, six windows standing on it, cold to heat ---------- */
+.spectrum{position:relative;margin-top:60px}
+.stops{--caph:340px;list-style:none;margin:0;padding:0 0 0 34px;position:relative;display:grid;gap:46px}
+.stops::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:6px;border-radius:3px;
+  background:linear-gradient(180deg,var(--glacier) 0%,var(--salt) 40%,var(--red) 70%,var(--cedar) 100%);
+  box-shadow:0 0 0 1px var(--slate-hair)}
+.stops::after{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:14px;pointer-events:none;
+  background:
+    repeating-linear-gradient(180deg,rgba(29,41,52,.5) 0 1px,rgba(29,41,52,0) 1px 64px) 0 0/14px 100% no-repeat,
+    repeating-linear-gradient(180deg,rgba(29,41,52,.26) 0 1px,rgba(29,41,52,0) 1px 16px) 0 0/8px 100% no-repeat}
+.stop{position:relative;display:grid;grid-template-columns:118px minmax(0,1fr);gap:0 20px;align-items:start}
+.stop::before{content:"";position:absolute;left:-37px;top:94px;width:12px;height:12px;border-radius:50%;
+  background:var(--mist);box-shadow:0 0 0 1px var(--slate),0 0 0 4px var(--frost)}
+.stop .capsule{width:118px;aspect-ratio:1/1.7}
+.stop .txt{position:relative;z-index:2;padding-top:4px}
+.lab{display:block;font-weight:700;font-size:12px;line-height:1.4;letter-spacing:.18em;text-transform:uppercase}
+.stop .tf{margin:6px 0 14px;font-size:10.5px}
+.stop h3{margin-bottom:6px}
+.stop p{margin:0;font-size:16px;line-height:1.55;color:var(--slate-74)}
+@media(min-width:640px){
+  .stop{grid-template-columns:170px minmax(0,1fr);gap:0 30px}
+  .stop .capsule{width:170px}
+  .stop::before{top:138px}
+}
+@media(min-width:1200px){
+  .stops{padding:0;grid-template-columns:repeat(6,minmax(0,1fr));gap:0}
+  .stops::before{left:0;right:0;top:calc(var(--caph) + 22px);bottom:auto;width:auto;height:8px;border-radius:4px;
+    background:var(--spectrum)}
+  .stops::after{left:0;right:0;top:calc(var(--caph) + 8px);bottom:auto;width:auto;height:12px;
+    background:
+      repeating-linear-gradient(90deg,rgba(29,41,52,.5) 0 1px,rgba(29,41,52,0) 1px 72px) 0 0/100% 12px no-repeat,
+      repeating-linear-gradient(90deg,rgba(29,41,52,.26) 0 1px,rgba(29,41,52,0) 1px 12px) 0 100%/100% 7px no-repeat}
+  .stop{display:flex;flex-direction:column;padding:0 11px}
+  .stop .capsule{width:100%;max-width:190px;height:var(--caph);aspect-ratio:auto;margin:0 auto}
+  .stop::before{left:calc(50% - 6px);top:calc(var(--caph) + 20px)}
+  .stop .txt{padding-top:60px}
+  .stop p{font-size:15px}
+}
+.stills{position:relative;z-index:2;margin:60px 0 0;max-width:840px;font-size:clamp(18px,1.6vw,21px);line-height:1.5}
+
+/* ---------- 05 the day ---------- */
+.scope{list-style:none;margin:0;padding:0}
+.scope li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 16px;padding:20px 0 22px;
+  border-bottom:1px solid var(--slate-hair)}
+.scope .n{font-family:var(--disp);font-weight:300;font-size:26px;line-height:1.1;color:var(--slate-74)}
+.scope strong{display:block;font-family:var(--disp);font-weight:600;font-size:clamp(20px,1.8vw,24px);line-height:1.2;margin-bottom:4px}
+.scope .d{display:block;color:var(--slate-74)}
+.after{margin:28px 0 0;font-weight:600}
+
+/* ---------- 06 who ---------- */
+.facts{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+.facts li{padding:14px 0 15px;border-top:1px solid var(--slate-hair);font-size:15px;line-height:1.35;color:var(--slate-74)}
+.facts b{display:block;font-family:var(--disp);font-weight:600;font-size:19px;line-height:1.2;color:var(--slate);margin-bottom:3px}
+
+/* ---------- 07 close ---------- */
+.close-band{position:relative;z-index:2;padding:clamp(60px,7vw,110px) var(--pad) 0}
+.close-band .capsule{aspect-ratio:2/1}
+@media(min-width:760px){.close-band .capsule{aspect-ratio:3.4/1}}
+.close h2 small{display:block;margin-top:18px;font-family:var(--body);font-weight:500;font-size:clamp(19px,1.8vw,24px);
+  line-height:1.4;letter-spacing:0;color:var(--slate-74)}
+.cta{display:inline-block;margin:30px 0 36px;padding:17px 30px 16px;border-radius:6px;background:var(--red);color:#fff;
+  text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.18em;text-transform:uppercase;
+  box-shadow:0 14px 24px -16px rgba(184,50,46,.8)}
+.cta:hover{background:var(--red-deep)}
+.sig{font-size:16px;line-height:1.85;color:var(--slate-74)}
+.sig b{font-family:var(--disp);font-weight:600;font-size:22px;color:var(--slate)}
+
+/* ---------- footer ---------- */
+.foot{position:relative;z-index:2;padding:34px var(--pad) 40px;background:var(--frost-deep);color:var(--slate-74);
+  font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.foot::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--spectrum)}
+.foot p{margin:8px 0}
+.foot .disc{text-transform:none;letter-spacing:0;font-weight:400;font-size:15px;line-height:1.6;max-width:820px}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="nav">
+    <div>Taylormade Creative</div>
+    <div class="meta">Just Wellness · Grapevine<br>A content-day concept</div>
+  </div>
+
+  <div class="hero-body fade">
+    <p class="eyebrow">For Allen &amp; Justine · Just Wellness</p>
+    <div class="hero-grid">
+      <h1>Five climates,<br>one roof.</h1>
+      <div>
+        <p class="hero-tag">The cold, the chamber, the salt room, the red light and the sauna, each filmed as its own 9:16 world, in order from cold to heat.</p>
+        <p class="hero-sub">One day in Grapevine on a cinema camera, cut vertical for Reels, TikTok and Shorts, with a stills bank from the same light.</p>
+      </div>
+    </div>
+  </div>
+
+  <figure class="hero-fig">
+    <div class="capsule h" style="--px:50%;--py:56%"><img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — a long, quiet grey corridor with a polished concrete floor, a row of open doorways lit icy blue, deep red, rose-amber and honey-wood, cold vapour curling from the nearest door, and a black capsule chamber with a lit window at the far end"></div>
+  </figure>
+
+  <div class="hero-foot">
+    <p>Prepared for Just Wellness · Grapevine</p>
+    <p>Creative direction — treatment frames, not final footage</p>
+  </div>
+</header>
+
+<main>
+
+<section id="read">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow">01 · The read</p>
+      <h2>Every room has its own weather.</h2>
+    </div>
+    <div class="cols">
+      <div class="measure fade">
+        <p>Allen, Justine — Nelson Taylor here. I direct and shoot brand content in Dallas–Fort Worth. Connor Pittman's Sept. 30 roundup in Community Impact is what sent me to your site: a celebration on Oct. 22, new equipment, and a med-spa menu running alongside the wellness side.</p>
+        <p>Then I read the menu, and it reads like a weather map. A cryo chamber, frost on the glass and a thin line of blue light inside. A hard-shell hyperbaric chamber with large viewing windows. A dry salt room. A red-light pod. A sauna cabin that fits six. Each one has its own light, its own texture, its own temperature.</p>
+        <p>I'm not here to say what any of it does. That's your expertise, and the conversation you have with your clients. A camera can show what each room looks like to walk into, and that's the whole idea: the rooms as atmospheres, one climate at a time.</p>
+      </div>
+      <figure class="cfig v">
+        <div class="capsule v"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — a frosted glass door with a thin line of cold blue light behind it, white vapour spilling across a dark floor, one hand on a steel handle"></div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="idea" class="alt">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow">02 · The idea</p>
+      <h2>One room a week.</h2>
+    </div>
+    <div class="cols">
+      <div class="measure fade">
+        <p>Five rooms make a format. Each week of the quarter belongs to one of them, and every one opens the same way: a door, a hand, the first look inside.</p>
+        <p>Then that room's own weather takes over. Vapour and frost in the cold. The curved window of the chamber. Salt up close. A single colour in the red light. Wood and warm light in the sauna. Same move, new climate, so the feed keeps a rhythm without anyone on your team having to be on camera.</p>
+        <p>Every cut is composed 9:16 from the first setup. The phone is the frame I'm shooting for, not a crop taken later.</p>
+      </div>
+      <figure class="cfig v">
+        <div class="capsule v"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — a wall of salt bricks lit from behind in rose and amber above a pale wood bench, a folded white towel and one hand resting beside it"></div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="shoot">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow">03 · What we'd shoot</p>
+      <h2>The spectrum.</h2>
+      <p class="lede">One day, cold to heat, room by room around your bookings, on a day you choose. Empty rooms, vapour, salt, light, wood and hands. Your team and your clients stay off camera unless they want to be on it, and that's a conversation we'd have first.</p>
+    </div>
+
+    <div class="spectrum">
+      <ol class="stops" aria-label="The shot list, from the cold to the heat">
+        <li class="stop">
+          <div class="capsule v" style="--px:55%;--py:55%;--z:1.5"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — frost crystals across a glass door, a line of blue light behind it and a hand on the steel handle"></div>
+          <div class="txt fade">
+            <span class="lab">No. 1 · the cold</span>
+            <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            <h3>The cold</h3>
+            <p>Frost on the glass, the thin blue line, cold air moving across the floor. Shot slow on the FX6.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <div class="capsule v" style="--px:1%;--py:48%;--z:1.6"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — the curved window of a black capsule chamber lit soft cream from inside, empty"></div>
+          <div class="txt fade">
+            <span class="lab">No. 2 · the chamber</span>
+            <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            <h3>The chamber</h3>
+            <p>The curved window lit from inside, empty. A hand on the shell; the long shape of it from across the room.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <div class="capsule v" style="--px:50%;--py:24%;--z:1.15"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — salt bricks lit from behind, rose and amber, the crystal texture up close"></div>
+          <div class="txt fade">
+            <span class="lab">No. 3 · the salt room</span>
+            <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            <h3>The salt room</h3>
+            <p>Salt at macro: the grain, the texture, the way the light sits in it. The quietest room, filmed like it.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <div class="capsule v" style="--px:58%;--py:51%;--z:2.6"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — deep red light filling an open doorway in a grey plaster wall"></div>
+          <div class="txt fade">
+            <span class="lab">No. 4 · the red light</span>
+            <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            <h3>The red light</h3>
+            <p>One colour, edge to edge. The outline of a hand against red; a robe on a hook.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <div class="capsule v" style="--px:29%;--py:48%;--z:2.6"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — a warm wood-lined cabin seen through a narrow doorway in a grey plaster wall"></div>
+          <div class="txt fade">
+            <span class="lab">No. 5 · the sauna</span>
+            <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            <h3>The sauna</h3>
+            <p>Wood grain, warm light, a towel folded on the bench, the door swinging shut.</p>
+          </div>
+        </li>
+        <li class="stop">
+          <div class="capsule v" style="--px:86%;--py:98%;--z:1.8"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — one hand resting on pale wood in warm rose light"></div>
+          <div class="txt fade">
+            <span class="lab">No. 6 · the new equipment</span>
+            <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            <h3>The new equipment</h3>
+            <p>Hands and light only: a palm on the housing, a line of light crossing a surface, the room around it.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <p class="stills fade">Alongside the video, the A7RV builds a stills bank from the same rooms and the same light all day: for the site, the grid and anything else that needs a photograph.</p>
+  </div>
+</section>
+
+<section id="first-look" class="dark">
+  <div class="sec">
+    <div class="cols">
+      <div class="measure fade">
+        <p class="eyebrow">04 · The first look</p>
+        <h2>Hands and light.</h2>
+        <p style="margin-top:30px">Community Impact's roundup mentions new equipment at Just Wellness. A new piece in the room deserves a first look of its own, and in a clinic the right first look is a quiet one.</p>
+        <p>So it's filmed the way the rest of the day is: hands and light only. A palm on the housing, a line of light travelling across a panel, the room settling around it. Nothing clinical on camera and nothing said on its behalf; just the object and the room.</p>
+        <p>And because it's the same move as every other room, it slots straight into the weekly format the day it posts.</p>
+      </div>
+      <figure class="cfig v">
+        <div class="capsule v" style="--px:58%;--py:100%;--z:1.6"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — red light falling from a doorway onto a polished concrete floor in a quiet corridor"></div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="day">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow">05 · The day</p>
+      <h2>Just the day.</h2>
+      <p class="lede">Plainly, here's what it is.</p>
+    </div>
+    <div class="cols">
+      <div class="fade">
+        <ol class="scope">
+          <li><span class="n">01</span><div><strong>One shoot day at Just Wellness</strong><span class="d">I direct and shoot it myself, room by room in Grapevine, around your bookings.</span></div></li>
+          <li><span class="n">02</span><div><strong>Sony FX6 + Sony A7RV</strong><span class="d">The FX6 carries the motion; the A7RV covers stills and hybrid.</span></div></li>
+          <li><span class="n">03</span><div><strong>Vertical-first</strong><span class="d">Every deliverable is cut 9:16 for Reels, TikTok and Shorts.</span></div></li>
+          <li><span class="n">04</span><div><strong>An edited set of vertical videos + a stills bank</strong><span class="d">From the same day and the same light, built to run for a quarter.</span></div></li>
+          <li><span class="n">05</span><div><strong>Two rounds of edits</strong><span class="d">Delivered in about two weeks.</span></div></li>
+        </ol>
+        <p class="after">Anything beyond that is a conversation on a call.</p>
+      </div>
+      <figure class="cfig">
+        <div class="capsule h" style="--ar:2/1;--px:50%;--py:86%"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — white cold vapour rolling low across a dark grey floor"></div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="who" class="alt">
+  <div class="sec">
+    <div class="cols">
+      <div class="measure fade">
+        <p class="eyebrow">06 · Behind the camera</p>
+        <h2>Who's shooting.</h2>
+        <p style="margin-top:30px">I'm Nelson Taylor, and Taylormade Creative is my studio in Dallas–Fort Worth. I've spent fourteen years in design and creative direction, and these days most of that work is brand content: I direct it, shoot it on the FX6 and the A7RV, and cut it myself.</p>
+        <p>Recent work includes TONI&amp;GUY Academy, Dreamcatchers Hair and a promo for It's a Secret Med Spa. Client work over the years includes Toni &amp; Guy, Lava Cantina, KFC, IAS Academy and Curls, and I shipped one iOS app, Run It UP! Dallas.</p>
+        <p>A clinic is a careful place to bring a camera. Nobody is filmed who hasn't said yes, and the plan you're reading is the edit you'd get, because the person framing the shot is the person cutting it.</p>
+        <ul class="facts">
+          <li><b>Fourteen years</b>design and direction</li>
+          <li><b>FX6 + A7RV</b>motion and stills, one kit</li>
+          <li><b>9:16</b>composed for the phone</li>
+          <li><b>One person</b>shoot through edit</li>
+        </ul>
+      </div>
+      <figure class="cfig v">
+        <div class="capsule v" style="--px:100%;--py:9%;--z:2"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — a hand in the cuff of a white robe resting on a brushed steel handle beside frosted glass"></div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="close" class="close">
+  <div class="close-band">
+    <figure class="cfig">
+      <div class="capsule h" style="--px:50%;--py:84%"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — coloured light from a row of doorways reflected on a polished concrete corridor floor, cold vapour drifting at the right"></div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+  <div class="sec">
+    <div class="fade" style="max-width:920px">
+      <p class="eyebrow">07 · Whenever suits</p>
+      <h2>No hurry at all. <small>Nothing here needs an answer this week.</small></h2>
+      <p style="margin-top:30px">Take this page at whatever pace suits the season. If the idea feels like Just Wellness, I'd be glad to spend twenty minutes on a call and walk the spectrum with you, room by room. Strike anything that doesn't fit, and add anything I've missed.</p>
+      <p>And if the timing isn't right, "not yet" is a perfectly good answer.</p>
+      <a class="cta" href="mailto:taylormademd@gmail.com?subject=Just%20Wellness%20%C3%97%20Taylormade%20Creative">Write to Nelson</a>
+      <div class="sig">
+        <b>Nelson Taylor</b><br>
+        Founder &amp; Creative Director · Taylormade Creative<br>
+        (817) 707‑1291 · taylormademd@gmail.com<br>
+        www.taylormadecreative.net · @taylormade_creative
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p>Prepared for Just Wellness by Taylormade Creative · Dallas–Fort Worth</p>
+  <p class="disc">All imagery on this page is creative direction — treatment frames, not final footage. None of it is a photograph of Just Wellness, its rooms, its equipment, its team or its clients.</p>
+</footer>
+
+<script>
+/* THE VAPOUR ROLL. Four soft cold-white bands lie over each capsule window; on entry they roll off
+   sideways at different speeds, lowest band first, 90ms apart, uncovering the image underneath
+   (which never changes). Capsules entering together stagger 120ms. Text only fades.
+   Reduced motion or no IntersectionObserver: no bands are ever made, everything is visible.
+   If the observer never reports, a timer rolls everything. If this never runs, CSS shows the text. */
+(function(){
+  var root = document.documentElement;
+  root.classList.add('live');
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fades = [].slice.call(document.querySelectorAll('.fade'));
+  var caps = [].slice.call(document.querySelectorAll('.capsule'));
+
+  function showText(){ fades.forEach(function(n){ n.classList.add('on'); }); }
+  if(calm || !('IntersectionObserver' in window)){ showText(); return; }
+
+  var TOPS = [-8, 16, 40, 62];
+  function lay(c){
+    var v = document.createElement('span');
+    v.className = 'vapour';
+    v.setAttribute('aria-hidden', 'true');
+    for(var j = 0; j < TOPS.length; j++){
+      var b = document.createElement('i');
+      b.style.top = TOPS[j] + '%';
+      b.style.height = (46 + Math.round(Math.random() * 12)) + '%';
+      b.style.setProperty('--x', (110 + Math.round(Math.random() * 30)) + '%');
+      b.style.setProperty('--d', (1000 + Math.round(Math.random() * 500)) + 'ms');
+      v.appendChild(b);
+    }
+    c.appendChild(v);
+  }
+  function roll(c, lag){
+    var v = c.querySelector('.vapour');
+    if(!v || v.classList.contains('roll')) return;
+    var bands = [].slice.call(v.children).reverse();   /* lowest band leaves first */
+    bands.forEach(function(b, j){ b.style.transitionDelay = (lag + j * 90) + 'ms'; });
+    void v.offsetWidth;
+    v.classList.add('roll');
+    window.setTimeout(function(){ if(v.parentNode){ v.parentNode.removeChild(v); } }, lag + 3 * 90 + 1650);
+  }
+
+  var heard = false;
+  try {
+    caps.forEach(lay);
+    var io = new IntersectionObserver(function(entries){
+      heard = true;
+      var arriving = [];
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var n = e.target;
+        io.unobserve(n);
+        if(n.classList.contains('capsule')) arriving.push(n); else n.classList.add('on');
+      });
+      arriving.sort(function(a, b){
+        var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+        return (Math.round(ra.top / 40) - Math.round(rb.top / 40)) || (ra.left - rb.left);
+      });
+      arriving.forEach(function(c, i){ roll(c, i * 120); });
+    }, { threshold: 0.18, rootMargin: '0px 0px -4% 0px' });
+    fades.concat(caps).forEach(function(n){ io.observe(n); });
+  } catch(err) {
+    [].slice.call(document.querySelectorAll('.vapour')).forEach(function(v){ v.parentNode.removeChild(v); });
+    showText();
+    return;
+  }
+
+  /* timed fallback: if the observer never reports, show everything */
+  window.setTimeout(function(){
+    if(!heard){ showText(); caps.forEach(function(c){ roll(c, 0); }); }
+  }, 2500);
+})();
+</script>
+</body>
+</html>
