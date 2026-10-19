@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta name="tc-build" content="7a6a3d523ed6">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>J Williams Fine Art × Taylormade Creative — A room worth the appointment</title>
+<meta name="description" content="A content-day concept for J Williams Fine Art in the Dallas Design District: one day filming the gallery itself in motion, composed vertical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Gantari:wght@300..800&display=swap" rel="stylesheet">
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+<style>
+:root{
+  --white:#FAF9F6; --wall:#ECEAE5; --char:#1C1C1B;
+  --alu:#B7BABD; --alu-deep:#8E9296; --oak:#B79668; --oak-deep:#8F7149; --vial:#C6D85A;
+  --front:#F8F7F3; --side-a:#E5E3DD; --side-b:#DAD8D1;
+  --ink-70:rgba(28,28,27,.72); --light-80:rgba(250,249,246,.84);
+  --disp:'Antic Didone','Didot','Bodoni 72',Georgia,serif;
+  --body:'Gantari','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --pad:clamp(24px,6vw,104px);
+  --d:12px;
+  --settle:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--char);font-family:var(--body);font-size:18px;line-height:1.62;
+  -webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2{font-family:var(--disp);font-weight:400;margin:0;letter-spacing:-.005em}
+h1{font-size:clamp(46px,9.4vw,150px);line-height:.98}
+h2{font-size:clamp(40px,6.2vw,94px);line-height:1.02}
+p{margin:0 0 18px}
+a{color:inherit}
+header,main,section,footer,figure{position:relative}
+:focus-visible{outline:3px solid var(--vial);outline-offset:4px}
+
+/* ---------- labels: Gantari 600, uppercase, tracked, an oak rule ahead ---------- */
+.eyebrow{display:flex;align-items:center;gap:14px;margin:0 0 24px;font-weight:600;font-size:13px;line-height:1.3;
+  letter-spacing:.2em;text-transform:uppercase}
+.eyebrow::before{content:"";flex:none;width:28px;height:2px;background:var(--oak)}
+
+/* ---------- the wall: every section is a white cube with a skirting line at its foot ---------- */
+.sec{position:relative;z-index:2;overflow:hidden;padding:clamp(76px,9vw,150px) var(--pad) clamp(92px,10vw,164px)}
+.sec::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;pointer-events:none;
+  background:linear-gradient(180deg,#FFFFFF,#F2F1EC);border-top:1px solid rgba(28,28,27,.13)}
+.wallbg{background:var(--wall)}
+.dark{background:var(--char);color:var(--white)}
+.dark::after{background:linear-gradient(180deg,#2A2A28,#222221);border-top-color:rgba(250,249,246,.16)}
+.lede{font-size:clamp(19px,1.6vw,22px);line-height:1.52;max-width:800px;margin-top:24px}
+.cols{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr);gap:56px;margin-top:48px;align-items:start}
+@media(min-width:960px){
+  .cols{grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(56px,6vw,112px)}
+  .cols.flip{grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr)}
+}
+.measure{max-width:640px}
+
+/* ---------- THE PLINTHS ---------- */
+.stand{position:relative;z-index:2;margin:0;display:flex;flex-direction:column;--spill:clamp(10px,3vw,40px)}
+.stage{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-top:32px}
+/* the floor: a hairline at the plinth's foot, a faint band of floor below it */
+.stage::after{content:"";position:absolute;left:calc(var(--gap,0px) / -2 - var(--spill,0px));right:calc(var(--gap,0px) / -2 - var(--spill,0px));
+  bottom:0;height:1px;background:rgba(28,28,27,.26);pointer-events:none}
+.stage::before{content:"";position:absolute;left:calc(var(--gap,0px) / -2 - var(--spill,0px));right:calc(var(--gap,0px) / -2 - var(--spill,0px));
+  top:100%;height:24px;background:linear-gradient(180deg,rgba(28,28,27,.06),rgba(28,28,27,0));pointer-events:none}
+.cast{position:absolute;z-index:0;left:50%;bottom:-10px;width:calc(var(--w,100%) + 6%);height:22px;margin-left:calc((var(--w,100%) + 6%) / -2);
+  border-radius:50%;background:radial-gradient(closest-side,rgba(28,28,27,.3),rgba(28,28,27,.1) 60%,rgba(28,28,27,0));pointer-events:none}
+.plinth{position:relative;z-index:1;width:calc(var(--w,100%) - var(--d));margin-right:var(--d);
+  padding:var(--bd,12px) var(--bd,12px) var(--rise,var(--bd,12px));
+  background:linear-gradient(180deg,var(--front) 0%,#F3F2EE 100%);
+  box-shadow:inset 0 0 0 1px rgba(28,28,27,.08),inset 0 -5px 0 rgba(28,28,27,.045)}
+@media(max-width:620px){.plinth{--bd:10px}}
+/* top face: lighter, a skewed parallelogram */
+.plinth::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:var(--d);pointer-events:none;
+  transform:skewX(-45deg);transform-origin:0 100%;
+  background:linear-gradient(180deg,#FFFFFF,#FDFDFB);box-shadow:inset 0 0 0 1px rgba(28,28,27,.08)}
+/* right side face: a faint shade */
+.plinth::after{content:"";position:absolute;left:100%;top:0;bottom:0;width:var(--d);pointer-events:none;
+  transform:skewY(-45deg);transform-origin:0 0;
+  background:linear-gradient(180deg,var(--side-a),var(--side-b));box-shadow:inset -1px 0 0 rgba(28,28,27,.08)}
+.face{position:relative;overflow:hidden;aspect-ratio:var(--ar,4/5);background:#D9D6CF}
+.face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#D9D6CF;color:var(--ink-70);font-size:13px;
+  object-position:var(--px,50%) var(--py,50%);transform:scale(var(--z,1));transform-origin:var(--px,50%) var(--py,50%)}
+
+/* the spirit level resting on each top face */
+.level{position:absolute;z-index:3;bottom:calc(100% + 3px);left:var(--lx,22%);width:var(--lw,68px);height:var(--lh,11px);border-radius:2px;pointer-events:none;
+  background:linear-gradient(180deg,#D7C19B 0%,var(--oak) 52%,var(--oak-deep) 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 1px 0 rgba(28,28,27,.24),0 4px 5px -3px rgba(28,28,27,.42)}
+.level::before,.level::after{content:"";position:absolute;top:0;bottom:0;width:5px;
+  background:linear-gradient(180deg,#E6E8EA,var(--alu) 55%,var(--alu-deep))}
+.level::before{left:0;border-radius:2px 0 0 2px}
+.level::after{right:0;border-radius:0 2px 2px 0}
+.level.alu{background:linear-gradient(180deg,#E8EAEC 0%,var(--alu) 52%,var(--alu-deep) 100%)}
+.level.alu::before,.level.alu::after{background:linear-gradient(180deg,#45453F,var(--char))}
+.vial{position:absolute;left:50%;top:50%;width:var(--vw,28px);height:var(--vh,6px);margin:calc(var(--vh,6px) / -2) 0 0 calc(var(--vw,28px) / -2);
+  border-radius:4px;overflow:hidden;background:linear-gradient(180deg,#E8F0A2 0%,var(--vial) 55%,#A9BB44 100%);
+  box-shadow:inset 0 0 0 1px rgba(28,28,27,.4),inset 0 1px 1px rgba(255,255,255,.7)}
+.vial::before,.vial::after{content:"";position:absolute;top:0;bottom:0;width:1px;background:rgba(28,28,27,.62)}
+.vial::before{left:calc(50% - var(--bw,7px) / 2 - 2px)}
+.vial::after{left:calc(50% + var(--bw,7px) / 2 + 1px)}
+.bubble{position:absolute;top:50%;left:50%;width:var(--bw,7px);height:var(--bh,4px);margin:calc(var(--bh,4px) / -2) 0 0 calc(var(--bw,7px) / -2);
+  border-radius:50%;background:radial-gradient(ellipse at 40% 35%,#FFFFFF 0 34%,rgba(255,255,255,.82) 62%,rgba(255,255,255,.5) 100%);
+  box-shadow:0 0 0 .5px rgba(28,28,27,.2)}
+
+/* the exhibition-checklist caption beneath each plinth */
+.check{display:flex;flex-direction:column;gap:6px;padding:22px 0 0}
+.tag{font-weight:600;font-size:12px;line-height:1.35;letter-spacing:.16em;text-transform:uppercase}
+.check strong{font-weight:600;font-size:18px;line-height:1.22}
+.desc{font-size:15px;line-height:1.5;color:var(--ink-70)}
+.tf{font-size:12px;line-height:1.4;letter-spacing:.01em;color:var(--ink-70)}
+.dark .stage::after{background:rgba(250,249,246,.3)}
+.dark .stage::before{background:linear-gradient(180deg,rgba(250,249,246,.06),rgba(250,249,246,0))}
+.dark .cast{background:radial-gradient(closest-side,rgba(0,0,0,.6),rgba(0,0,0,.2) 60%,rgba(0,0,0,0))}
+.dark .tf,.dark .desc{color:var(--light-80)}
+
+/* ---------- THE LEVEL: the bubble finds centre, the face comes up ---------- */
+.js .plinth.pre .face img{opacity:.15}
+.js .plinth.pre .bubble{transform:translateX(var(--travel,-10px))}
+.plinth.go .face img{opacity:1;transition:opacity .9s var(--settle) var(--lag,0ms)}
+.plinth.go .bubble{animation:centre .9s var(--settle) var(--lag,0ms) both}
+@keyframes centre{
+  0%{transform:translateX(var(--travel,-10px))}
+  74%{transform:translateX(2.5px)}
+  100%{transform:translateX(0)}
+}
+/* text only fades */
+.js .fade{opacity:0;transition:opacity .8s ease}
+.js .fade.on{opacity:1}
+.js:not(.live) .fade{animation:rescue 0s linear 4.5s forwards}
+@keyframes rescue{to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .fade{opacity:1!important;transition:none!important;animation:none!important}
+  .plinth .face img{opacity:1!important;transition:none!important}
+  .bubble{animation:none!important;transform:none!important}
+}
+
+/* ---------- HERO: one huge plinth fills the first viewport ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;overflow:hidden;background:var(--white);
+  --d:14px;padding:44px calc(14px + var(--d) + 6px) 34px 14px}
+@media(min-width:800px){.hero{--d:18px;padding:52px calc(28px + var(--d) + 6px) 40px 28px}}
+.hero-stage{position:relative;flex:1;display:flex;flex-direction:column}
+.hero-stage::after{content:"";position:absolute;left:-28px;right:-60px;bottom:0;height:1px;background:rgba(28,28,27,.28)}
+.hero-stage::before{content:"";position:absolute;left:-28px;right:-60px;top:100%;height:40px;background:linear-gradient(180deg,rgba(28,28,27,.07),rgba(28,28,27,0))}
+.hero .cast{left:1%;width:100%;margin-left:0;bottom:-14px;height:28px}
+.hero-plinth{flex:1;display:flex;width:auto;margin:0;--bd:10px;--rise:10px}
+@media(min-width:800px){.hero-plinth{--bd:14px;--rise:14px}}
+.hero-plinth .level{--lw:112px;--lh:15px;--vw:42px;--vh:9px;--bw:10px;--bh:6px;--travel:-15px;left:clamp(44px,12%,190px);bottom:calc(100% + 4px)}
+.hero-face{flex:1;aspect-ratio:auto;min-height:0;display:flex;flex-direction:column;justify-content:space-between;
+  padding:22px clamp(20px,4vw,64px) 24px;color:var(--white);background:#3A3936}
+.hero-face img{background:#3A3936;color:var(--light-80)}
+.scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(28,28,27,.82) 0%,rgba(28,28,27,.42) 22%,rgba(28,28,27,.5) 52%,rgba(28,28,27,.93) 100%),
+    linear-gradient(90deg,rgba(28,28,27,.74) 0%,rgba(28,28,27,.26) 58%,rgba(28,28,27,.06) 86%)}
+@media(max-width:760px){.scrim{background:
+    linear-gradient(180deg,rgba(28,28,27,.84) 0%,rgba(28,28,27,.52) 20%,rgba(28,28,27,.58) 50%,rgba(28,28,27,.94) 100%),
+    linear-gradient(90deg,rgba(28,28,27,.5) 0%,rgba(28,28,27,.26) 70%,rgba(28,28,27,.16) 100%)}}
+.nav,.hero-body,.hero-foot{position:relative;z-index:2;text-shadow:0 1px 18px rgba(28,28,27,.6)}
+.nav{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;
+  font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+.nav .meta{text-align:right;color:var(--light-80);line-height:1.55}
+.hero-body{padding:64px 0 36px}
+.hero-tag{font-size:clamp(18px,1.65vw,23px);line-height:1.5;max-width:720px;margin:28px 0 0}
+.hero-sub{font-size:clamp(16px,1.25vw,19px);max-width:580px;margin:14px 0 0;color:var(--light-80)}
+.hero-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 28px;
+  font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--light-80)}
+.hero-foot p{margin:0}
+
+/* ---------- 01 why now ---------- */
+.q{margin:0;max-width:580px;padding-top:22px;border-top:2px solid var(--oak)}
+.q blockquote{margin:0;font-family:var(--disp);font-size:clamp(32px,3.2vw,46px);line-height:1.14}
+.q .said{margin:16px 0 0;font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-70)}
+.after-q{margin-top:28px;max-width:580px}
+.read-stand{margin-top:40px;max-width:520px}
+
+/* ---------- 02 the floor ---------- */
+.floor{--gap:clamp(18px,2.2vw,34px);list-style:none;margin:60px 0 0;padding:0;display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--gap);row-gap:0}
+@media(min-width:760px){.floor{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1180px){.floor{grid-template-columns:repeat(6,minmax(0,1fr))}}
+.floor>li{display:contents}
+.spot{margin:0;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0;--spill:0px}
+.spot .stage{align-self:stretch}
+.spot .check{padding:22px 2px 52px}
+.stills{position:relative;z-index:2;margin:8px 0 0;max-width:860px;font-size:clamp(18px,1.55vw,21px);line-height:1.52}
+
+/* ---------- 03 the format (after hours) ---------- */
+.dark p{color:var(--light-80)}
+.dark .eyebrow,.dark h2{color:var(--white)}
+.fmt-stand{max-width:480px;width:100%;justify-self:center}
+
+/* ---------- 04 the day ---------- */
+.scope{list-style:none;margin:0;padding:0;border-top:1px solid rgba(28,28,27,.16)}
+.scope li{display:grid;grid-template-columns:46px minmax(0,1fr);gap:4px 14px;padding:20px 0 22px;border-bottom:1px solid rgba(28,28,27,.16)}
+.num{font-weight:600;font-size:14px;letter-spacing:.12em;padding-top:5px;color:var(--char)}
+.num::after{content:"";display:block;width:22px;height:2px;margin-top:6px;background:var(--oak)}
+.scope strong{display:block;font-weight:600;font-size:clamp(20px,1.8vw,24px);line-height:1.2;margin-bottom:4px}
+.scope .d{display:block;color:var(--ink-70)}
+.after-scope{margin:28px 0 0;font-size:clamp(18px,1.55vw,21px);font-weight:500}
+.day-stand{max-width:500px;width:100%;justify-self:center}
+
+/* ---------- 05 who ---------- */
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 0;padding:0}
+.chips li{padding:11px 15px 10px;background:var(--white);border:1px solid rgba(28,28,27,.16);font-size:15px;line-height:1.3;color:var(--ink-70)}
+.chips b{display:block;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--char);margin-bottom:3px}
+.who-stand{max-width:480px;width:100%;justify-self:center}
+
+/* ---------- 06 close ---------- */
+.close-stand{--ar:4/3}
+@media(min-width:760px){.close-stand{--ar:16/7}}
+.close-copy{position:relative;z-index:2;max-width:940px;margin-top:64px}
+.close-copy h2 small{display:block;margin-top:18px;font-family:var(--body);font-weight:400;font-size:clamp(19px,1.8vw,24px);
+  line-height:1.42;letter-spacing:0;color:var(--ink-70)}
+.cta{display:inline-block;margin:30px 0 38px;padding:17px 30px 16px;background:var(--char);color:var(--white);text-decoration:none;
+  font-weight:600;font-size:15px;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 12px 20px -14px rgba(28,28,27,.7)}
+.cta:hover{background:#000}
+.sig{font-size:16px;line-height:1.85;color:var(--ink-70)}
+.sig b{font-weight:600;font-size:22px;color:var(--char)}
+
+/* ---------- footer ---------- */
+.foot{position:relative;z-index:2;padding:30px var(--pad) 40px;background:var(--wall);color:var(--ink-70);
+  border-top:1px solid rgba(28,28,27,.18);font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.foot p{margin:8px 0}
+.foot .disc{text-transform:none;letter-spacing:0;font-weight:400;font-size:15px;line-height:1.6;max-width:820px}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="hero-stage">
+    <span class="cast" aria-hidden="true"></span>
+    <div class="plinth hero-plinth">
+      <span class="level" aria-hidden="true"><span class="vial"><i class="bubble"></i></span></span>
+      <div class="face hero-face">
+        <img src="images/hero.png" width="1536" height="1024" style="--px:50%;--py:50%" alt="Treatment frame — a wide, empty white gallery in late afternoon, low golden light raking across a pale floor and up the far wall, three white plinths standing empty, one wrapped work leaning against a bare wall">
+        <div class="scrim" aria-hidden="true"></div>
+        <div class="nav">
+          <div>Taylormade Creative</div>
+          <div class="meta">J Williams Fine Art · Dallas Design District<br>A content-day concept</div>
+        </div>
+        <div class="hero-body fade">
+          <p class="eyebrow">For James Williams · J Williams Fine Art</p>
+          <h1>A room worth the appointment.</h1>
+          <p class="hero-tag">One day inside the gallery, filmed as a room in motion: light crossing white walls, a wrapped work carried in on gloved hands, a level finding centre, the floor set and empty.</p>
+          <p class="hero-sub">Composed 9:16 for Reels, TikTok and Shorts, with a stills bank from the same light.</p>
+        </div>
+        <div class="hero-foot">
+          <p>Prepared for J Williams Fine Art · Dallas Design District</p>
+          <p>Creative direction — treatment frames, not final footage</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="read" class="sec">
+  <div class="fade">
+    <p class="eyebrow">01 · Why now</p>
+    <h2>Every visit, on purpose.</h2>
+  </div>
+  <div class="cols">
+    <div class="measure fade">
+      <p>James, Nelson Taylor here. I direct and shoot brand content in Dallas–Fort Worth, and the Texas Design Week schedule is what brought me to your site: it lists a salon talk and book signing at the gallery on Tuesday, November 10.</p>
+      <p>Your site describes a 5,200-square-foot gallery in the Dallas Design District with a rotating group show, and it says plainly: open by appointment.</p>
+      <p>That's the line I kept coming to. A gallery that opens by appointment is a room people plan an hour around. The day on this page puts that room on a phone, in motion: its scale, its light, and the quiet of a floor that has been set for whoever booked the hour.</p>
+    </div>
+    <div>
+      <div class="q fade">
+        <blockquote>“From initial discovery through final installation…”</blockquote>
+        <p class="said">— from the J Williams Fine Art site</p>
+      </div>
+      <p class="after-q fade">Installation is part of the work your site describes, so it's part of what the day films: a work arriving wrapped, carried through the door, a level set against a bare wall. In every frame on this page the work stays wrapped. What appears on camera is your call and the artists' to make.</p>
+      <figure class="stand read-stand">
+        <div class="stage">
+          <span class="cast" aria-hidden="true" style="--w:92%"></span>
+          <div class="plinth" style="--w:92%;--ar:4/5;--rise:26px">
+            <span class="level" aria-hidden="true" style="--lx:58%"><span class="vial"><i class="bubble"></i></span></span>
+            <div class="face"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:46%;--z:1.08" alt="Treatment frame — a white-gloved hand holding a plain white oak spirit level flat against a bare white wall, the bubble resting between the centre marks"></div>
+          </div>
+        </div>
+        <figcaption class="check fade"><span class="tag">The level · a bare wall</span><span class="tf">Creative direction — treatment frames, not final footage.</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="floor" class="sec wallbg">
+  <div class="fade">
+    <p class="eyebrow">02 · The shot list</p>
+    <h2>The floor.</h2>
+    <p class="lede">One day at the gallery, on a date you choose, with the walls however you want them. Six setups, standing in a row like plinths on a gallery floor: hands, light, walls and floor. No faces, and no artist's work unless you and the artist want it there.</p>
+  </div>
+
+  <ol class="floor" aria-label="The shot list, one plinth per setup">
+    <li><figure class="spot">
+      <div class="stage">
+        <span class="cast" aria-hidden="true" style="--w:100%"></span>
+        <div class="plinth" style="--w:100%;--ar:4/5;--rise:22px">
+          <span class="level" aria-hidden="true" style="--lx:20%"><span class="vial"><i class="bubble"></i></span></span>
+          <div class="face"><img src="images/hero.png" width="1536" height="1024" loading="lazy" style="--px:24%;--py:72%;--z:1.45" alt="Treatment frame — low golden light reaching across an empty gallery floor toward the far wall"></div>
+        </div>
+      </div>
+      <figcaption class="check fade"><span class="tag">1 · the floor, first light</span><strong>The room at rest</strong><span class="desc">The gallery before anyone arrives, wide and slow at eye height, the first light reaching across the floor.</span><span class="tf">Creative direction — treatment frames, not final footage.</span></figcaption>
+    </figure></li>
+    <li><figure class="spot">
+      <div class="stage">
+        <span class="cast" aria-hidden="true" style="--w:86%"></span>
+        <div class="plinth" style="--w:86%;--ar:2/3;--rise:12px">
+          <span class="level alu" aria-hidden="true" style="--lx:34%"><span class="vial"><i class="bubble"></i></span></span>
+          <div class="face"><img src="images/hero.png" width="1536" height="1024" loading="lazy" style="--px:60%;--py:36%;--z:1.6" alt="Treatment frame — soft-edged shapes of warm daylight on a tall bare white wall"></div>
+        </div>
+      </div>
+      <figcaption class="check fade"><span class="tag">2 · the long wall, all day</span><strong>Light across the walls</strong><span class="desc">One locked frame on a long white wall from morning to evening, the light travelling across it, cut down to seconds.</span><span class="tf">Creative direction — treatment frames, not final footage.</span></figcaption>
+    </figure></li>
+    <li><figure class="spot">
+      <div class="stage">
+        <span class="cast" aria-hidden="true" style="--w:94%"></span>
+        <div class="plinth" style="--w:94%;--ar:3/4;--rise:44px">
+          <span class="level" aria-hidden="true" style="--lx:44%"><span class="vial"><i class="bubble"></i></span></span>
+          <div class="face"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:50%" alt="Treatment frame — a figure in charcoal, seen from the shoulders down, carrying a wrapped work level in white cotton gloves through a white doorway"></div>
+        </div>
+      </div>
+      <figcaption class="check fade"><span class="tag">3 · the door, a work arriving</span><strong>The arrival</strong><span class="desc">A wrapped work coming through the door on gloved hands. The wrap, the grip and the care, never the work.</span><span class="tf">Creative direction — treatment frames, not final footage.</span></figcaption>
+    </figure></li>
+    <li><figure class="spot">
+      <div class="stage">
+        <span class="cast" aria-hidden="true" style="--w:80%"></span>
+        <div class="plinth" style="--w:80%;--ar:1/1;--rise:64px">
+          <span class="level alu" aria-hidden="true" style="--lx:18%"><span class="vial"><i class="bubble"></i></span></span>
+          <div class="face"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:44%;--z:1.5" alt="Treatment frame — close on a white-gloved hand holding an oak spirit level, its small green vial at the centre"></div>
+        </div>
+      </div>
+      <figcaption class="check fade"><span class="tag">4 · a bare wall, the level</span><strong>The level</strong><span class="desc">A level set against the wall and the bubble drifting to centre. The smallest shot of the day, and the one the format is built on.</span><span class="tf">Creative direction — treatment frames, not final footage.</span></figcaption>
+    </figure></li>
+    <li><figure class="spot">
+      <div class="stage">
+        <span class="cast" aria-hidden="true" style="--w:100%"></span>
+        <div class="plinth" style="--w:100%;--ar:5/6;--rise:30px">
+          <span class="level" aria-hidden="true" style="--lx:52%"><span class="vial"><i class="bubble"></i></span></span>
+          <div class="face"><img src="images/hero.png" width="1536" height="1024" loading="lazy" style="--px:50%;--py:64%;--z:1.8" alt="Treatment frame — plain white plinths of different heights standing empty on a pale floor"></div>
+        </div>
+      </div>
+      <figcaption class="check fade"><span class="tag">5 · the plinths, empty</span><strong>Set and ready</strong><span class="desc">Plinths and open floor in their places: the room as it looks the minute before a visit.</span><span class="tf">Creative direction — treatment frames, not final footage.</span></figcaption>
+    </figure></li>
+    <li><figure class="spot">
+      <div class="stage">
+        <span class="cast" aria-hidden="true" style="--w:88%"></span>
+        <div class="plinth" style="--w:88%;--ar:3/5;--rise:16px">
+          <span class="level alu" aria-hidden="true" style="--lx:30%"><span class="vial"><i class="bubble"></i></span></span>
+          <div class="face"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:92%;--z:1.6" alt="Treatment frame — a figure seen from the waist down stepping through a white doorway onto a pale gallery floor"></div>
+        </div>
+      </div>
+      <figcaption class="check fade"><span class="tag">6 · eye height, walking</span><strong>The walk-through</strong><span class="desc">A slow walk through the gallery at a visitor's eye height, composed vertical from the first step.</span><span class="tf">Creative direction — treatment frames, not final footage.</span></figcaption>
+    </figure></li>
+  </ol>
+
+  <p class="stills fade">All day, the A7RV pulls stills from the same setups: a bank of photographs for the site, the grid and anyone writing about the gallery.</p>
+</section>
+
+<section id="format" class="sec dark">
+  <div class="cols flip">
+    <figure class="stand fmt-stand">
+      <div class="stage">
+        <span class="cast" aria-hidden="true" style="--w:100%"></span>
+        <div class="plinth" style="--w:100%;--ar:2/3;--rise:34px">
+          <span class="level" aria-hidden="true" style="--lx:26%"><span class="vial"><i class="bubble"></i></span></span>
+          <div class="face"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:46%" alt="Treatment frame — white-gloved hands holding a wrapped work level against a charcoal sweater, a bright empty gallery beyond"></div>
+        </div>
+      </div>
+      <figcaption class="check fade"><span class="tag">After hours · the wrap</span><span class="tf">Creative direction — treatment frames, not final footage.</span></figcaption>
+    </figure>
+    <div class="measure fade">
+      <p class="eyebrow">03 · The format</p>
+      <h2>One wall a week.</h2>
+      <p style="margin-top:32px">The level shot becomes a format. On the shoot day I'd frame several walls the same way, at the same height and on the same lens: the light crossing the wall, the level touching it, the floor in front of it set. Cut one wall at a time, it gives the feed a rhythm it can keep through the quarter, and no one at the gallery ever has to be on camera.</p>
+      <p>Which works appear on those walls, if any, is a question for you and the artists, and it's the first one I'd ask rather than assume. The format holds with the walls bare, wrapped, or hung however you and they decide.</p>
+    </div>
+  </div>
+</section>
+
+<section id="day" class="sec">
+  <div class="fade">
+    <p class="eyebrow">04 · The scope</p>
+    <h2>Just the day.</h2>
+    <p class="lede">Five lines. That's the whole of it.</p>
+  </div>
+  <div class="cols">
+    <div class="fade">
+      <ol class="scope">
+        <li><span class="num">01</span><div><strong>One shoot day at the gallery</strong><span class="d">I direct and shoot it myself, on a date that suits your calendar.</span></div></li>
+        <li><span class="num">02</span><div><strong>Sony FX6 + Sony A7RV</strong><span class="d">Cinema motion on the FX6; stills and hybrid on the A7RV.</span></div></li>
+        <li><span class="num">03</span><div><strong>Vertical-first</strong><span class="d">Every cut is composed 9:16 for Reels, TikTok and Shorts.</span></div></li>
+        <li><span class="num">04</span><div><strong>An edited set of vertical videos + a stills bank</strong><span class="d">All from the same day, built to run for a quarter.</span></div></li>
+        <li><span class="num">05</span><div><strong>Two rounds of edits</strong><span class="d">About two weeks from the shoot to the finished set.</span></div></li>
+      </ol>
+      <p class="after-scope">Everything else, including when it fits the gallery's calendar, is a conversation for a call.</p>
+    </div>
+    <figure class="stand day-stand">
+      <div class="stage">
+        <span class="cast" aria-hidden="true" style="--w:94%"></span>
+        <div class="plinth" style="--w:94%;--ar:3/4;--rise:20px">
+          <span class="level alu" aria-hidden="true" style="--lx:60%"><span class="vial"><i class="bubble"></i></span></span>
+          <div class="face"><img src="images/hero.png" width="1536" height="1024" loading="lazy" style="--px:30%;--py:58%;--z:1.4" alt="Treatment frame — warm late light falling across an empty gallery floor toward a bare white wall"></div>
+        </div>
+      </div>
+      <figcaption class="check fade"><span class="tag">The day · late light</span><span class="tf">Creative direction — treatment frames, not final footage.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="who" class="sec wallbg">
+  <div class="cols">
+    <div class="fade">
+      <p class="eyebrow">05 · Who</p>
+      <h2>Behind the lens.</h2>
+      <p style="margin-top:32px">I'm Nelson Taylor, and Taylormade Creative is my studio in Dallas–Fort Worth. I've spent fourteen years in design and creative direction; these days most of that work is brand content I direct, shoot and edit myself.</p>
+      <p>Content work includes TONI&amp;GUY Academy, It's a Secret Med Spa and Dreamcatchers Hair. Clients over the years include Toni &amp; Guy, Lava Cantina, KFC, IAS Academy and Curls, and I shipped one iOS app, Run It UP! Dallas.</p>
+      <p>The person composing each frame is the person cutting it, so the floor on this page is the edit you'd see.</p>
+      <ul class="chips">
+        <li><b>14 years</b>design and creative direction</li>
+        <li><b>Cinema + stills</b>one kit, one day</li>
+        <li><b>9:16</b>framed for a phone first</li>
+        <li><b>Start to finish</b>the same eye on set and in the edit</li>
+      </ul>
+    </div>
+    <figure class="stand who-stand">
+      <div class="stage">
+        <span class="cast" aria-hidden="true" style="--w:90%"></span>
+        <div class="plinth" style="--w:90%;--ar:4/5;--rise:40px">
+          <span class="level" aria-hidden="true" style="--lx:30%"><span class="vial"><i class="bubble"></i></span></span>
+          <div class="face"><img src="images/hero.png" width="1536" height="1024" loading="lazy" style="--px:88%;--py:56%;--z:1.7" alt="Treatment frame — a large work wrapped in plain white sheeting leaning against a bare white gallery wall"></div>
+        </div>
+      </div>
+      <figcaption class="check fade"><span class="tag">Waiting · wrapped, against the wall</span><span class="tf">Creative direction — treatment frames, not final footage.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="close" class="sec">
+  <figure class="stand close-stand">
+    <div class="stage">
+      <span class="cast" aria-hidden="true" style="--w:100%"></span>
+      <div class="plinth" style="--w:100%;--rise:18px">
+        <span class="level alu" aria-hidden="true" style="--lx:16%"><span class="vial"><i class="bubble"></i></span></span>
+        <div class="face"><img src="images/hero.png" width="1536" height="1024" loading="lazy" style="--px:46%;--py:52%" alt="Treatment frame — the empty white gallery wide, late light across the floor and walls, plinths standing ready"></div>
+      </div>
+    </div>
+    <figcaption class="check fade"><span class="tag">The room · set and empty</span><span class="tf">Creative direction — treatment frames, not final footage.</span></figcaption>
+  </figure>
+  <div class="close-copy fade">
+    <p class="eyebrow">06 · No clock</p>
+    <h2>Whenever it suits. <small>Nothing on this page needs an answer on any timeline.</small></h2>
+    <p style="margin-top:32px">If the room on this page feels like the gallery, I'd be glad to talk it through on a short call, booked the way your visitors book: by appointment. I'll walk you through the six plinths, and you can strike any that don't feel like J Williams Fine Art.</p>
+    <p>And if the season isn't right, “not yet” is a perfectly good answer. Thank you for reading this far.</p>
+    <a class="cta" href="mailto:taylormademd@gmail.com?subject=J%20Williams%20Fine%20Art%20%C3%97%20Taylormade%20Creative">Email Nelson</a>
+    <div class="sig">
+      <b>Nelson Taylor</b><br>
+      Founder &amp; Creative Director · Taylormade Creative<br>
+      (817) 707‑1291 · taylormademd@gmail.com<br>
+      www.taylormadecreative.net · @taylormade_creative
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p>Prepared for J Williams Fine Art by Taylormade Creative · Dallas–Fort Worth</p>
+  <p class="disc">All imagery on this page is creative direction — treatment frames, not final footage. None of it is a photograph of J Williams Fine Art's gallery, its team or any artist's work.</p>
+</footer>
+
+<script>
+/* THE LEVEL. As each plinth comes into view, the bubble in its vial travels from the left end to the
+   centre marks, overshoots a hair and settles, while the frame on the plinth's face comes up from .15.
+   Plinths arriving together stagger 130ms across the floor. Text only fades.
+   Reduced motion or no IntersectionObserver: nothing is ever dimmed, bubbles stay centred.
+   If the observer never reports, a timer shows everything; if this never runs, CSS shows the text. */
+(function(){
+  var doc = document.documentElement;
+  doc.classList.add('live');
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var texts = [].slice.call(document.querySelectorAll('.fade'));
+  var plinths = [].slice.call(document.querySelectorAll('.plinth'));
+
+  function atRest(p){ p.classList.remove('pre'); p.classList.remove('go'); p.style.removeProperty('--lag'); }
+  function revealAll(){
+    texts.forEach(function(t){ t.classList.add('on'); });
+    plinths.forEach(atRest);
+  }
+  if(still || !('IntersectionObserver' in window)){ revealAll(); return; }
+
+  function settle(p, lag){
+    p.style.setProperty('--lag', lag + 'ms');
+    p.classList.remove('pre');
+    p.classList.add('go');
+    window.setTimeout(function(){ atRest(p); }, lag + 1000);
+  }
+
+  var reported = false;
+  try {
+    plinths.forEach(function(p){ p.classList.add('pre'); });
+    var watch = new IntersectionObserver(function(entries){
+      reported = true;
+      var batch = [];
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        watch.unobserve(e.target);
+        if(e.target.classList.contains('plinth')) batch.push(e.target); else e.target.classList.add('on');
+      });
+      batch.sort(function(a, b){
+        var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+        return (Math.round(ra.bottom / 60) - Math.round(rb.bottom / 60)) || (ra.left - rb.left);
+      });
+      batch.forEach(function(p, i){ settle(p, i * 130); });
+    }, { threshold: 0.18, rootMargin: '0px 0px -4% 0px' });
+    texts.concat(plinths).forEach(function(n){ watch.observe(n); });
+  } catch(err) {
+    revealAll();
+    return;
+  }
+
+  window.setTimeout(function(){ if(!reported){ revealAll(); } }, 2600);
+})();
+</script>
+</body>
+</html>
