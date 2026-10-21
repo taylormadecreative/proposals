@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="tc-build" content="cdc67b527127">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Harvest House × Taylormade Creative — A backyard changes by the hour</title>
+<meta name="description" content="A content-day concept for Harvest House, Denton: one market day in the backyard, filmed from setup to stage light and cut vertical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Signika:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(function(){var d=document.documentElement;try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&('IntersectionObserver' in window)){d.className+=' anim';}}catch(e){}})();
+</script>
+<style>
+:root{
+  --hay:#EFE4C8; --hay-deep:#E6D8B6; --hay-paper:#F7F0DE;
+  --denim:#1E2A3A; --denim-76:rgba(30,42,58,.78); --denim-hair:rgba(30,42,58,.2); --denim-paper:#2B3B51;
+  --sage:#9FB08F; --sage-paper:#CED7C0;
+  --beet:#8A2E4B; --beet-deep:#70223B; --amber:#EDB146;
+  --on-denim:#F4ECD8; --on-denim-80:rgba(244,236,216,.84);
+  --disp:'Lilita One','Arial Rounded MT Bold','Trebuchet MS',sans-serif;
+  --body:'Signika','Trebuchet MS',Helvetica,Arial,sans-serif;
+  --pad:clamp(24px,6vw,104px);
+  --off:10px;
+}
+@media(min-width:900px){:root{--off:14px}}
+*{box-sizing:border-box}
+html{overflow-x:hidden}
+body{margin:0;background:var(--hay);color:var(--denim);font-family:var(--body);font-size:18px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--disp);font-weight:400;margin:0;letter-spacing:.005em}
+h1{font-size:clamp(46px,11.2vw,148px);line-height:.98}
+h2{font-size:clamp(38px,6.4vw,90px);line-height:1.02}
+h3{font-size:clamp(22px,2vw,28px);line-height:1.14}
+p{margin:0 0 18px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--beet);outline-offset:4px}
+em{font-style:normal;color:var(--beet)}
+
+/* labels: Signika 600 caps; a tiny beet square printed slightly off its amber */
+.eyebrow{display:flex;align-items:center;gap:13px;margin:0 0 20px;font-weight:600;font-size:13px;letter-spacing:.2em;
+  text-transform:uppercase}
+.eyebrow::before{content:"";flex:none;width:11px;height:11px;background:var(--beet);box-shadow:3px 3px 0 var(--amber)}
+
+/* sections */
+.sec{position:relative;z-index:2;padding:clamp(76px,9vw,148px) var(--pad);overflow:hidden}
+.alt{background:var(--hay-deep)}
+.dark{background:var(--denim);color:var(--on-denim)}
+.dark p{color:var(--on-denim-80)}
+.dark em{color:var(--amber)}
+.lede{font-size:clamp(19px,1.7vw,23px);line-height:1.5;max-width:780px;margin-top:22px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr);gap:64px;margin-top:44px;align-items:center}
+@media(min-width:960px){.cols{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(56px,6vw,120px)}}
+.measure{position:relative;z-index:2;max-width:640px}
+.solo{width:min(100%,430px);justify-self:center}
+
+/* ---------- THE SEED PACKET: paper body, pinked top, fold line, printed panel, second-colour plate ---------- */
+.pk{position:relative;z-index:2;margin:8px var(--off) var(--off) 0;--paper:var(--hay-paper);--plate:var(--beet)}
+.pk .plate{position:absolute;inset:0;z-index:0;background:var(--plate);transform:translate(var(--off),var(--off))}
+.pk .plate::before,.pk .paper::before{content:"";position:absolute;left:0;right:0;top:-8px;height:8px;
+  background:conic-gradient(from 135deg at 50% 0,var(--edge) 90deg,transparent 0) 0 0/16px 8px;
+  background-repeat:round no-repeat}
+.pk .plate::before{--edge:var(--plate)}
+.pk .paper::before{--edge:var(--paper)}
+.pk .paper{position:relative;z-index:1;background:var(--paper);color:var(--denim);
+  padding:0 clamp(12px,1.5vw,18px) 18px}
+.pk .flap{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:clamp(16px,2vw,22px) 2px 14px;
+  margin-bottom:14px;border-bottom:1px solid rgba(30,42,58,.17);box-shadow:0 1px 0 rgba(255,255,255,.6)}
+.pk .flap b{font-family:var(--disp);font-weight:400;font-size:clamp(20px,1.8vw,24px);line-height:1}
+.pk .flap span{font-weight:600;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--denim-76);text-align:right}
+.pk .panel{position:relative;overflow:hidden;background:var(--sage);aspect-ratio:var(--ar,4/5)}
+.pk .panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--sage);color:var(--denim);
+  font-size:13px;object-position:var(--px,50%) var(--py,50%);transform:scale(var(--z,1));transform-origin:var(--px,50%) var(--py,50%)}
+.pk .panel::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(30,42,58,.22)}
+.pk figcaption{padding-top:14px}
+.pk .plab{display:block;font-weight:600;font-size:12px;line-height:1.4;letter-spacing:.17em;text-transform:uppercase;color:var(--beet)}
+.pk .tf{display:block;margin-top:8px;font-weight:600;font-size:10.5px;line-height:1.45;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--denim-76)}
+.pk.sage{--paper:var(--sage-paper)}
+.pk.denim{--paper:var(--denim-paper)}
+.pk.denim .paper{color:var(--on-denim)}
+.pk.denim .flap{border-bottom-color:rgba(244,236,216,.2);box-shadow:0 1px 0 rgba(0,0,0,.28)}
+.pk.denim .flap span,.pk.denim .tf{color:var(--on-denim-80)}
+.pk.denim .plab{color:var(--amber)}
+.pk.denim .panel{background:var(--sage)}
+.pk.amber{--plate:var(--amber)}
+.pk.denim.amber .plab{color:var(--amber)}
+
+/* ---------- THE MISREGISTRATION: the plate starts dead behind the packet and lands off register ---------- */
+.anim .pk .plate{transform:translate(0,0)}
+.anim .pk.inked .plate{transform:translate(var(--off),var(--off));
+  transition:transform 700ms cubic-bezier(.16,.68,.3,1) var(--lag,0ms)}
+.anim .fade{opacity:0;transition:opacity .85s ease}
+.anim .fade.on{opacity:1}
+.anim:not(.live) .fade{animation:rescue 0s linear 4.5s forwards}
+.anim:not(.live) .pk .plate{animation:plate-rescue 0s linear 4.5s forwards}
+@keyframes rescue{to{opacity:1}}
+@keyframes plate-rescue{to{transform:translate(var(--off),var(--off))}}
+@media(prefers-reduced-motion:reduce){
+  .anim .fade{opacity:1;transition:none;animation:none}
+  .anim .pk .plate{transform:translate(var(--off),var(--off));transition:none;animation:none}
+}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  padding:26px var(--pad) 30px;overflow:hidden;background:var(--sage)}
+.hero .bed{position:absolute;inset:0;z-index:0;background:var(--sage)}
+.hero .bed img{width:100%;height:100%;object-fit:cover;object-position:62% 50%;background:var(--sage);color:var(--denim)}
+.hero .scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(239,228,200,.97) 0%,rgba(239,228,200,.94) 48%,rgba(239,228,200,.4) 68%,
+    rgba(239,228,200,.08) 80%,rgba(239,228,200,.08) 86%,rgba(239,228,200,.92) 100%)}
+@media(min-width:900px){
+  .hero .scrim{background:
+    linear-gradient(90deg,rgba(239,228,200,.97) 0%,rgba(239,228,200,.92) 33%,rgba(239,228,200,.45) 54%,rgba(239,228,200,0) 70%),
+    linear-gradient(0deg,rgba(239,228,200,.92) 0,rgba(239,228,200,0) 130px)}
+}
+@media(max-width:899px){
+  .hero{background:var(--hay)}
+  .hero .bed{top:auto;bottom:0;height:62%}
+  .hero .bed img{object-position:70% 60%}
+  .hero .scrim{background:linear-gradient(180deg,rgba(239,228,200,.97) 0%,rgba(239,228,200,.95) 58%,rgba(239,228,200,.32) 71%,
+    rgba(239,228,200,.04) 78%,rgba(239,228,200,.04) 84%,rgba(239,228,200,.86) 93%,rgba(239,228,200,.94) 100%)}
+}
+.hero .nav,.hero .hero-body,.hero .hero-foot{position:relative;z-index:2}
+.nav{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;font-weight:600;font-size:13px;
+  letter-spacing:.2em;text-transform:uppercase}
+.nav .meta{text-align:right;color:var(--denim-76);line-height:1.55}
+.hero-body{padding:clamp(40px,8vh,96px) 0 32px}
+.hero-tag{font-size:clamp(19px,1.7vw,23px);line-height:1.5;max-width:560px;margin:26px 0 0}
+.hero-sub{font-size:16px;line-height:1.55;color:var(--denim-76);max-width:500px;margin:12px 0 0}
+.hero-foot{margin-top:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 28px;
+  font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--denim)}
+.hero-foot p{margin:0}
+
+/* ---------- 02 the run of packets ---------- */
+.run{list-style:none;margin:60px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:64px}
+.run > li{position:relative;z-index:2;max-width:520px}
+@media(min-width:860px){
+  .run{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(48px,6vw,110px);row-gap:44px;align-items:start}
+  .run > li:nth-child(even){margin-top:150px}
+}
+.run h3{margin:8px 0 6px}
+.run p{margin:0;font-size:16px;line-height:1.55;color:var(--denim-76)}
+.run .pk.denim p{color:var(--on-denim-80)}
+.stills{position:relative;z-index:2;margin:72px 0 0;max-width:820px;font-size:clamp(18px,1.6vw,21px);line-height:1.5}
+
+/* ---------- 04 the day ---------- */
+.scope{list-style:none;margin:0;padding:0;border-top:1px solid var(--denim-hair)}
+.scope li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:4px 14px;padding:19px 0 21px;border-bottom:1px solid var(--denim-hair)}
+.scope .n{font-family:var(--disp);font-size:27px;line-height:1.05;color:var(--beet)}
+.scope strong{display:block;font-family:var(--disp);font-weight:400;font-size:clamp(21px,1.9vw,25px);line-height:1.16;margin-bottom:3px}
+.scope .d{display:block;color:var(--denim-76)}
+.after{margin:26px 0 0;font-weight:600}
+
+/* ---------- 06 close ---------- */
+.close h2 small{display:block;margin-top:16px;font-family:var(--body);font-weight:500;font-size:clamp(19px,1.8vw,24px);
+  line-height:1.4;letter-spacing:0;color:var(--denim-76)}
+.cta{display:inline-block;margin:28px 0 34px;padding:17px 30px 15px;background:var(--beet);color:var(--hay-paper);
+  text-decoration:none;font-weight:600;font-size:15px;letter-spacing:.18em;text-transform:uppercase;box-shadow:5px 5px 0 var(--amber)}
+.cta:hover{background:var(--beet-deep)}
+.sig{font-size:16px;line-height:1.85;color:var(--denim-76)}
+.sig b{font-family:var(--disp);font-weight:400;font-size:24px;color:var(--denim)}
+
+/* ---------- footer ---------- */
+.foot{position:relative;z-index:2;padding:34px var(--pad) 42px;background:var(--hay-deep);color:var(--denim-76);
+  border-top:6px solid var(--beet);box-shadow:inset 0 6px 0 var(--amber);
+  font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.foot p{margin:8px 0}
+.foot .disc{text-transform:none;letter-spacing:0;font-weight:400;font-size:15px;line-height:1.6;max-width:820px}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="bed"><img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — an open-air gravel backyard in late-morning sun, set for a small farmers market: white canopy tents along a vine-covered wooden fence, crates of beets, squash and apples, buckets of cut flowers, honey-pine picnic tables and a strand of bare-bulb string lights, nobody in the scene"></div>
+  <div class="scrim" aria-hidden="true"></div>
+
+  <div class="nav">
+    <div>Taylormade Creative</div>
+    <div class="meta">Harvest House · Denton<br>A content-day concept</div>
+  </div>
+
+  <div class="hero-body">
+    <p class="eyebrow">For Hannah &amp; Matt · Harvest House</p>
+    <h1>A backyard changes <em>by the hour.</em></h1>
+    <p class="hero-tag">One market day at Harvest House, filmed from the first crate set down to the stage lights coming up, and cut 9:16 for Reels, TikTok and Shorts.</p>
+    <p class="hero-sub">One day in Denton on a cinema camera, with a stills bank from the same light.</p>
+  </div>
+
+  <div class="hero-foot">
+    <p>Prepared for Harvest House · Denton</p>
+    <p>Creative direction — treatment frames, not final footage</p>
+  </div>
+</header>
+
+<main>
+
+<section id="read">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow">01 · The read</p>
+      <h2>Thursday evenings, <em>Sunday afternoons.</em></h2>
+    </div>
+    <div class="cols">
+      <div class="measure fade">
+        <p>Hannah, Matt — Nelson Taylor here. I direct and shoot brand content in Dallas–Fort Worth. Gabby Bailey's Sept. 11 story in Community Impact, on the new farmers market at Harvest House, is what sent me to your site.</p>
+        <p>Produce, flowers, baked goods and handmade things from local growers and makers, Thursdays from 5 to 8 and Sundays from noon to 4, in the yard your site calls “the backyard of Denton.” Congratulations on the ribbon cutting with the Denton Chamber on Oct. 14, too.</p>
+        <p>A market is one of the few things that looks different every hour it runs. Tables go up in late-morning light, the stalls fill at noon, the yard slows down through the afternoon and the bulbs come on at dusk. So the idea is simple: one market day, filmed hour by hour.</p>
+      </div>
+      <figure class="pk sage solo">
+        <span class="plate" aria-hidden="true"></span>
+        <div class="paper">
+          <div class="flap"><b>The flowers</b><span>Early afternoon</span></div>
+          <div class="panel" style="--ar:2/3"><img src="images/frame-01.png" width="1024" height="1536" alt="Treatment frame — two hands in rolled denim sleeves wrapping a bouquet of beet-red dahlias, butter-yellow strawflowers and sage eucalyptus in plain paper on a wooden market table"></div>
+          <figcaption>
+            <span class="plab">The read · stems in paper</span>
+            <span class="tf">Creative direction — treatment frames, not final footage.</span>
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="shoot" class="alt">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow">02 · What we'd shoot</p>
+      <h2>Six packets, <em>one day.</em></h2>
+      <p class="lede">A Sunday market, on a day you choose, from vendor setup to dusk: hands, goods, tables, light and the yard itself. Vendors are their own businesses, so on camera they're hands and goods only, with no names, no stall signs and no faces, and whether a stall takes part is a conversation between you and them. Guests appear as hands at most.</p>
+    </div>
+
+    <ol class="run" aria-label="The one-day plan, hour by hour">
+      <li>
+        <figure class="pk amber">
+          <span class="plate" aria-hidden="true"></span>
+          <div class="paper">
+            <div class="flap"><b>No. 1</b><span>Sunday · Denton</span></div>
+            <div class="panel" style="--ar:4/5;--px:72%;--py:58%;--z:1.5"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — white canopy tents along a weathered wooden fence, folding tables laid with crates of produce before a market opens"></div>
+            <figcaption class="fade">
+              <span class="plab">Packet 1 · 11 a.m., setup</span>
+              <h3>The tables go up</h3>
+              <p>Tents opening along the fence, crates set down on bare tables, the first light moving across the gravel.</p>
+              <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            </figcaption>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure class="pk sage">
+          <span class="plate" aria-hidden="true"></span>
+          <div class="paper">
+            <div class="flap"><b>No. 2</b><span>Sunday · Denton</span></div>
+            <div class="panel" style="--ar:1/1;--px:80%;--py:66%;--z:2.4"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — crates of beets with their greens and pale squash beside galvanized buckets of deep red dahlias under a white tent"></div>
+            <figcaption class="fade">
+              <span class="plab">Packet 2 · noon, the stalls</span>
+              <h3>Hands choose</h3>
+              <p>Beets lifted by their greens, a squash turned over in a palm, a jar of honey held up to the sun. Close and slow.</p>
+              <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            </figcaption>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure class="pk denim amber">
+          <span class="plate" aria-hidden="true"></span>
+          <div class="paper">
+            <div class="flap"><b>No. 3</b><span>Sunday · Denton</span></div>
+            <div class="panel" style="--ar:4/5;--px:50%;--py:65%;--z:1.1"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — hands tying a paper-wrapped bouquet with jute twine on a weathered wooden table, loose stems and a crate of beets beside it"></div>
+            <figcaption class="fade">
+              <span class="plab">Packet 3 · early afternoon, the flowers</span>
+              <h3>Stems in paper</h3>
+              <p>A bouquet wrapped and tied at the table, start to finish, in one vertical take.</p>
+              <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            </figcaption>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure class="pk">
+          <span class="plate" aria-hidden="true"></span>
+          <div class="paper">
+            <div class="flap"><b>No. 4</b><span>Sunday · Denton</span></div>
+            <div class="panel" style="--ar:5/4;--px:88%;--py:80%;--z:3"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — a woven basket of round crusty loaves half under natural linen on a market table, buckets of dahlias behind"></div>
+            <figcaption class="fade">
+              <span class="plab">Packet 4 · mid-afternoon, the bread</span>
+              <h3>Under the linen</h3>
+              <p>A cloth lifted off a basket of loaves; flour and crumbs on the wood.</p>
+              <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            </figcaption>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure class="pk sage amber">
+          <span class="plate" aria-hidden="true"></span>
+          <div class="paper">
+            <div class="flap"><b>No. 5</b><span>Sunday · Denton</span></div>
+            <div class="panel" style="--ar:3/4;--px:6%;--py:62%;--z:1.4"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — honey-pine picnic tables and benches on pale gravel, an empty covered stage beyond and string lights overhead"></div>
+            <figcaption class="fade">
+              <span class="plab">Packet 5 · late afternoon, the yard</span>
+              <h3>The long light</h3>
+              <p>Picnic tables, vines on the fence, the corners of the yard as the shadows stretch across the gravel.</p>
+              <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            </figcaption>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure class="pk denim">
+          <span class="plate" aria-hidden="true"></span>
+          <div class="paper">
+            <div class="flap"><b>No. 6</b><span>Sunday · Denton</span></div>
+            <div class="panel" style="--ar:2/3"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — strands of bare-bulb string lights glowing against a deep blue evening sky above an empty wooden stage lit amber, a basket of beets on a picnic table in the foreground"></div>
+            <figcaption class="fade">
+              <span class="plab">Packet 6 · dusk, the stage</span>
+              <h3>Lights up</h3>
+              <p>The string lights coming on, the stage empty and lit, the last basket left on a table.</p>
+              <span class="tf">Creative direction — treatment frames, not final footage.</span>
+            </figcaption>
+          </div>
+        </figure>
+      </li>
+    </ol>
+
+    <p class="stills fade">All day, the A7RV builds a stills bank from the same stalls and the same light, for the site, the grid and anything else that needs a photograph.</p>
+  </div>
+</section>
+
+<section id="format" class="dark">
+  <div class="sec">
+    <div class="cols">
+      <div class="measure fade">
+        <p class="eyebrow">03 · The format</p>
+        <h2>The backyard <em>hour.</em></h2>
+        <p style="margin-top:30px">Hannah told Community Impact she hopes the market grows into something Denton can enjoy weekly. A weekly market suits a weekly post, so the day is cut into a format: one stall, one corner of the yard, one hour of light at a time, across the quarter.</p>
+        <p>Each one opens on the same small move, a hand setting something down on a wooden table, and then the hour takes over. Honey at noon. Stems after lunch. The long light on the picnic tables. The bulbs at dusk.</p>
+        <p>The opening stays fixed and the hour keeps changing, which gives the grid a rhythm without anyone on your team having to perform for the lens.</p>
+      </div>
+      <figure class="pk amber solo">
+        <span class="plate" aria-hidden="true"></span>
+        <div class="paper">
+          <div class="flap"><b>The format</b><span>Weekly</span></div>
+          <div class="panel" style="--ar:3/4;--px:50%;--py:5%;--z:1.6"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — warm bulbs strung across a denim-blue dusk sky above a covered wooden stage and a vine-covered fence"></div>
+          <figcaption>
+            <span class="plab">The backyard hour · dusk</span>
+            <span class="tf">Creative direction — treatment frames, not final footage.</span>
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="day">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow">04 · The day</p>
+      <h2>What the day <em>is.</em></h2>
+      <p class="lede">Here it is, plainly.</p>
+    </div>
+    <div class="cols">
+      <div class="fade">
+        <ol class="scope">
+          <li><span class="n">1</span><div><strong>One shoot day at Harvest House</strong><span class="d">I direct and shoot it myself, in Denton, on a market day you pick.</span></div></li>
+          <li><span class="n">2</span><div><strong>Sony FX6 + Sony A7RV</strong><span class="d">Cinema motion from the FX6; stills and hybrid from the A7RV.</span></div></li>
+          <li><span class="n">3</span><div><strong>Vertical-first</strong><span class="d">Every deliverable cut 9:16 for Reels, TikTok and Shorts.</span></div></li>
+          <li><span class="n">4</span><div><strong>An edited set of vertical videos + a stills bank</strong><span class="d">All from the same day, built to run for a quarter.</span></div></li>
+          <li><span class="n">5</span><div><strong>Two rounds of edits</strong><span class="d">About two weeks from the shoot to delivery.</span></div></li>
+        </ol>
+        <p class="after">Anything past that, we'd talk through on a call.</p>
+      </div>
+      <figure class="pk sage">
+        <span class="plate" aria-hidden="true"></span>
+        <div class="paper">
+          <div class="flap"><b>The yard</b><span>Late morning</span></div>
+          <div class="panel" style="--ar:3/2;--px:62%;--py:58%;--z:1.25"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — a gravel backyard with picnic tables, white tents and a vine-covered fence in soft late-morning light"></div>
+          <figcaption>
+            <span class="plab">The day · one location, start to finish</span>
+            <span class="tf">Creative direction — treatment frames, not final footage.</span>
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="who" class="alt">
+  <div class="sec">
+    <div class="cols">
+      <div class="measure fade">
+        <p class="eyebrow">05 · Behind the camera</p>
+        <h2>Who'd be <em>shooting.</em></h2>
+        <p style="margin-top:30px">I'm Nelson Taylor, and Taylormade Creative is my studio in Dallas–Fort Worth. I've spent fourteen years in design and creative direction, and most of my work now is brand content that I direct, shoot on the FX6 and A7RV, and edit myself.</p>
+        <p>Recent work includes TONI&amp;GUY Academy and Dreamcatchers Hair; over the years my client work has included Lava Cantina and KFC, and I shipped an iOS app, Run It UP! Dallas.</p>
+        <p>A market table is someone's livelihood, so I shoot it quietly, from the edges of the stalls and out of the way of anyone buying or selling.</p>
+      </div>
+      <figure class="pk amber solo">
+        <span class="plate" aria-hidden="true"></span>
+        <div class="paper">
+          <div class="flap"><b>The twine</b><span>Close up</span></div>
+          <div class="panel" style="--ar:1/1;--px:42%;--py:50%;--z:2"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — close on two hands knotting jute twine around a paper-wrapped bouquet"></div>
+          <figcaption>
+            <span class="plab">Behind the camera · hands only</span>
+            <span class="tf">Creative direction — treatment frames, not final footage.</span>
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="close" class="close">
+  <div class="sec">
+    <div class="cols">
+      <div class="measure fade">
+        <p class="eyebrow">06 · Whenever it suits</p>
+        <h2>Take it at your <em>own pace.</em> <small>There's no timeline on any of this.</small></h2>
+        <p style="margin-top:30px">If the idea feels like Harvest House, I'd be glad to spend twenty minutes on a call and walk the market day through with you, hour by hour. Cross out what doesn't fit, and add whatever I've missed.</p>
+        <p>If the season is already full, “not yet” is a perfectly good answer.</p>
+        <a class="cta" href="mailto:taylormademd@gmail.com?subject=Harvest%20House%20%C3%97%20Taylormade%20Creative">Write to Nelson</a>
+        <div class="sig">
+          <b>Nelson Taylor</b><br>
+          Founder &amp; Creative Director · Taylormade Creative<br>
+          (817) 707‑1291 · taylormademd@gmail.com<br>
+          www.taylormadecreative.net · @taylormade_creative
+        </div>
+      </div>
+      <figure class="pk denim solo">
+        <span class="plate" aria-hidden="true"></span>
+        <div class="paper">
+          <div class="flap"><b>Lights up</b><span>Dusk</span></div>
+          <div class="panel" style="--ar:4/5;--px:50%;--py:72%;--z:1.2"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — an empty wooden stage washed in warm amber light at blue hour, a picnic table and a small basket of beets in the foreground"></div>
+          <figcaption>
+            <span class="plab">The last packet · the stage</span>
+            <span class="tf">Creative direction — treatment frames, not final footage.</span>
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p>Prepared for Harvest House by Taylormade Creative · Dallas–Fort Worth</p>
+  <p class="disc">All imagery on this page is creative direction — treatment frames, not final footage. None of it is a photograph of Harvest House, its backyard, its market or vendors, its team or its guests.</p>
+</footer>
+
+<script>
+/* THE MISREGISTRATION. Each seed packet has a solid second-colour plate behind it. On entry the plate,
+   which starts exactly behind the packet, slides out to a fixed print offset (10px mobile / 14px desktop),
+   700ms ease-out, 90ms apart for packets arriving together. The packet and its image never move; text only fades.
+   Reduced motion or no IntersectionObserver: the head script never adds .anim, so plates sit at their offset
+   and all text is visible. If the observer never reports, a timer inks everything. If this never runs,
+   CSS rescues the text and the plates after 4.5s. */
+(function(){
+  var root = document.documentElement;
+  if(!/\banim\b/.test(root.className)) return;
+  root.classList.add('live');
+  var fades = [].slice.call(document.querySelectorAll('.fade'));
+  var pks = [].slice.call(document.querySelectorAll('.pk'));
+
+  function ink(list){
+    list.sort(function(a, b){
+      var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+      return (Math.round(ra.top / 40) - Math.round(rb.top / 40)) || (ra.left - rb.left);
+    });
+    list.forEach(function(p, i){ p.style.setProperty('--lag', (i * 90) + 'ms'); p.classList.add('inked'); });
+  }
+  function everything(){
+    fades.forEach(function(n){ n.classList.add('on'); });
+    ink(pks.filter(function(p){ return !p.classList.contains('inked'); }));
+  }
+
+  var heard = false, io;
+  try {
+    io = new IntersectionObserver(function(entries){
+      heard = true;
+      var arriving = [];
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        io.unobserve(e.target);
+        if(e.target.classList.contains('pk')) arriving.push(e.target); else e.target.classList.add('on');
+      });
+      if(arriving.length) ink(arriving);
+    }, { threshold: 0.2, rootMargin: '0px 0px -5% 0px' });
+    fades.concat(pks).forEach(function(n){ io.observe(n); });
+  } catch(err) {
+    root.classList.remove('anim');
+    return;
+  }
+
+  /* timed fallback: if the observer never reports, show everything */
+  window.setTimeout(function(){ if(!heard) everything(); }, 2500);
+})();
+</script>
+</body>
+</html>
