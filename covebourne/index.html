@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta name="tc-build" content="c54b3d56c8c0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Covebourne × Taylormade Creative — From the counter to the water</title>
+<meta name="description" content="A content-day concept for Covebourne, Historic Downtown Rockwall: the shop as the clubhouse, the water as its reason, cut vertical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Rokkitt:wght@400;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+<style>
+:root{
+  --sail:#F2EEE4; --sail-2:#E9E3D5; --canvas:#EDE7DA; --hem:#DAD1BE;
+  --navy:#1B2A3D; --navy-74:rgba(27,42,61,.74); --navy-hair:rgba(27,42,61,.2);
+  --slate:#527C82; --drift:#B39C7C; --signal:#C25F2A; --signal-fill:#B4561F; --signal-deep:#97461A;
+  --on-navy:#F2EEE4; --on-navy-80:rgba(242,238,228,.8);
+  --disp:'Rokkitt',Rockwell,'Roboto Slab',Georgia,serif;
+  --body:'Assistant','Segoe UI',Helvetica,Arial,sans-serif;
+  --pad:clamp(22px,6vw,104px);
+  /* a brass grommet: dark hole, bright inner lip, brass body, darker outer edge, soft shadow */
+  --grom:radial-gradient(circle,#1F1B15 0 2.5px,#4E3B1A 3px,#E6D29A 3.6px,#B8975A 4.6px,#A8874A 5.6px,#6E5426 6.6px,rgba(40,30,12,.3) 7.3px,rgba(40,30,12,0) 8px);
+  --glint:radial-gradient(circle at 31% 29%,rgba(255,249,226,.95) 0 .7px,rgba(255,249,226,0) 2px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{margin:0;background:var(--sail);color:var(--navy);font-family:var(--body);font-size:18px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--disp);margin:0;font-weight:800;letter-spacing:-.004em}
+h1{font-size:clamp(46px,6vw,104px);line-height:.96}
+h2{font-size:clamp(38px,6vw,86px);line-height:1}
+h3{font-weight:700;font-size:clamp(22px,2vw,28px);line-height:1.15}
+p{margin:0 0 18px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--signal);outline-offset:4px}
+
+.eyebrow{margin:0 0 20px;font-weight:700;font-size:13px;line-height:1.4;letter-spacing:.2em;text-transform:uppercase}
+.eyebrow b{color:var(--signal);font-weight:700;margin-right:10px}
+.dark .eyebrow b{color:#E08A5A}
+
+/* ---------- sections ---------- */
+.sec{position:relative;z-index:2;padding:clamp(76px,9vw,150px) var(--pad);overflow:hidden}
+.alt{background:var(--sail-2)}
+.dark{background:var(--navy);color:var(--on-navy)}
+.dark p{color:var(--on-navy-80)}
+.lede{font-size:clamp(19px,1.7vw,23px);line-height:1.5;max-width:780px;margin-top:24px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr);gap:56px;margin-top:46px;align-items:center}
+@media(min-width:960px){.cols{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(56px,6vw,120px)}}
+.measure{max-width:640px;position:relative;z-index:2}
+blockquote{margin:0;font-family:var(--disp);font-weight:700;font-size:clamp(24px,2.3vw,32px);line-height:1.2}
+
+/* ---------- THE SAILCLOTH PANEL: canvas face, a turned hem with a crease, a brass grommet in each corner ---------- */
+.pf{position:relative;z-index:2;margin:0}
+.pf.v{width:min(100%,420px);justify-self:center}
+.panel{position:relative;background:var(--canvas);border:12px solid var(--hem);padding:6px 6px 0;
+  box-shadow:0 2px 3px rgba(27,42,61,.12),0 26px 44px -30px rgba(27,42,61,.6)}
+.panel::before{content:"";position:absolute;inset:-8px;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(27,42,61,.17),inset 0 0 0 2px rgba(255,255,255,.3)}
+.gr{position:absolute;inset:-12px;z-index:3;pointer-events:none;
+  background-image:var(--glint),var(--glint),var(--glint),var(--glint),var(--grom),var(--grom),var(--grom),var(--grom);
+  background-size:16px 16px;background-repeat:no-repeat;
+  background-position:0 0,100% 0,0 100%,100% 100%,0 0,100% 0,0 100%,100% 100%}
+.pic{position:relative;overflow:hidden;aspect-ratio:var(--ar,3/2);background:var(--slate)}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--slate);
+  color:var(--on-navy);font-size:13px;object-position:var(--px,50%) var(--py,50%);
+  transform:scale(var(--z,1));transform-origin:var(--px,50%) var(--py,50%)}
+.hl{margin:0;padding:9px 2px 10px;font-weight:700;font-size:11px;line-height:1.3;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--navy-74)}
+.tf{display:block;margin:16px 0 0;font-weight:600;font-size:11.5px;line-height:1.45;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--navy-74)}
+.dark .tf{color:var(--on-navy-80)}
+
+/* ---------- THE LUFF-TO-TAUT: panels arrive slack and pull square ---------- */
+.js .panel{transform:skewX(-6deg);transform-origin:top left;transition:transform 850ms cubic-bezier(.2,.8,.2,1)}
+.js .panel.taut{transform:skewX(0)}
+.js:not(.live) .panel{animation:square 0s linear 4.5s forwards}
+@keyframes square{to{transform:skewX(0)}}
+/* text only fades */
+.js .fade{opacity:0;transition:opacity .9s ease}
+.js .fade.on{opacity:1}
+.js:not(.live) .fade{animation:rescue 0s linear 4.5s forwards}
+@keyframes rescue{to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .panel{transform:none;transition:none;animation:none}
+  .js .fade{opacity:1;transition:none;animation:none}
+}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;z-index:2;overflow:hidden;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  padding:26px var(--pad) 32px;background:var(--sail)}
+.hero > *{position:relative;z-index:2}
+.nav{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;font-weight:700;font-size:13px;
+  line-height:1.55;letter-spacing:.18em;text-transform:uppercase}
+.nav .meta{text-align:right;color:var(--navy-74)}
+.hero-grid{flex:1;display:grid;grid-template-columns:minmax(0,1fr);gap:30px;align-content:center;
+  padding:clamp(34px,6vh,72px) 0 clamp(18px,3vh,30px)}
+@media(min-width:1000px){.hero-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,5vw,96px);align-items:center}}
+.hero-tag{font-size:clamp(19px,1.6vw,22px);line-height:1.5;margin:26px 0 0;max-width:560px}
+.hero-sub{font-size:16px;line-height:1.55;color:var(--navy-74);margin:12px 0 0;max-width:520px}
+.hero-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 28px;font-weight:700;font-size:12px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--navy-74)}
+.hero-foot p{margin:0}
+
+/* ---------- 03 the run: a staggered two-column run of panels ---------- */
+.run{list-style:none;margin:60px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:64px}
+@media(min-width:900px){
+  .run{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(48px,6vw,120px);row-gap:84px;padding-bottom:150px}
+  .run > li:nth-child(even){transform:translateY(150px)}
+}
+.step{position:relative}
+.step .pf{max-width:560px}
+.step .txt{position:relative;z-index:2;margin-top:6px;max-width:520px}
+.step h3{margin-bottom:6px}
+.step p{margin:0;font-size:16.5px;line-height:1.55;color:var(--navy-74)}
+.stills{position:relative;z-index:2;margin:70px 0 0;max-width:820px;font-size:clamp(18px,1.6vw,21px);line-height:1.5}
+
+/* ---------- 04 the day ---------- */
+.scope{list-style:none;margin:0;padding:0}
+.scope li{display:grid;grid-template-columns:46px minmax(0,1fr);gap:4px 16px;padding:20px 0 22px;
+  border-bottom:1px solid rgba(242,238,228,.2)}
+.scope .n{font-family:var(--disp);font-weight:700;font-size:26px;line-height:1.1;color:#E08A5A}
+.scope strong{display:block;font-family:var(--disp);font-weight:700;font-size:clamp(21px,1.9vw,25px);line-height:1.2;
+  margin-bottom:4px;color:var(--on-navy)}
+.scope .d{display:block;color:var(--on-navy-80)}
+.after{margin:28px 0 0;font-weight:600}
+
+/* ---------- 05 who ---------- */
+.facts{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+.facts li{padding:14px 0 15px;border-top:1px solid var(--navy-hair);font-size:15px;line-height:1.35;color:var(--navy-74)}
+.facts b{display:block;font-family:var(--disp);font-weight:700;font-size:21px;line-height:1.2;color:var(--navy);margin-bottom:3px}
+
+/* ---------- 06 close ---------- */
+.close-band{position:relative;z-index:2;padding:clamp(64px,7vw,110px) var(--pad) 0;overflow:hidden}
+.close-band .pic{--ar:3/2}
+@media(min-width:760px){.close-band .pic{--ar:21/8}}
+.close h2 small{display:block;margin-top:16px;font-family:var(--body);font-weight:600;font-size:clamp(19px,1.8vw,24px);
+  line-height:1.4;letter-spacing:0;color:var(--navy-74)}
+.cta{display:inline-block;margin:30px 0 36px;padding:17px 30px 16px;border-radius:3px;background:var(--signal-fill);color:#fff;
+  text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.18em;text-transform:uppercase;
+  box-shadow:0 14px 24px -16px rgba(151,70,26,.85)}
+.cta:hover{background:var(--signal-deep)}
+.sig{font-size:16px;line-height:1.85;color:var(--navy-74)}
+.sig b{font-family:var(--disp);font-weight:700;font-size:24px;color:var(--navy)}
+
+/* ---------- footer ---------- */
+.foot{position:relative;z-index:2;padding:34px var(--pad) 40px;background:var(--navy);color:var(--on-navy-80);
+  font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.foot p{margin:8px 0}
+.foot .disc{text-transform:none;letter-spacing:0;font-weight:400;font-size:15px;line-height:1.6;max-width:820px}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="nav">
+    <div>Taylormade Creative</div>
+    <div class="meta">Covebourne · Rockwall<br>A content-day concept</div>
+  </div>
+
+  <div class="hero-grid">
+    <div class="fade">
+      <p class="eyebrow">For Craig Tatum · Covebourne</p>
+      <h1>From the counter to the water.</h1>
+      <p class="hero-tag">One day at your shop on the square in Historic Downtown Rockwall: the room set for the morning, the Collection up close, and the water at golden hour if you want it.</p>
+      <p class="hero-sub">Shot on a cinema camera and cut 9:16 for Reels, TikTok and Shorts, with a stills bank from the same light.</p>
+    </div>
+    <figure class="pf">
+      <div class="panel">
+        <div class="pic" style="--ar:3/2"><img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — a quiet sporting shop before opening: window light from a tree-lined square, white brick and a navy wall, brass pendant lamps, caps with rope across the brims on wall shelves, folded tees in ivory, terracotta and moss, a sea-glass board and two sling chairs, a cup of coffee on a walnut counter"></div>
+        <p class="hl">Panel 2 · the room, set for the day</p>
+        <i class="gr" aria-hidden="true"></i>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+
+  <div class="hero-foot">
+    <p>Prepared for Covebourne · Rockwall</p>
+    <p>Taylormade Creative · Dallas–Fort Worth</p>
+  </div>
+</header>
+
+<main>
+
+<section id="read">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow"><b>01</b>The read</p>
+      <h2>Everything here points at the water.</h2>
+    </div>
+    <div class="cols">
+      <div class="measure fade">
+        <p>Craig — Nelson Taylor here. I direct and shoot brand content in Dallas–Fort Worth. The Rockwall Area Chamber's listing for your ribbon cutting on Nov. 5 is what sent me to your site and your Instagram.</p>
+        <p>What I noticed first is the direction of it all. The shop opened on the square at the end of September, Lake Ray Hubbard is close by, and your homepage puts it plainly:</p>
+        <blockquote>“We believe life is richer on and around the water.”</blockquote>
+        <p style="margin-top:18px">The Collection follows it: caps in sand and sea-spray blue with rope detail, a bass and a mallard stitched on, tees in ivory, terracotta and moss. Craig spent more than a decade with a Texas fly fishing outfitter and leads the selection of brands and goods; Cade is shaping a shop where guests feel comfortable asking questions. With the Founders Circle and a standing welcome for dogs, it reads less like a store than a clubhouse.</p>
+        <p>So the idea is simple: film the shop as the clubhouse, and the water as its reason.</p>
+      </div>
+      <figure class="pf v">
+        <div class="panel">
+          <div class="pic" style="--ar:3/4;--px:50%;--py:60%"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — golden hour at a calm lake: a hand in a navy sleeve resting on a sea-glass paddleboard pulled onto the shore, a wooden chair and a fishing rod at the water's edge, the sun low over a far tree line"></div>
+          <p class="hl">Panel 5 · the water, if you want it</p>
+          <i class="gr" aria-hidden="true"></i>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="idea" class="alt">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow"><b>02</b>The idea</p>
+      <h2>From the counter.</h2>
+    </div>
+    <div class="cols">
+      <div class="measure fade">
+        <p>One format to carry the quarter. Every week opens on the same shot: the counter in morning light, a cup of coffee, and one thing set down by hand. A cap from the Collection. Gear for the weekend. A candle, a book from the shelf, something for the dogs.</p>
+        <p>Then the cut lets it live a little: in the room, in the hand, near the water when it belongs there. Over it runs a line on why it made the shelf, in Craig's own words, on screen or as a voice-over, whichever suits.</p>
+        <p>Same opening, new piece. The feed keeps a rhythm, the Collection gets a steady place in it, and nobody has to step in front of the lens unless they want to.</p>
+      </div>
+      <figure class="pf v">
+        <div class="panel">
+          <div class="pic" style="--ar:4/5;--px:50%;--py:55%"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — two hands in rolled navy sleeves setting a sand-coloured cap with a braided rope brim on a walnut counter, a folded ivory tee and a cup of coffee beside it, shelves of hats and a sea-glass board behind"></div>
+          <p class="hl">Panel 3 · the counter</p>
+          <i class="gr" aria-hidden="true"></i>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="shoot">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow"><b>03</b>What we'd shoot</p>
+      <h2>One day, square to shoreline.</h2>
+      <p class="lede">One day at the shop, on a day you choose; a day the doors aren't open gives us the room to ourselves. Hands, product, light and the room. Nobody goes on camera who hasn't said yes.</p>
+    </div>
+
+    <ol class="run" aria-label="The one-day plan, from first light to dusk">
+      <li class="step">
+        <figure class="pf">
+          <div class="panel">
+            <div class="pic" style="--ar:4/3;--px:0%;--py:45%;--z:1.9"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — morning light through a tall shop window onto a tree-lined square, a brass pendant lamp above and folded tees on a table below"></div>
+            <p class="hl">Panel 1 · morning on the square</p>
+            <i class="gr" aria-hidden="true"></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>Morning on the square</h3>
+          <p>First light across the square and into the window. The room before anyone needs it.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="pf">
+          <div class="panel">
+            <div class="pic" style="--ar:4/5;--px:95%;--py:50%"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — a sea-glass board and a paddle leaning on a navy wall beside shelves of caps with rope across the brims, a brass lamp above"></div>
+            <p class="hl">Panel 2 · the room, set for the day</p>
+            <i class="gr" aria-hidden="true"></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>The room, set for the day</h3>
+          <p>Caps lined on the wall, the Collection folded, a board standing ready, the lamps coming up. Empty and orderly.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="pf">
+          <div class="panel">
+            <div class="pic" style="--ar:4/5;--px:70%;--py:66%;--z:1.25"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — hands setting a cap down on a walnut counter in morning light, beside a folded tee and a cup of coffee"></div>
+            <p class="hl">Panel 3 · the counter</p>
+            <i class="gr" aria-hidden="true"></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>The counter</h3>
+          <p>The weekly opener: one locked-off frame, shot again for every piece, so a quarter of openings comes from one morning.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="pf">
+          <div class="panel">
+            <div class="pic" style="--ar:5/4;--px:40%;--py:66%;--z:1.7"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — close on a sand-coloured cap held in two hands, the braided rope across its brim"></div>
+            <p class="hl">Panel 4 · the Collection, up close</p>
+            <i class="gr" aria-hidden="true"></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>The Collection, up close</h3>
+          <p>Rope detail, the stitched bass and mallard, the weave of a tee. Macro stills on the A7RV, slow moves on the FX6.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="pf">
+          <div class="panel">
+            <div class="pic" style="--ar:2/3;--px:50%;--py:50%"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — a paddleboard pulled up on a pebbly shore at golden hour, a chair and a fishing rod by the water, still water out to a low tree line"></div>
+            <p class="hl">Panel 5 · the water, if you want it</p>
+            <i class="gr" aria-hidden="true"></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>The water, if you want it</h3>
+          <p>A board's nose on the shore, a hand on the rail, the light going gold. Optional, and a conversation first; the day itself lives at the shop.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="pf">
+          <div class="panel">
+            <div class="pic" style="--ar:3/2;--px:62%;--py:0%;--z:1.45"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — brass pendant lamps glowing over a navy wall, a tall board and shelves of caps"></div>
+            <p class="hl">Panel 6 · lights on</p>
+            <i class="gr" aria-hidden="true"></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>Lights on</h3>
+          <p>Dusk, the lamps on, the room seen through the glass from the square. The last shot of the day, and a natural end card.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="stills fade">Alongside the video, the A7RV builds a stills bank from the same day and the same light: for the grid, the site and anything else that needs a photograph.</p>
+  </div>
+</section>
+
+<section id="day" class="dark">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow"><b>04</b>The day</p>
+      <h2>Just the day.</h2>
+      <p class="lede">Plainly, here's what it is.</p>
+    </div>
+    <div class="cols">
+      <div class="fade">
+        <ol class="scope">
+          <li><span class="n">01</span><div><strong>One shoot day at Covebourne</strong><span class="d">I direct and shoot it myself, at the shop on the square.</span></div></li>
+          <li><span class="n">02</span><div><strong>Sony FX6 + Sony A7RV</strong><span class="d">The FX6 carries the motion; the A7RV covers stills and hybrid.</span></div></li>
+          <li><span class="n">03</span><div><strong>Vertical-first</strong><span class="d">Every deliverable is cut 9:16 for Reels, TikTok and Shorts.</span></div></li>
+          <li><span class="n">04</span><div><strong>An edited set of vertical videos + a stills bank</strong><span class="d">From the same day, built to run for a quarter.</span></div></li>
+          <li><span class="n">05</span><div><strong>Two rounds of edits</strong><span class="d">Delivered in about two weeks.</span></div></li>
+        </ol>
+        <p class="after">Anything beyond that is a conversation on a call.</p>
+      </div>
+      <figure class="pf">
+        <div class="panel">
+          <div class="pic" style="--ar:4/3;--px:50%;--py:42%"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — still lake water under a pale sky, the sun low over a dark tree line, a chair and a fishing rod on the shore"></div>
+          <p class="hl">Panel 5 · the shoreline</p>
+          <i class="gr" aria-hidden="true"></i>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="who" class="alt">
+  <div class="sec">
+    <div class="cols">
+      <div class="measure fade">
+        <p class="eyebrow"><b>05</b>Behind the camera</p>
+        <h2>Who's shooting.</h2>
+        <p style="margin-top:30px">I'm Nelson Taylor, and Taylormade Creative is my studio in Dallas–Fort Worth. I've spent fourteen years in design and creative direction, and most of that work is now brand content: I direct it, shoot it on the FX6 and the A7RV, and cut it myself.</p>
+        <p>Recent work includes TONI&amp;GUY Academy, Dreamcatchers Hair and It's a Secret Med Spa. Client work over the years includes Toni &amp; Guy, Lava Cantina and KFC, and I shipped one iOS app, Run It UP! Dallas.</p>
+        <p>A shop with a point of view needs a camera that keeps to it. The plan on this page is the edit you'd get, because the person framing each shot is the one cutting it.</p>
+        <ul class="facts">
+          <li><b>Fourteen years</b>design and direction</li>
+          <li><b>FX6 + A7RV</b>motion and stills, one kit</li>
+          <li><b>9:16</b>composed for the phone</li>
+          <li><b>One person</b>shoot through edit</li>
+        </ul>
+      </div>
+      <figure class="pf v">
+        <div class="panel">
+          <div class="pic" style="--ar:4/5;--px:30%;--py:30%;--z:1.2"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — a rolled navy sleeve and a hand reaching down to a cap on a walnut counter, shelves of hats soft behind"></div>
+          <p class="hl">Panel 4 · by hand</p>
+          <i class="gr" aria-hidden="true"></i>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="close" class="close">
+  <div class="close-band">
+    <figure class="pf">
+      <div class="panel">
+        <div class="pic" style="--px:50%;--py:62%"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — the whole room in morning light: folded tees by the window, a sea-glass board and sling chairs, caps on shelves against the navy wall, a cup of coffee on the walnut counter"></div>
+        <p class="hl">Panel 2 · the room</p>
+        <i class="gr" aria-hidden="true"></i>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+  <div class="sec">
+    <div class="fade" style="max-width:920px">
+      <p class="eyebrow"><b>06</b>Whenever it suits</p>
+      <h2>No hurry at all. <small>Take this at whatever pace the season allows.</small></h2>
+      <p style="margin-top:30px">If the idea feels like Covebourne, I'd be glad to spend twenty minutes on a call and walk the day, panel by panel. Strike anything that doesn't fit, and add anything I've missed.</p>
+      <p>And if the timing isn't right, “not yet” is a perfectly good answer.</p>
+      <a class="cta" href="mailto:taylormademd@gmail.com?subject=Covebourne%20%C3%97%20Taylormade%20Creative">Write to Nelson</a>
+      <div class="sig">
+        <b>Nelson Taylor</b><br>
+        Founder &amp; Creative Director · Taylormade Creative<br>
+        (817) 707‑1291 · taylormademd@gmail.com<br>
+        www.taylormadecreative.net · @taylormade_creative
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p>Prepared for Covebourne by Taylormade Creative · Dallas–Fort Worth</p>
+  <p class="disc">All imagery on this page is creative direction — treatment frames, not final footage. None of it is a photograph of Covebourne, its shop, its products, its team or its guests, or of the lake.</p>
+</footer>
+
+<script>
+/* THE LUFF-TO-TAUT. Each sailcloth panel arrives slack, skewX(-6deg) from its top-left corner, and pulls square
+   (850ms, cubic-bezier(.2,.8,.2,1)), 110ms apart when several arrive together. The image, the hem label and the
+   grommets ride with their panel; nothing else moves. Text only fades.
+   Reduced motion or no IntersectionObserver: everything is square and visible from the start.
+   If the observer never reports, a timer squares and shows everything. If this never runs, CSS does it at 4.5s. */
+(function(){
+  var root = document.documentElement;
+  root.classList.add('live');
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fades = [].slice.call(document.querySelectorAll('.fade'));
+  var panels = [].slice.call(document.querySelectorAll('.panel'));
+
+  function all(){
+    fades.forEach(function(n){ n.classList.add('on'); });
+    panels.forEach(function(p){ p.classList.add('taut'); });
+  }
+  if(calm || !('IntersectionObserver' in window)){ all(); return; }
+
+  var heard = false;
+  try {
+    var io = new IntersectionObserver(function(entries){
+      heard = true;
+      var arriving = [];
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var n = e.target;
+        io.unobserve(n);
+        if(n.classList.contains('panel')) arriving.push(n); else n.classList.add('on');
+      });
+      arriving.sort(function(a, b){
+        var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+        return (Math.round(ra.top / 40) - Math.round(rb.top / 40)) || (ra.left - rb.left);
+      });
+      arriving.forEach(function(p, i){
+        p.style.transitionDelay = (i * 110) + 'ms';
+        p.classList.add('taut');
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+    fades.concat(panels).forEach(function(n){ io.observe(n); });
+  } catch(err) {
+    all();
+    return;
+  }
+
+  /* timed fallback: if the observer never reports, square and show everything */
+  window.setTimeout(function(){ if(!heard){ all(); } }, 2500);
+})();
+</script>
+</body>
+</html>
