@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="tc-build" content="9c5da80ae7bb">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Keeping Up With the Joneses × Taylormade Creative — Room by room</title>
+<meta name="description" content="A content-day concept for Keeping Up With the Joneses, Fort Worth: the bungalow filmed room by room, porch to dusk, cut vertical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('has-js');</script>
+<style>
+:root{
+  --linen:#FAF6F0; --linen-2:#F2EBE1; --linen-rim:#F6EFE5;
+  --umber:#3A2B26; --umber-72:rgba(58,43,38,.74); --umber-hair:rgba(58,43,38,.2);
+  --pink:#EBC9C0; --haint:#C2DAD4; --lip:#C8325A; --lip-deep:#A8284B; --porch:#2F7A45;
+  --on-umber:#F7F0E8; --on-umber-80:rgba(247,240,232,.82);
+  --disp:'Chonburi',Georgia,'Times New Roman',serif;
+  --body:'Lato','Helvetica Neue',Arial,sans-serif;
+  --pad:clamp(22px,6vw,108px);
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden;scroll-behavior:smooth}
+body{margin:0;background:var(--linen);color:var(--umber);font-family:var(--body);font-size:18px;line-height:1.66;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--disp);font-weight:400;margin:0;overflow-wrap:normal}
+h1{font-size:clamp(52px,14.6vw,176px);line-height:1.02;letter-spacing:-.01em}
+h2{font-size:clamp(30px,7.4vw,86px);line-height:1.1;letter-spacing:-.005em}
+h3{font-size:clamp(21px,2vw,27px);line-height:1.22}
+p{margin:0 0 18px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--lip);outline-offset:4px}
+
+/* labels: Lato caps, tracked wide like the hand-painted sign; a lipstick tick ahead of each eyebrow */
+.kicker{display:flex;align-items:center;gap:12px;margin:0 0 20px;font-weight:700;font-size:12.5px;line-height:1.4;
+  letter-spacing:.22em;text-transform:uppercase}
+.kicker::before{content:"";flex:none;width:22px;height:3px;border-radius:2px;background:var(--lip)}
+
+/* sections */
+.band{position:relative;z-index:2;padding:clamp(78px,9.5vw,156px) var(--pad);overflow:hidden}
+.band.tint{background:var(--linen-2)}
+.band.deep{background:var(--umber);color:var(--on-umber)}
+.band.deep p{color:var(--on-umber-80)}
+.lede{font-size:clamp(19px,1.7vw,23px);line-height:1.52;max-width:780px;margin-top:22px}
+.split{display:grid;grid-template-columns:minmax(0,1fr);gap:54px;margin-top:44px;align-items:center}
+@media(min-width:940px){.split{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(56px,6.5vw,124px)}
+  .split.flip > :first-child{order:2}}
+.copy{max-width:640px;position:relative;z-index:2}
+.pull{font-family:var(--disp);font-size:clamp(26px,3.4vw,44px);line-height:1.16;margin:34px 0 0;color:var(--lip)}
+.deep .pull{color:var(--pink)}
+
+/* ---------- THE TISSUE-LINED BOX: a shallow boutique box seen from above ---------- */
+.gift{position:relative;z-index:2;margin:0}
+.gift.v{width:min(100%,430px);justify-self:center}
+.box{position:relative;padding:16px 16px 0;border-radius:3px;background:var(--rim,var(--pink));
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.38),0 0 0 1px rgba(58,43,38,.09),0 2px 0 rgba(58,43,38,.07),
+    0 26px 38px -30px rgba(58,43,38,.6)}
+.box.pink{--rim:var(--pink)} .box.haint{--rim:var(--haint)} .box.linen{--rim:var(--linen-rim)}
+.well{position:relative;overflow:hidden;aspect-ratio:var(--ar,4/5);background:var(--linen-2)}
+.well img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--linen-2);
+  color:var(--umber-72);font-size:13px;object-position:var(--px,50%) var(--py,50%);
+  transform:scale(var(--z,1));transform-origin:var(--px,50%) var(--py,50%)}
+.well::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(58,43,38,.16),inset 8px 10px 16px -8px rgba(58,43,38,.52),
+    inset -5px -5px 12px -9px rgba(255,255,255,.75)}
+.rim-lab{display:block;height:44px;padding:15px 2px 0;font-weight:700;font-size:11px;line-height:14px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--umber);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rim-lab::before{content:"";display:inline-block;width:7px;height:7px;margin-right:9px;border-radius:50%;
+  background:var(--porch);vertical-align:1px}
+.tf{display:block;margin:14px 0 0;font-weight:700;font-size:11px;line-height:1.45;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--umber-72)}
+.deep .tf{color:var(--on-umber-80)}
+
+/* tissue sheets: a translucent triangle of paper over a corner, two plies at slightly different angles
+   (that is what makes the edge look torn and layered), a fold band and a soft crumple inside */
+.ts{position:absolute;z-index:3;width:var(--s,27%);min-width:62px;max-width:160px;aspect-ratio:1/1;pointer-events:none;
+  --t1:rgba(255,255,255,.74); --t2:rgba(255,253,251,.5);
+  background:
+    radial-gradient(circle at var(--cx) var(--cy),rgba(255,255,255,.55) 0 5%,rgba(255,255,255,0) 19%),
+    linear-gradient(var(--a),rgba(255,255,255,0) 0 11%,rgba(58,43,38,.07) 14%,rgba(255,255,255,0) 17%,
+      rgba(255,255,255,.36) 25%,rgba(255,255,255,0) 30%,rgba(58,43,38,.05) 37%,rgba(255,255,255,0) 40%),
+    linear-gradient(calc(var(--a) - 6deg),var(--t2) 0 43.5%,rgba(58,43,38,.13) 45%,rgba(255,255,255,0) 45.6%),
+    linear-gradient(calc(var(--a) + 5deg),var(--t1) 0 40%,rgba(58,43,38,.11) 48.4%,rgba(255,255,255,0) 49%);
+  transform:translate(0,0);transition:transform .9s cubic-bezier(.16,.84,.3,1)}
+.ts.blush{--t1:rgba(249,224,228,.74); --t2:rgba(252,236,238,.52)}
+.ts.tl{--a:135deg;--cx:21%;--cy:21%;top:-7px;left:-7px}
+.ts.tr{--a:225deg;--cx:79%;--cy:21%;top:-7px;right:-7px}
+.ts.br{--a:315deg;--cx:79%;--cy:79%;right:-7px;bottom:35px}
+.ts.sm{--s:20%}
+.ts.lg{--s:33%}
+/* the unwrap: before entry each sheet is drawn ~28px further over the image, then slides out to its corner */
+.box.wrapped .ts.tl{transform:translate(20px,20px)}
+.box.wrapped .ts.tr{transform:translate(-20px,20px)}
+.box.wrapped .ts.br{transform:translate(-20px,-20px)}
+.hold .ts{transition:none!important}
+
+/* text only fades */
+.has-js .rv{opacity:0;transition:opacity .85s ease}
+.has-js .rv.in{opacity:1}
+.has-js:not(.running) .rv{animation:surface 0s linear 4s forwards}
+@keyframes surface{to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .has-js .rv{opacity:1;transition:none;animation:none}
+  .ts,.box.wrapped .ts{transition:none;transform:none}
+}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  padding:22px var(--pad) 30px;overflow:hidden;background:var(--linen)}
+.hero > *{position:relative;z-index:2}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;font-weight:700;font-size:12px;
+  line-height:1.5;letter-spacing:.2em;text-transform:uppercase}
+.top .meta{text-align:right;color:var(--umber-72)}
+.hero-main{flex:1;display:grid;gap:30px;align-content:center;padding:clamp(34px,6vh,72px) 0 clamp(22px,3vh,36px)}
+@media(min-width:1000px){.hero-main{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);align-items:end;gap:clamp(44px,5vw,96px)}}
+.hero-tag{font-size:clamp(19px,1.6vw,23px);line-height:1.5;margin:22px 0 0;max-width:560px}
+.hero-sub{font-size:16px;line-height:1.55;color:var(--umber-72);margin:12px 0 0;max-width:520px}
+.hero .gift .tf{margin-top:12px}
+.hero-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 26px;font-weight:700;font-size:11.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--umber-72)}
+.hero-foot p{margin:0}
+
+/* ---------- 03 the day, box by box: a staggered run ---------- */
+.run{list-style:none;margin:58px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:56px}
+.stop{position:relative;z-index:2;display:grid;gap:20px;align-content:start}
+.stop .gift{width:min(100%,460px)}
+.stop h3{margin:0 0 8px}
+.stop p{margin:0;font-size:16.5px;line-height:1.6;color:var(--umber-72)}
+@media(min-width:900px){
+  .run{grid-template-columns:repeat(2,minmax(0,1fr));gap:72px clamp(44px,5.5vw,104px);padding-bottom:150px}
+  .run > .stop:nth-child(even){margin-top:150px;margin-bottom:-150px}
+  .stop .gift{width:min(100%,520px)}
+}
+.stills{position:relative;z-index:2;margin:64px 0 0;max-width:820px;font-size:clamp(18px,1.6vw,21px);line-height:1.52}
+
+/* ---------- 05 what it is ---------- */
+.scope{list-style:none;margin:0;padding:0;counter-reset:s}
+.scope li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:2px 14px;padding:20px 0 21px;border-top:1px solid var(--umber-hair)}
+.scope li:last-child{border-bottom:1px solid var(--umber-hair)}
+.scope li::before{counter-increment:s;content:counter(s);font-family:var(--disp);font-size:26px;line-height:1.1;color:var(--lip)}
+.scope strong{display:block;font-weight:900;font-size:clamp(18px,1.6vw,21px);line-height:1.3;margin-bottom:3px}
+.scope span{display:block;color:var(--umber-72);font-size:16.5px;line-height:1.55}
+.after{margin:26px 0 0;font-weight:700}
+
+/* ---------- 07 close ---------- */
+.close-top{position:relative;z-index:2;padding:clamp(64px,7vw,112px) var(--pad) 0;overflow:hidden}
+.close h2 small{display:block;margin-top:16px;font-family:var(--body);font-weight:400;font-size:clamp(19px,1.8vw,24px);
+  line-height:1.42;letter-spacing:0;color:var(--umber-72)}
+.btn{display:inline-block;margin:28px 0 34px;padding:16px 30px 15px;border-radius:4px;background:var(--lip);color:#fff;
+  text-decoration:none;font-weight:900;font-size:14px;letter-spacing:.2em;text-transform:uppercase;
+  box-shadow:0 14px 26px -16px rgba(200,50,90,.85)}
+.btn:hover{background:var(--lip-deep)}
+.sig{font-size:16px;line-height:1.85;color:var(--umber-72)}
+.sig b{font-family:var(--disp);font-weight:400;font-size:23px;color:var(--umber)}
+
+/* ---------- footer ---------- */
+.foot{position:relative;z-index:2;padding:34px var(--pad) 42px;background:var(--linen-2);color:var(--umber-72);
+  border-top:4px solid var(--pink);font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
+.foot p{margin:8px 0}
+.foot .disc{text-transform:none;letter-spacing:0;font-weight:400;font-size:15px;line-height:1.6;max-width:840px}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="top">
+    <div>Taylormade Creative</div>
+    <div class="meta">Keeping Up With the Joneses · Fort Worth<br>Content day · a concept</div>
+  </div>
+
+  <div class="hero-main">
+    <div class="rv">
+      <p class="kicker">For Judy · Keeping Up With the Joneses</p>
+      <h1>Room by<br>room.</h1>
+      <p class="hero-tag">A boutique in a bungalow is shopped like a visit: the porch, the front door, the front room, the rails, the table, the gift. One day films it in that order, cut 9:16.</p>
+      <p class="hero-sub">From the porch steps in the morning to the windows lit at dusk, on a cinema camera, with a stills bank from the same light.</p>
+    </div>
+    <figure class="gift">
+      <div class="box pink" style="--ar:3/2">
+        <div class="well"><img src="images/hero.png" width="1536" height="1024" style="--px:50%;--py:55%" alt="Treatment frame — the front room of a Craftsman bungalow boutique in morning light: a white brick fireplace with blue-and-white and celadon ginger jars on the mantel, a rail of bright printed blouses and dresses, a pale oak table with folded clothes, white gift boxes and blush tissue, dark hardwood floors"></div>
+        <span class="ts tl" aria-hidden="true"></span>
+        <span class="ts tr blush sm" aria-hidden="true"></span>
+        <span class="ts br" aria-hidden="true"></span>
+        <span class="rim-lab">The front room, first light</span>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+
+  <div class="hero-foot">
+    <p>Prepared for Keeping Up With the Joneses · Fort Worth</p>
+    <p>Creative direction — treatment frames, not final footage</p>
+  </div>
+</header>
+
+<main>
+
+<section id="read" class="band">
+  <div class="rv">
+    <p class="kicker">01 · The read</p>
+    <h2>Twelve years, and counting.</h2>
+  </div>
+  <div class="split">
+    <div class="copy rv">
+      <p>Hi Judy. I'm Nelson Taylor; I direct and shoot brand content across Dallas–Fort Worth. I came across your anniversary weekend in The Scout Guide's events listing, which marks the occasion as “celebrating 12 years of Keeping Up With the Joneses and 100 years of 5017 El Campo Avenue.” Congratulations on twelve years.</p>
+      <p>Your Instagram describes the shop in its own words: “Inside a charming little Craftsman bungalow facing Camp Bowie Blvd is a well-curated boutique filled with fun, colorful…” The photos on your site fill in the rest. A red-brick porch and a green front door; inside, a white-painted brick fireplace with ginger jars along the mantel, rails of bright prints, hardwood underfoot.</p>
+      <p>A shop like that isn't browsed so much as visited, one room after another. So that's the whole idea.</p>
+      <p class="pull">Film the visit.</p>
+    </div>
+    <figure class="gift v">
+      <div class="box haint" style="--ar:2/3">
+        <div class="well"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:50%" alt="Treatment frame — the porch of a red-brick Craftsman bungalow at dusk, a green front door half open with lamplight spilling out, urns of chrysanthemums on the brick piers and purple asters along the front"></div>
+        <span class="ts tl blush" aria-hidden="true"></span>
+        <span class="ts br" aria-hidden="true"></span>
+        <span class="rim-lab">The porch, dusk</span>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="format" class="band tint">
+  <div class="rv">
+    <p class="kicker">02 · The format</p>
+    <h2>Room by room, every week.</h2>
+  </div>
+  <div class="split flip">
+    <div class="copy rv">
+      <p>Every week of the quarter opens the same way: a hand on the front door, the door swings open, and we step into one corner of the house. Then one outfit, one corner, one idea: a colour story pulled from a rail, a look built on the table, a gift folded into tissue.</p>
+      <p>The same first second, a different room each time, so the feed keeps a rhythm people come to recognise before they read a caption. The holiday season gives it plenty to carry: gifts, colour, the windows lit early in the evening.</p>
+      <p>I frame for the phone from the first setup, so nothing you post is a crop of a wider shot.</p>
+    </div>
+    <figure class="gift v">
+      <div class="box linen" style="--ar:3/4">
+        <div class="well"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:50%;--z:1.08" alt="Treatment frame — seen from above, two hands folding blush tissue over a pink and orange floral silk blouse in a shallow white box on a pale oak table, a fine gold necklace beside it"></div>
+        <span class="ts tl" aria-hidden="true"></span>
+        <span class="ts tr blush" aria-hidden="true"></span>
+        <span class="ts br sm" aria-hidden="true"></span>
+        <span class="rim-lab">The table, the tissue</span>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="shoot" class="band">
+  <div class="rv">
+    <p class="kicker">03 · The day, box by box</p>
+    <h2>Porch to lamplight.</h2>
+    <p class="lede">One day at the bungalow, on a day you choose and around your hours, shot in the order a customer meets the house. Rooms, rails, colour and hands. Nobody appears on camera without saying yes first; customers and team are hands at most, and we'd agree that together before the day.</p>
+  </div>
+
+  <ol class="run" aria-label="The one-day plan, from the porch steps to dusk">
+    <li class="stop">
+      <figure class="gift">
+        <div class="box pink" style="--ar:4/5">
+          <div class="well"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:82%;--z:1.35" alt="Treatment frame — low concrete steps up to a lit porch, purple asters on either side"></div>
+          <span class="ts tl" aria-hidden="true"></span>
+          <span class="ts tr blush sm" aria-hidden="true"></span>
+          <span class="rim-lab">Box 1 · the porch steps</span>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="rv">
+        <h3>The porch steps</h3>
+        <p>Early light on the brick and on whatever the porch is wearing for the season. The walk up to the door: the establishing shot for every week.</p>
+      </div>
+    </li>
+    <li class="stop">
+      <figure class="gift">
+        <div class="box haint" style="--ar:3/4">
+          <div class="well"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" style="--px:40%;--py:53%;--z:1.9" alt="Treatment frame — a green front door standing half open, warm lamplight falling across the porch floor"></div>
+          <span class="ts tl blush" aria-hidden="true"></span>
+          <span class="ts br" aria-hidden="true"></span>
+          <span class="rim-lab">Box 2 · the front door</span>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="rv">
+        <h3>The opener</h3>
+        <p>A hand on the handle, the door swings open, the camera steps inside. The same first second in every episode, so the feed has a rhythm people come to know.</p>
+      </div>
+    </li>
+    <li class="stop">
+      <figure class="gift">
+        <div class="box linen" style="--ar:1/1">
+          <div class="well"><img src="images/hero.png" width="1536" height="1024" loading="lazy" style="--px:95%;--py:32%;--z:1.6" alt="Treatment frame — blue-and-white and celadon ginger jars along the mantel of a white-painted brick fireplace"></div>
+          <span class="ts tl lg" aria-hidden="true"></span>
+          <span class="ts tr blush sm" aria-hidden="true"></span>
+          <span class="ts br sm" aria-hidden="true"></span>
+          <span class="rim-lab">Box 3 · the mantel, morning</span>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="rv">
+        <h3>The mantel</h3>
+        <p>The white brick fireplace and the ginger jars along it, window light travelling across the hardwood. A slow push on the FX6, nothing hurried.</p>
+      </div>
+    </li>
+    <li class="stop">
+      <figure class="gift">
+        <div class="box pink" style="--ar:4/5">
+          <div class="well"><img src="images/hero.png" width="1536" height="1024" loading="lazy" style="--px:12%;--py:50%;--z:1.7" alt="Treatment frame — a rail of blouses and dresses in hot pink florals, orange, cobalt-and-white and lavender on wooden hangers"></div>
+          <span class="ts tl blush" aria-hidden="true"></span>
+          <span class="ts tr" aria-hidden="true"></span>
+          <span class="rim-lab">Box 4 · the rails, noon</span>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="rv">
+        <h3>The rails</h3>
+        <p>Hangers slid along a rail, prints side by side, a colour story pulled one piece at a time. Colour does the talking.</p>
+      </div>
+    </li>
+    <li class="stop">
+      <figure class="gift">
+        <div class="box haint" style="--ar:5/4">
+          <div class="well"><img src="images/hero.png" width="1536" height="1024" loading="lazy" style="--px:62%;--py:62%;--z:1.75" alt="Treatment frame — a pale oak table with neatly folded blouses, white gift boxes and loose blush tissue"></div>
+          <span class="ts tl" aria-hidden="true"></span>
+          <span class="ts br blush" aria-hidden="true"></span>
+          <span class="rim-lab">Box 5 · the table, afternoon</span>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="rv">
+        <h3>The look</h3>
+        <p>Hands building an outfit on the table: a blouse laid flat, a necklace set beside it, a scarf folded in. Shot from above, hands only.</p>
+      </div>
+    </li>
+    <li class="stop">
+      <figure class="gift">
+        <div class="box linen" style="--ar:4/5">
+          <div class="well"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:50%;--z:1.12" alt="Treatment frame — hands folding blush tissue paper over a floral blouse in a shallow white gift box"></div>
+          <span class="ts tl blush" aria-hidden="true"></span>
+          <span class="ts tr sm" aria-hidden="true"></span>
+          <span class="ts br" aria-hidden="true"></span>
+          <span class="rim-lab">Box 6 · the gift, afternoon</span>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="rv">
+        <h3>The gift</h3>
+        <p>Something chosen from Gift &amp; Home, folded into tissue in a shallow box and handed over in a bag. The holiday thread, in a few quiet seconds.</p>
+      </div>
+    </li>
+    <li class="stop">
+      <figure class="gift">
+        <div class="box pink" style="--ar:2/3">
+          <div class="well"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:40%" alt="Treatment frame — a red-brick bungalow at dusk, its double-hung windows glowing amber and the porch lit from inside"></div>
+          <span class="ts tl" aria-hidden="true"></span>
+          <span class="ts tr blush" aria-hidden="true"></span>
+          <span class="ts br sm" aria-hidden="true"></span>
+          <span class="rim-lab">Box 7 · the porch, dusk</span>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="rv">
+        <h3>The windows lit</h3>
+        <p>The house from the walk as the windows glow and the door stands half open. The last shot of the day, and the closing beat of every episode.</p>
+      </div>
+    </li>
+  </ol>
+
+  <p class="stills rv">Between video setups the A7RV makes photographs of the same rooms in the same light, so the stills bank and the reels look like one shoot, because they are.</p>
+</section>
+
+<section id="season" class="band deep">
+  <div class="split">
+    <div class="copy rv">
+      <p class="kicker">04 · The season</p>
+      <h2>The holidays, in tissue.</h2>
+      <p style="margin-top:28px">The holiday season puts the gift side of the shop to work. Your menu runs from apparel and accessories to sleepwear and Gift &amp; Home, and that gives the quarter its own weekly thread: a piece chosen, set on the table, wrapped, handed over in a bag at the door.</p>
+      <p>Filmed slow and close, it's a few seconds of paper and hands that hold a thumb mid-scroll. It's hands and tissue only, which keeps every face out of it unless someone asks to be in.</p>
+      <p class="pull">Same door, new gift.</p>
+    </div>
+    <figure class="gift v">
+      <div class="box haint" style="--ar:4/5">
+        <div class="well"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:34%;--z:1.4" alt="Treatment frame — close on a hand lifting blush tissue over a bright pink floral blouse in a white box, a blue-and-white porcelain dish above"></div>
+        <span class="ts tl" aria-hidden="true"></span>
+        <span class="ts tr blush" aria-hidden="true"></span>
+        <span class="rim-lab">Gift &amp; Home, wrapped</span>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="day" class="band">
+  <div class="rv">
+    <p class="kicker">05 · What it is</p>
+    <h2>The day, plainly.</h2>
+  </div>
+  <div class="split">
+    <div class="rv">
+      <ol class="scope">
+        <li><div><strong>One shoot day at Keeping Up With the Joneses</strong><span>In the bungalow, around your hours, with me directing and shooting.</span></div></li>
+        <li><div><strong>Sony FX6 + Sony A7RV</strong><span>Cinema motion on the FX6; stills and hybrid on the A7RV.</span></div></li>
+        <li><div><strong>Vertical-first</strong><span>Each piece is framed 9:16, made for Reels, TikTok and Shorts.</span></div></li>
+        <li><div><strong>Edited vertical videos and a stills bank</strong><span>Shot the same day, made to carry a quarter of posting.</span></div></li>
+        <li><div><strong>Two rounds of edits</strong><span>About two weeks from the shoot to delivery.</span></div></li>
+      </ol>
+      <p class="after">Everything else, we'd talk through together.</p>
+    </div>
+    <figure class="gift">
+      <div class="box pink" style="--ar:2/1">
+        <div class="well"><img src="images/hero.png" width="1536" height="1024" loading="lazy" style="--px:50%;--py:82%" alt="Treatment frame — morning light across dark hardwood floors, a pale blue-grey rug and a cream bench in a boutique's front room"></div>
+        <span class="ts tl" aria-hidden="true"></span>
+        <span class="ts br blush sm" aria-hidden="true"></span>
+        <span class="rim-lab">The front room, the floor</span>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="who" class="band tint">
+  <div class="split flip">
+    <div class="copy rv">
+      <p class="kicker">06 · Who</p>
+      <h2>The person behind the lens.</h2>
+      <p style="margin-top:28px">My name's Nelson Taylor. Taylormade Creative is the studio I run in Dallas–Fort Worth, built on fourteen years of design and creative direction; most of that work now goes into brand content I direct, shoot on the FX6 and the A7RV, and edit myself.</p>
+      <p>That work has included TONI&amp;GUY Academy and Dreamcatchers Hair, and across the fourteen years the client list runs from Lava Cantina and KFC to IAS Academy and Curls.</p>
+      <p>One person carries the day from the first frame to the final cut, so what you see planned here is what turns up in the edit.</p>
+    </div>
+    <figure class="gift v">
+      <div class="box linen" style="--ar:3/4">
+        <div class="well"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" style="--px:50%;--py:72%;--z:1.35" alt="Treatment frame — a hand in the cuff of a cream knit cardigan at the edge of a tissue-lined white box, a fine gold chain on the table beside it"></div>
+        <span class="ts tl blush" aria-hidden="true"></span>
+        <span class="ts br" aria-hidden="true"></span>
+        <span class="rim-lab">Hands only</span>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="close" class="close">
+  <div class="close-top">
+    <figure class="gift">
+      <div class="box haint" style="--ar:21/9">
+        <div class="well"><img src="images/hero.png" width="1536" height="1024" loading="lazy" style="--px:50%;--py:46%" alt="Treatment frame — the front room of a bungalow boutique, rails of colour on one side and a fireplace of ginger jars on the other, empty and bright"></div>
+        <span class="ts tl" aria-hidden="true"></span>
+        <span class="ts tr blush sm" aria-hidden="true"></span>
+        <span class="ts br" aria-hidden="true"></span>
+        <span class="rim-lab">The front room, open</span>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+  <div class="band">
+    <div class="rv" style="max-width:900px">
+      <p class="kicker">07 · Over to you</p>
+      <h2>Whenever the season allows. <small>There's nothing here that needs deciding.</small></h2>
+      <p style="margin-top:28px">If this sounds like Keeping Up With the Joneses, a twenty-minute call is plenty to walk the house through together. Anything here that doesn't suit the shop can go, and anything I've missed, we'd add.</p>
+      <p>And if now isn't the moment, “not yet” is an easy answer.</p>
+      <a class="btn" href="mailto:taylormademd@gmail.com?subject=Keeping%20Up%20With%20the%20Joneses%20%2B%20Taylormade%20Creative">Email Nelson</a>
+      <div class="sig">
+        <b>Nelson Taylor</b><br>
+        Founder &amp; Creative Director · Taylormade Creative<br>
+        (817) 707‑1291 · taylormademd@gmail.com<br>
+        www.taylormadecreative.net · @taylormade_creative
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p>Prepared for Keeping Up With the Joneses by Taylormade Creative · Dallas–Fort Worth</p>
+  <p class="disc">All imagery on this page is creative direction — treatment frames, not final footage. None of it is a photograph of Keeping Up With the Joneses, its bungalow, its rooms, its merchandise, its team or its customers.</p>
+</footer>
+
+<script>
+/* THE UNWRAP. Each box carries two or three tissue sheets over its corners. Before a box enters, its sheets are
+   drawn ~28px further in over the image (set with transitions off, so nothing moves on load); on entry they slide
+   out diagonally to their resting corners: 900ms ease-out, 80ms between sheets, 120ms between boxes arriving
+   together. The image and the box never move. Text only fades.
+   Reduced motion or no IntersectionObserver: sheets stay at rest and every word is visible.
+   If the observer never reports, a timer unwraps everything; if this script never runs, CSS shows the text. */
+(function(){
+  var root = document.documentElement;
+  root.classList.add('running');
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var words = [].slice.call(document.querySelectorAll('.rv'));
+  var boxes = [].slice.call(document.querySelectorAll('.box'));
+
+  function showWords(){ words.forEach(function(n){ n.classList.add('in'); }); }
+  if(still || !('IntersectionObserver' in window)){ showWords(); return; }
+
+  function unwrap(b, lag){
+    if(!b.classList.contains('wrapped')) return;
+    var sheets = b.querySelectorAll('.ts');
+    for(var i = 0; i < sheets.length; i++){ sheets[i].style.transitionDelay = (lag + i * 80) + 'ms'; }
+    b.classList.remove('wrapped');
+  }
+
+  var heard = false;
+  try {
+    root.classList.add('hold');
+    boxes.forEach(function(b){ b.classList.add('wrapped'); });
+    void root.offsetWidth;
+    root.classList.remove('hold');
+
+    var io = new IntersectionObserver(function(entries){
+      heard = true;
+      var arriving = [];
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var n = e.target;
+        io.unobserve(n);
+        if(n.classList.contains('box')) arriving.push(n); else n.classList.add('in');
+      });
+      arriving.sort(function(a, b){
+        var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+        return (Math.round(ra.top / 40) - Math.round(rb.top / 40)) || (ra.left - rb.left);
+      });
+      arriving.forEach(function(b, i){ unwrap(b, i * 120); });
+    }, { threshold: 0.2, rootMargin: '0px 0px -5% 0px' });
+    words.concat(boxes).forEach(function(n){ io.observe(n); });
+  } catch(err) {
+    root.classList.remove('hold');
+    boxes.forEach(function(b){ b.classList.remove('wrapped'); });
+    showWords();
+    return;
+  }
+
+  /* timed fallback: if the observer never reports, unwrap and show everything */
+  window.setTimeout(function(){
+    if(!heard){ showWords(); boxes.forEach(function(b){ unwrap(b, 0); }); }
+  }, 2500);
+})();
+</script>
+</body>
+</html>
