@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="tc-build" content="f51e96a20ae1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Women of Strength × Taylormade Creative — The room before the first rep</title>
+<meta name="description" content="A content-day concept for Women of Strength's second studio in Keller: the room filmed in hands, chalk and steel, cut vertical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600;700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root{
+  --chalk:#F3F2EE; --chalk-2:#E8E7E2;
+  --iron:#17181A; --iron-72:rgba(23,24,26,.72); --iron-line:rgba(23,24,26,.16);
+  --steel:#8E9398; --steel-d:#5C6166; --chrome:#C9CDD1; --chrome-hi:#F4F6F7;
+  --wos:#D1007C; --wos-deep:#A8005F; --wos-ink:#B8006D; --wos-lt:#FF5CB0;
+  --on-iron:#F3F2EE; --on-iron-78:rgba(243,242,238,.78); --on-iron-line:rgba(243,242,238,.16);
+  --head:'Antonio','Arial Narrow','Helvetica Neue Condensed',Impact,sans-serif;
+  --text:'Ubuntu','Segoe UI',Helvetica,Arial,sans-serif;
+  --edge:clamp(22px,6.2vw,108px);
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden}
+body{margin:0;background:var(--chalk);color:var(--iron);font-family:var(--text);font-size:17.5px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block}
+p{margin:0 0 17px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--wos);outline-offset:4px}
+
+/* ---------- display type: Antonio, uppercase, each heading split into line spans ---------- */
+h1,h2{font-family:var(--head);font-weight:700;text-transform:uppercase;margin:0;letter-spacing:.004em;
+  position:relative;z-index:2}
+h1{font-size:clamp(52px,8.2vw,136px);line-height:.92}
+h2{font-size:clamp(42px,6.2vw,98px);line-height:.95}
+h3{font-family:var(--text);font-weight:700;font-size:15px;line-height:1.3;letter-spacing:.16em;text-transform:uppercase;margin:0 0 8px}
+.lk{overflow:hidden;overflow:clip visible;padding-right:.08em}
+.lk .ln{display:block}
+.lk .ln:nth-child(1){--o:.6em}
+.lk .ln:nth-child(2){--o:1.3em}
+.lk .ln:nth-child(3){--o:.3em}
+
+/* ---------- THE LOCKOUT: each line starts offset right by its own amount and all slide into one flush edge ---------- */
+.js .lk .ln{transform:translateX(var(--o));transition:transform 800ms cubic-bezier(.16,1,.3,1)}
+.js .lk.locked .ln{transform:translateX(0)}
+.js:not(.live) .lk .ln{animation:lockout 0s linear 4.5s forwards}
+@keyframes lockout{to{transform:translateX(0)}}
+/* body copy only fades (house default) */
+.js .fade{opacity:0;transition:opacity .85s ease}
+.js .fade.on{opacity:1}
+.js:not(.live) .fade{animation:showall 0s linear 4.5s forwards}
+@keyframes showall{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .js .lk .ln{transform:none;transition:none;animation:none}
+  .js .fade{opacity:1;transition:none;animation:none}
+}
+
+.label{margin:0 0 22px;font-weight:700;font-size:12.5px;line-height:1.4;letter-spacing:.22em;text-transform:uppercase;color:var(--iron-72)}
+.label b{color:var(--wos-ink);margin-right:12px}
+.ironband .label{color:var(--on-iron-78)}
+.ironband .label b{color:var(--wos-lt)}
+
+/* ---------- THE KNURL: a diamond-knurled band around every image, broken along the bottom by a smooth chrome collar ---------- */
+.kf{margin:0;position:relative;z-index:2}
+.kn{position:relative;padding:14px 14px 0;border-radius:2px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.34) 0,rgba(255,255,255,.1) 26%,rgba(255,255,255,0) 52%,rgba(0,0,0,.14) 100%),
+    repeating-linear-gradient(45deg,var(--steel-d) 0 1.3px,rgba(92,97,102,0) 1.3px 5px),
+    repeating-linear-gradient(-45deg,var(--steel-d) 0 1.3px,rgba(92,97,102,0) 1.3px 5px),
+    var(--steel);
+  box-shadow:0 1px 2px rgba(23,24,26,.28),0 28px 46px -32px rgba(23,24,26,.7)}
+.pic{position:relative;overflow:hidden;aspect-ratio:var(--ar,3/2);background:var(--steel-d);
+  box-shadow:0 0 0 1px rgba(23,24,26,.45)}
+.pic img{position:absolute;max-width:none;width:calc(var(--z,1) * 100%);height:calc(var(--z,1) * 100%);
+  left:calc((1 - var(--z,1)) * var(--fx,.5) * 100%);top:calc((1 - var(--z,1)) * var(--fy,.5) * 100%);
+  object-fit:cover;object-position:var(--px,50%) var(--py,50%);background:var(--steel-d);color:var(--chalk);font-size:13px}
+.collar{margin:14px -14px 0;padding:11px 16px 12px;border-radius:0 0 2px 2px;border-top:1px solid rgba(23,24,26,.32);
+  background:linear-gradient(180deg,#B7BCC1 0,#E4E7EA 16%,var(--chrome-hi) 30%,#DADDE0 44%,var(--chrome) 62%,#AEB3B8 100%);
+  font-weight:700;font-size:11px;line-height:1.3;letter-spacing:.2em;text-transform:uppercase;color:var(--iron)}
+.tf{display:block;margin:14px 0 0;font-weight:500;font-size:11.5px;line-height:1.45;letter-spacing:.12em;text-transform:uppercase;color:var(--iron-72)}
+.ironband .tf{color:var(--on-iron-78)}
+
+/* ---------- opening screen ---------- */
+.top{position:relative;z-index:2;overflow:hidden;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  padding:24px var(--edge) 30px;background:var(--chalk)}
+.top > *{position:relative;z-index:2}
+.bar{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;font-weight:700;font-size:12.5px;
+  line-height:1.55;letter-spacing:.2em;text-transform:uppercase}
+.bar .who{text-align:right;color:var(--iron-72)}
+.top-grid{flex:1;display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-content:center;padding:clamp(30px,6vh,70px) 0 clamp(20px,3vh,32px)}
+@media (min-width:1020px){.top-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,5vw,100px);align-items:center}}
+.top-lede{font-size:clamp(18.5px,1.6vw,22px);line-height:1.5;margin:24px 0 0;max-width:560px}
+.top-sub{font-size:15.5px;line-height:1.55;color:var(--iron-72);margin:12px 0 0;max-width:500px}
+.top-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 28px;font-weight:700;font-size:11.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--iron-72)}
+.top-foot p{margin:0}
+
+/* ---------- sections ---------- */
+.sec{position:relative;z-index:2;overflow:hidden;padding:clamp(78px,9vw,150px) var(--edge)}
+.sec > *{position:relative;z-index:2}
+.alt{background:var(--chalk-2)}
+.ironband{background:var(--iron);color:var(--on-iron)}
+.ironband p{color:var(--on-iron-78)}
+.pair{display:grid;grid-template-columns:minmax(0,1fr);gap:52px;margin-top:44px;align-items:center}
+@media (min-width:980px){.pair{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(56px,6vw,124px)}}
+.copy{max-width:640px;position:relative;z-index:2}
+.narrow{width:min(100%,430px);justify-self:center}
+.quote{font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:clamp(26px,2.6vw,36px);line-height:1.08;
+  margin:4px 0 20px;padding-left:16px;border-left:3px solid var(--wos)}
+.quote cite{display:block;margin-top:8px;font-family:var(--text);font-style:normal;font-weight:700;font-size:11.5px;
+  letter-spacing:.18em;color:var(--iron-72)}
+.intro{font-size:clamp(18.5px,1.6vw,22px);line-height:1.5;max-width:760px;margin-top:24px}
+
+/* ---------- 03: the stack of knurled frames ---------- */
+.stack{list-style:none;margin:58px 0 0;padding:0;columns:1}
+@media (min-width:900px){.stack{columns:2;column-gap:clamp(44px,5.5vw,110px)}}
+.stack > li{break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 62px;position:relative;z-index:2}
+.stack .kf{max-width:560px}
+.set-txt{margin-top:16px;max-width:520px;position:relative;z-index:2}
+.set-txt p{margin:0;font-size:16px;line-height:1.55;color:var(--iron-72)}
+.stills{max-width:800px;margin:10px 0 0;font-size:clamp(17.5px,1.5vw,20px);line-height:1.55;position:relative;z-index:2}
+
+/* ---------- 04: the day ---------- */
+.inc{list-style:none;margin:0;padding:0}
+.inc li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px 14px;padding:19px 0 21px;border-bottom:1px solid var(--on-iron-line)}
+.inc li:first-child{border-top:1px solid var(--on-iron-line)}
+.inc .k{font-family:var(--head);font-weight:700;font-size:24px;line-height:1.15;color:var(--wos-lt)}
+.inc strong{display:block;font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:clamp(22px,2vw,27px);
+  line-height:1.15;letter-spacing:.01em;color:var(--on-iron);margin-bottom:3px}
+.inc span.d{display:block;color:var(--on-iron-78)}
+.past{margin:26px 0 0;font-weight:500}
+
+/* ---------- 06: close ---------- */
+.wide{position:relative;z-index:2;overflow:hidden;padding:clamp(66px,7vw,112px) var(--edge) 0}
+.wide .pic{--ar:3/2}
+@media (min-width:780px){.wide .pic{--ar:12/5}}
+.btn{display:inline-block;margin:28px 0 34px;padding:17px 30px 16px;border-radius:2px;background:var(--wos);color:#fff;
+  text-decoration:none;font-weight:700;font-size:14.5px;letter-spacing:.2em;text-transform:uppercase;
+  box-shadow:0 14px 26px -16px rgba(168,0,95,.8)}
+.btn:hover{background:var(--wos-deep)}
+.sign{font-size:16px;line-height:1.85;color:var(--iron-72)}
+.sign b{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:26px;letter-spacing:.01em;color:var(--iron)}
+
+/* ---------- footer ---------- */
+.end{position:relative;z-index:2;padding:34px var(--edge) 40px;background:var(--chalk-2);border-top:1px solid var(--iron-line);
+  font-weight:700;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--iron-72)}
+.end p{margin:8px 0}
+.end .note{text-transform:none;letter-spacing:0;font-weight:400;font-size:15px;line-height:1.6;max-width:840px}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="bar">
+    <div>Taylormade Creative</div>
+    <div class="who">Women of Strength · Keller<br>A content-day concept</div>
+  </div>
+
+  <div class="top-grid">
+    <div>
+      <p class="label fade">For Misty Jameson · Women of Strength</p>
+      <h1 class="lk"><span class="ln">The room</span><span class="ln">before the</span><span class="ln">first rep.</span></h1>
+      <p class="top-lede fade">A one-day shoot in your second studio in Keller, told entirely in chalk, steel, collars and morning light: hands and equipment, never a face.</p>
+      <p class="top-sub fade">Filmed on a Sony FX6, cut vertical for Reels, TikTok and Shorts, and paired with a bank of stills made the same day.</p>
+    </div>
+    <figure class="kf">
+      <div class="kn">
+        <div class="pic" style="--ar:3/2"><img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — an empty strength studio in soft morning light: frosted windows, matte black racks along a white wall, a loaded barbell and a kettlebell on a black rubber floor, a steel chalk bowl, and a folded pink towel on a bench"></div>
+        <p class="collar">Set 1 · first light</p>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+
+  <div class="top-foot">
+    <p>Prepared for Women of Strength · Keller</p>
+    <p>Taylormade Creative · Dallas–Fort Worth</p>
+  </div>
+</header>
+
+<main>
+
+<section class="sec" id="read">
+  <p class="label fade"><b>01</b>The read</p>
+  <h2 class="lk"><span class="ln">A second studio.</span><span class="ln">Hands only.</span></h2>
+  <div class="pair">
+    <div class="copy fade">
+      <p>Misty, Nelson Taylor here. I'm a creative director and shooter based in Dallas–Fort Worth, and Community Impact's piece on your second studio in Keller led me to your site and your feed.</p>
+      <div class="quote">“a private training studio for women”<cite>Community Impact, on Women of Strength</cite></div>
+      <p>Your site lays out the format — 1-1 personal training and semi-private sessions — and your Instagram already runs on reels.</p>
+      <p>So this concept begins with the privacy. The lens stays on what the room is made of: the knurl on a bar, chalk worked into a pair of hands, a collar clipped on, a kettlebell set down, the studio quiet before the day starts. No faces, and no one filmed without a yes first.</p>
+      <p>What you'd come away with is footage of the new room for your reels to draw on through a quarter, and nobody ever has to stand in front of a camera for it.</p>
+    </div>
+    <figure class="kf narrow">
+      <div class="kn">
+        <div class="pic" style="--ar:4/5;--py:45%"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — two hands in long charcoal sleeves with pink cuffs pressing white chalk into the palms over a steel bowl, chalk dust in window light, a knurled barbell across the foreground"></div>
+        <p class="collar">Set 2 · the chalk</p>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec alt" id="idea">
+  <p class="label fade"><b>02</b>The idea</p>
+  <h2 class="lk"><span class="ln">The setup,</span><span class="ln">every week.</span></h2>
+  <div class="pair">
+    <div class="copy fade">
+      <p>A single recurring opener holds the quarter together. Every week starts on one locked-off frame inside the new studio: a loaded bar resting on the floor, early light across it. Then hands enter. Chalk, grip, a collar, one detail of a lift being set up.</p>
+      <p>Over that runs a single line in your words, a coaching cue or a thought for the week, as on-screen text or a voice-over, whichever you like. The line is always yours to write.</p>
+      <p>The frame stays; the detail changes. Your feed gets a beat it can count on, the Keller studio gets a regular place in it, and being on camera stays optional for everyone.</p>
+    </div>
+    <figure class="kf narrow">
+      <div class="kn">
+        <div class="pic" style="--ar:4/5;--py:50%"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — a hand in a long pink sleeve sliding a polished steel collar onto a barbell resting in a black rack, a plain black plate beside it and a kettlebell soft on the floor below"></div>
+        <p class="collar">Set 4 · the collar</p>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec" id="shoot">
+  <p class="label fade"><b>03</b>What we'd shoot</p>
+  <h2 class="lk"><span class="ln">One day,</span><span class="ln">six sets.</span></h2>
+  <p class="intro fade">One day in the Keller studio, at an hour you choose. A stretch with no sessions on the floor keeps the room to ourselves and everyone's privacy intact. Hands, steel, light and space.</p>
+
+  <ol class="stack" aria-label="The one-day plan, in six sets">
+    <li>
+      <figure class="kf">
+        <div class="kn">
+          <div class="pic" style="--ar:16/10;--z:1.3;--fx:.1;--fy:.4"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — morning light through frosted windows across an empty studio floor, black racks along a white wall"></div>
+          <p class="collar">Set 1 · first light</p>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="set-txt fade"><h3>First light</h3><p>The empty studio as the windows warm up: racks squared, bars resting, the floor clear.</p></div>
+    </li>
+    <li>
+      <figure class="kf">
+        <div class="kn">
+          <div class="pic" style="--ar:3/4;--py:40%"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — chalk dust rising from two hands in long sleeves above a steel bowl"></div>
+          <p class="collar">Set 2 · the chalk</p>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="set-txt fade"><h3>The chalk</h3><p>Chalk pressed into a pair of hands in long sleeves, slow and close. Macro stills on the A7RV.</p></div>
+    </li>
+    <li>
+      <figure class="kf">
+        <div class="kn">
+          <div class="pic" style="--ar:1/1;--z:1.6;--py:100%;--fx:.2;--fy:.92"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — close on the diamond knurling of a steel barbell, chalked fingertips and a steel bowl just above it"></div>
+          <p class="collar">Set 3 · the knurl</p>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="set-txt fade"><h3>The knurl</h3><p>The grip of the bar up close: the diamond pattern, a palm settling onto it, a little chalk in the light.</p></div>
+    </li>
+    <li>
+      <figure class="kf">
+        <div class="kn">
+          <div class="pic" style="--ar:4/5;--py:55%"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — a pink sleeve and a hand clipping a steel collar onto a barbell in a black rack"></div>
+          <p class="collar">Set 4 · the collar</p>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="set-txt fade"><h3>The collar</h3><p>A plate slid on, a collar clipped home. A sharp, clean sound to cut on.</p></div>
+    </li>
+    <li>
+      <figure class="kf">
+        <div class="kn">
+          <div class="pic" style="--ar:5/4;--z:2.4;--px:100%;--fx:.84;--fy:1"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — a cast-iron kettlebell on a black rubber floor beside a steel chalk bowl and the legs of a bench"></div>
+          <p class="collar">Set 5 · the kettlebell</p>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="set-txt fade"><h3>The kettlebell</h3><p>A kettlebell set down on the floor, the hand leaving the handle. One quiet beat for the edit.</p></div>
+    </li>
+    <li>
+      <figure class="kf">
+        <div class="kn">
+          <div class="pic" style="--ar:3/2;--z:1.35;--fx:.8;--fy:0"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — a row of matte black racks and benches standing still against a white wall, the edge of a loaded barbell on the floor"></div>
+          <p class="collar">Set 6 · the rack</p>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+      <div class="set-txt fade"><h3>The rack</h3><p>The rack row, wide and still, after the last session of the day. A natural closing shot.</p></div>
+    </li>
+  </ol>
+
+  <p class="stills fade">Between video setups, the A7RV makes a bank of stills in the same light: material for the grid, your site, and any page that needs a photograph of the new room.</p>
+</section>
+
+<section class="sec ironband" id="day">
+  <p class="label fade"><b>04</b>The day</p>
+  <h2 class="lk"><span class="ln">Plainly,</span><span class="ln">the day.</span></h2>
+  <div class="pair">
+    <div class="fade">
+      <p class="intro" style="margin:0 0 26px">What a Content Day includes, and nothing it doesn't.</p>
+      <ol class="inc">
+        <li><span class="k">01</span><div><strong>One shoot day, in your Keller studio</strong><span class="d">Directed and shot by me, start to finish.</span></div></li>
+        <li><span class="k">02</span><div><strong>Sony FX6 + Sony A7RV</strong><span class="d">Cinema motion on the FX6; stills and hybrid work on the A7RV.</span></div></li>
+        <li><span class="k">03</span><div><strong>Vertical-first</strong><span class="d">Every piece cut 9:16 for Reels, TikTok and Shorts.</span></div></li>
+        <li><span class="k">04</span><div><strong>An edited set of vertical videos + a stills bank</strong><span class="d">All from the one day, made to run across a quarter.</span></div></li>
+        <li><span class="k">05</span><div><strong>Two rounds of edits</strong><span class="d">About two weeks from the shoot to delivery.</span></div></li>
+      </ol>
+      <p class="past">Anything past this list, we'd talk through on a call.</p>
+    </div>
+    <figure class="kf">
+      <div class="kn">
+        <div class="pic" style="--ar:4/3;--z:1.2;--fx:.35;--fy:.3"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — black racks, a loaded barbell on a rubber floor, a steel chalk bowl and a kettlebell in morning light"></div>
+        <p class="collar">Set 1 · the floor</p>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec alt" id="who">
+  <div class="pair">
+    <div class="copy">
+      <p class="label fade"><b>05</b>Behind the camera</p>
+      <h2 class="lk" style="margin-bottom:30px"><span class="ln">Who's</span><span class="ln">shooting it.</span></h2>
+      <div class="fade">
+      <p>Taylormade Creative is my studio, based in Dallas–Fort Worth. My background is fourteen years of design and creative direction; these days most of my work is brand content, which I direct, shoot on the FX6 and A7RV, and edit myself.</p>
+      <p>Recent work includes TONI&amp;GUY Academy, It's a Secret Med Spa and Dreamcatchers Hair. Over the years, client work has included Lava Cantina, KFC and IAS Academy, and I shipped one iOS app, Run It UP! Dallas.</p>
+      <p>A private room needs someone behind the lens who knows where not to point it. One person frames every shot and cuts every edit, so what's planned on this page is what lands in your folder.</p>
+      </div>
+    </div>
+    <figure class="kf narrow">
+      <div class="kn">
+        <div class="pic" style="--ar:4/5;--z:1.25;--fx:.45;--fy:.35"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — close on a hand in a pink sleeve at the steel end of a barbell, a black plate and a rack upright beside it"></div>
+        <p class="collar">Set 4 · by hand</p>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="close">
+  <div class="wide">
+    <figure class="kf">
+      <div class="kn">
+        <div class="pic" style="--py:100%"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — the whole studio at rest in morning light: black racks and benches, a loaded barbell on the floor, a steel chalk bowl, a kettlebell, a pink towel folded on a bench"></div>
+        <p class="collar">Set 1 · the studio at rest</p>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+  <div class="sec">
+    <p class="label fade"><b>06</b>Whenever it suits</p>
+    <h2 class="lk"><span class="ln">No rush.</span><span class="ln">Your call.</span></h2>
+    <div class="copy fade" style="margin-top:30px;max-width:760px">
+      <p>If this feels like Women of Strength, I'd be glad to walk through the six sets with you on a short call, change anything that doesn't fit, and add what I've missed.</p>
+      <p>And if the timing is wrong, “not yet” is a completely fine answer.</p>
+      <a class="btn" href="mailto:taylormademd@gmail.com?subject=Women%20of%20Strength%20%C3%97%20Taylormade%20Creative">Email Nelson</a>
+      <div class="sign">
+        <b>Nelson Taylor</b><br>
+        Creative Director · Taylormade Creative<br>
+        (817) 707‑1291 · taylormademd@gmail.com<br>
+        www.taylormadecreative.net · @taylormade_creative
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="end">
+  <p>Prepared for Women of Strength by Taylormade Creative · Dallas–Fort Worth</p>
+  <p class="note">Every image on this page is creative direction — treatment frames, not final footage. They are not photographs of Women of Strength's studios or equipment, or of anyone who trains or coaches there.</p>
+</footer>
+
+<script>
+/* THE LOCKOUT. Each display heading is two or three line spans. With JS on, every line starts offset to the right
+   by its own amount (0.6em / 1.3em / 0.3em) and, when the heading enters view, all lines slide left into one
+   flush edge together (translateX, 800ms, ease-out). Headings clip their own overflow, so the offsets never
+   widen the page. Nothing else moves; body copy only fades in.
+   Reduced motion or no IntersectionObserver: everything flush and visible at once.
+   If the observer never reports, a timer locks and shows everything; if this script never runs, CSS does at 4.5s. */
+(function(){
+  var root = document.documentElement;
+  root.classList.add('live');
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var heads = [].slice.call(document.querySelectorAll('.lk'));
+  var fades = [].slice.call(document.querySelectorAll('.fade'));
+
+  function everything(){
+    heads.forEach(function(h){ h.classList.add('locked'); });
+    fades.forEach(function(f){ f.classList.add('on'); });
+  }
+  if(still || !('IntersectionObserver' in window)){ everything(); return; }
+
+  var heard = false;
+  try {
+    var io = new IntersectionObserver(function(entries){
+      heard = true;
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        io.unobserve(e.target);
+        e.target.classList.add(e.target.classList.contains('lk') ? 'locked' : 'on');
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
+    heads.concat(fades).forEach(function(n){ io.observe(n); });
+  } catch(err) {
+    everything();
+    return;
+  }
+
+  /* timed fallback: if the observer never reports, lock every heading and show every line of copy */
+  window.setTimeout(function(){ if(!heard){ everything(); } }, 2500);
+})();
+</script>
+</body>
+</html>
