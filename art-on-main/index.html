@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta name="tc-build" content="f329ee55ba11">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Art on Main × Taylormade Creative — Wet paint</title>
+<meta name="description" content="A content-day concept for Art on Main, Old East Dallas: the building's working day in materials, hands and light, cut vertical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kulim+Park:wght@400;600;700&family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap" rel="stylesheet">
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+<style>
+:root{
+  --canvas:#ECE6DA; --gesso:#F7F4EE; --field:#DCE7E0;
+  --char:#1C1D20; --char-72:rgba(28,29,32,.72); --char-hair:rgba(28,29,32,.18);
+  --orange:#E57A3C; --orange-deep:#CF6529; --sage:#93B6A4; --indigo:#2C3E7A;
+  --on-char:#F2EEE6; --on-char-78:rgba(242,238,230,.78);
+  --disp:'Recursive','Trebuchet MS',Verdana,sans-serif;
+  --body:'Kulim Park','Segoe UI',Helvetica,Arial,sans-serif;
+  --pad:clamp(22px,6vw,104px);
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden}
+body{margin:0;background:var(--canvas);color:var(--char);font-family:var(--body);font-weight:400;font-size:18px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+p{margin:0 0 18px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+
+/* display type: Recursive, weight/slant/mono fixed; the finished state is the casual brush cut */
+h1,h2,h3{font-family:var(--disp);font-weight:700;margin:0;letter-spacing:-.005em;
+  font-variation-settings:"MONO" 0,"CASL" 1,"slnt" 0,"CRSV" .5}
+h1{font-size:clamp(44px,7.2vw,122px);line-height:1.02}
+h2{font-size:clamp(36px,5.4vw,86px);line-height:1.06}
+h3{font-size:clamp(22px,2vw,28px);line-height:1.2}
+
+.eyebrow{margin:0 0 20px;font-weight:600;font-size:12.5px;line-height:1.4;letter-spacing:.22em;text-transform:uppercase}
+.eyebrow b{color:var(--orange-deep);font-weight:700;margin-right:12px}
+.dark .eyebrow b{color:var(--orange)}
+
+/* ---------- THE BRUSH HAND: headings arrive in the linear cut and loosen into the casual brush cut ---------- */
+.js .brush{font-variation-settings:"MONO" 0,"CASL" 0,"slnt" 0,"CRSV" .5;
+  transition:font-variation-settings 1000ms cubic-bezier(.16,.84,.3,1)}
+.js .brush.done{font-variation-settings:"MONO" 0,"CASL" 1,"slnt" 0,"CRSV" .5}
+.js:not(.live) .brush{animation:loosen 0s linear 4.5s forwards}
+@keyframes loosen{to{font-variation-settings:"MONO" 0,"CASL" 1,"slnt" 0,"CRSV" .5}}
+/* body text only fades */
+.js .fade{opacity:0;transition:opacity .9s ease}
+.js .fade.on{opacity:1}
+.js:not(.live) .fade{animation:show 0s linear 4.5s forwards}
+@keyframes show{to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  .js .brush{font-variation-settings:"MONO" 0,"CASL" 1,"slnt" 0,"CRSV" .5;transition:none;animation:none}
+  .js .fade{opacity:1;transition:none;animation:none}
+}
+
+/* ---------- THE DRIP LINE: a gesso panel, a dry-brushed band across its top, drips down the right margin ---------- */
+.fig{position:relative;z-index:2;margin:0}
+.fig.v{width:min(100%,440px);justify-self:center}
+.pan{--paint:var(--orange);--d1:46px;--d2:118px;--d3:24px;--d4:72px;
+  position:relative;z-index:2;background:var(--gesso);padding:32px 32px 0 10px;
+  box-shadow:0 1px 2px rgba(28,29,32,.08),0 22px 36px -28px rgba(28,29,32,.5)}
+.pan.sg{--paint:var(--sage)}
+.pan.ig{--paint:var(--indigo)}
+.pan.d2{--d1:30px;--d2:64px;--d3:140px;--d4:38px}
+.pan.d3{--d1:88px;--d2:28px;--d3:54px;--d4:160px}
+.pan::before{content:"";position:absolute;left:0;right:0;top:0;height:32px;z-index:1;pointer-events:none;
+  background:
+    repeating-linear-gradient(180deg,rgba(255,255,255,.15) 0 1px,rgba(255,255,255,0) 1px 3px,rgba(28,29,32,.08) 3px 4px,rgba(28,29,32,0) 4px 6px) 0 0/100% 21px no-repeat,
+    linear-gradient(90deg,rgba(247,244,238,0) 0 6%,rgba(247,244,238,.42) 8% 10%,rgba(247,244,238,0) 13% 37%,rgba(247,244,238,.28) 39% 45%,rgba(247,244,238,0) 48% 69%,rgba(247,244,238,.5) 71% 72.5%,rgba(247,244,238,0) 75% 88%,rgba(247,244,238,.3) 90% 94%,rgba(247,244,238,0) 96%) 0 3px/100% 16px no-repeat,
+    linear-gradient(90deg,var(--paint) 0 7%,transparent 7% 9%,var(--paint) 9% 23%,transparent 23% 25%,var(--paint) 25% 46%,transparent 46% 50%,var(--paint) 50% 68%,transparent 68% 70%,var(--paint) 70% 91%,transparent 91% 93%,var(--paint) 93%) 0 21px/100% 5px no-repeat,
+    linear-gradient(90deg,transparent 0 3%,var(--paint) 3% 15%,transparent 15% 19%,var(--paint) 19% 30%,transparent 30% 38%,var(--paint) 38% 44%,transparent 44% 55%,var(--paint) 55% 64%,transparent 64% 74%,var(--paint) 74% 86%,transparent 86% 96%,var(--paint) 96%) 0 26px/100% 3px no-repeat,
+    linear-gradient(90deg,transparent 0 11%,var(--paint) 11% 13%,transparent 13% 40%,var(--paint) 40% 42.5%,transparent 42.5% 58%,var(--paint) 58% 61%,transparent 61% 80%,var(--paint) 80% 81.5%,transparent 81.5%) 0 29px/100% 2px no-repeat,
+    linear-gradient(var(--paint),var(--paint)) 0 0/100% 21px no-repeat}
+.drips{position:absolute;top:20px;right:3px;width:26px;height:0;z-index:1;pointer-events:none}
+.drips b{position:absolute;top:0;border-radius:0 0 4px 4px/0 0 7px 7px;
+  background:linear-gradient(90deg,rgba(255,255,255,.22),rgba(255,255,255,0) 60%),var(--paint)}
+.drips b:nth-child(1){left:0;width:5px;height:var(--d1)}
+.drips b:nth-child(2){left:7px;width:7px;height:var(--d2)}
+.drips b:nth-child(3){left:16px;width:4px;height:var(--d3)}
+.drips b:nth-child(4){left:21px;width:5px;height:var(--d4)}
+.pic{position:relative;z-index:2;overflow:hidden;aspect-ratio:var(--ar,3/2);background:var(--char)}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--char);
+  color:var(--on-char);font-size:13px;object-position:var(--px,50%) var(--py,50%);
+  transform:scale(var(--z,1));transform-origin:var(--px,50%) var(--py,50%)}
+.cap{position:relative;z-index:2;margin:0;padding:11px 2px 13px;font-weight:600;font-size:11px;line-height:1.3;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--char-72)}
+.tf{display:block;margin:14px 0 0;font-weight:600;font-size:11.5px;line-height:1.45;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--char-72)}
+.dark .tf{color:var(--on-char-78)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;z-index:2;overflow:hidden;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  gap:18px;padding:20px var(--pad) 24px;background:var(--canvas)}
+.hero > *{position:relative;z-index:2}
+.nav{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;font-weight:600;font-size:12px;
+  line-height:1.55;letter-spacing:.2em;text-transform:uppercase}
+.nav .meta{text-align:right;color:var(--char-72)}
+.hero-fig{flex:1;display:flex;flex-direction:column}
+.hero-fig .pan{flex:1;display:flex;flex-direction:column}
+.hero-pic{position:relative;z-index:2;flex:1;min-height:clamp(470px,64svh,780px);overflow:hidden;background:var(--char);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(20px,3.6vw,58px)}
+.hero-pic img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:58% 50%;
+  background:var(--char);color:var(--on-char)}
+.hero-pic::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(28,29,32,.06) 0%,rgba(28,29,32,.2) 36%,rgba(28,29,32,.84) 100%),
+             linear-gradient(90deg,rgba(28,29,32,.5) 0%,rgba(28,29,32,0) 68%)}
+.hero-copy{position:relative;z-index:2;color:#F7F4EE}
+.hero-copy .eyebrow{color:rgba(247,244,238,.88)}
+.hero-copy .eyebrow b{color:#F2A272}
+.hero-copy h1{max-width:13ch}
+.hero-tag{font-size:clamp(17px,1.6vw,22px);line-height:1.5;margin:20px 0 0;max-width:640px;color:#F7F4EE}
+.hero-sub{font-size:15px;line-height:1.55;margin:10px 0 0;max-width:560px;color:rgba(247,244,238,.84)}
+.hero-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 28px;font-weight:600;font-size:12px;
+  letter-spacing:.17em;text-transform:uppercase;color:var(--char-72)}
+.hero-foot p{margin:0}
+
+/* ---------- sections ---------- */
+.sec{position:relative;z-index:2;padding:clamp(76px,9vw,150px) var(--pad);overflow:hidden}
+.field{background:var(--field)}
+.dark{background:var(--char);color:var(--on-char)}
+.dark p{color:var(--on-char-78)}
+.lede{font-size:clamp(19px,1.7vw,23px);line-height:1.5;max-width:800px;margin-top:24px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr);gap:56px;margin-top:46px;align-items:center}
+@media(min-width:960px){.cols{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(56px,6vw,120px)}}
+.measure{max-width:650px;position:relative;z-index:2}
+blockquote{margin:6px 0 22px;padding-left:18px;border-left:3px solid var(--orange);font-family:var(--disp);font-weight:700;
+  font-variation-settings:"MONO" 0,"CASL" 1,"slnt" 0,"CRSV" .5;font-size:clamp(23px,2.2vw,31px);line-height:1.25}
+blockquote cite{display:block;margin-top:8px;font-family:var(--body);font-style:normal;font-weight:600;font-size:11.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--char-72)}
+
+/* ---------- 03 the run of panels ---------- */
+.run{list-style:none;margin:60px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:66px}
+@media(min-width:900px){
+  .run{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(48px,6vw,120px);row-gap:86px}
+  .run > li:nth-child(even){margin-top:140px}
+}
+.step{position:relative}
+.step .fig{max-width:580px}
+.step .txt{position:relative;z-index:2;margin-top:18px;max-width:520px}
+.step h3{margin-bottom:6px}
+.step p{margin:0;font-size:16.5px;line-height:1.55;color:var(--char-72)}
+.stills{position:relative;z-index:2;margin:76px 0 0;max-width:840px;font-size:clamp(18px,1.6vw,21px);line-height:1.5}
+
+/* ---------- 04 the day ---------- */
+.scope{list-style:none;margin:0;padding:0}
+.scope li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 16px;padding:20px 0 22px;
+  border-bottom:1px solid rgba(242,238,230,.2)}
+.scope .n{font-family:var(--disp);font-weight:700;font-size:24px;line-height:1.15;color:var(--orange)}
+.scope strong{display:block;font-family:var(--disp);font-weight:700;font-variation-settings:"MONO" 0,"CASL" 1,"slnt" 0,"CRSV" .5;
+  font-size:clamp(21px,1.9vw,25px);line-height:1.22;margin-bottom:4px;color:var(--on-char)}
+.scope .d{display:block;color:var(--on-char-78)}
+.after{margin:28px 0 0;font-weight:600}
+
+/* ---------- 05 who ---------- */
+.facts{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px}
+.facts li{padding:14px 0 15px;border-top:1px solid var(--char-hair);font-size:15px;line-height:1.35;color:var(--char-72)}
+.facts b{display:block;font-family:var(--disp);font-weight:700;font-size:21px;line-height:1.2;color:var(--char);margin-bottom:3px}
+
+/* ---------- 06 close ---------- */
+.close-band{position:relative;z-index:2;padding:clamp(66px,7vw,112px) var(--pad) 0;overflow:hidden}
+.close-band .pic{--ar:3/2}
+@media(min-width:760px){.close-band .pic{--ar:21/8}}
+.close h2 small{display:block;margin-top:16px;font-family:var(--body);font-weight:600;font-size:clamp(19px,1.8vw,24px);
+  line-height:1.4;letter-spacing:0;color:var(--char-72)}
+.cta{display:inline-block;margin:30px 0 36px;padding:17px 30px 16px;border-radius:3px;background:var(--orange);color:var(--char);
+  text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.18em;text-transform:uppercase;
+  box-shadow:0 14px 24px -16px rgba(207,101,41,.9)}
+.cta:hover{background:var(--orange-deep);color:#fff}
+.sig{font-size:16px;line-height:1.85;color:var(--char-72)}
+.sig b{font-family:var(--disp);font-weight:700;font-size:24px;color:var(--char)}
+
+/* ---------- footer ---------- */
+.foot{position:relative;z-index:2;padding:34px var(--pad) 40px;background:var(--char);color:var(--on-char-78);
+  font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.foot p{margin:8px 0}
+.foot .disc{text-transform:none;letter-spacing:0;font-weight:400;font-size:15px;line-height:1.6;max-width:840px}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="nav">
+    <div>Taylormade Creative</div>
+    <div class="meta">Art on Main · Old East Dallas<br>A content-day concept</div>
+  </div>
+
+  <figure class="fig hero-fig">
+    <div class="pan">
+      <div class="hero-pic">
+        <img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — an empty upstairs gallery and studio floor at first light: bare white walls, polished grey concrete, silver ductwork overhead, tall windows on the left, plain studio doors at the far end, and a wooden work table with orange and sage paint on a glass slab, jars of brushes and folded indigo denim on a stool">
+        <div class="hero-copy fade">
+          <p class="eyebrow"><b>For</b>Andrea Lamarsaude · Art on Main</p>
+          <h1 class="brush">The building is the story.</h1>
+          <p class="hero-tag">One day at Art on Main in Old East Dallas, told through materials, hands and light: colour mixed on the slab, brushes in the rinse jar, studio doors ajar, gallery walls between shows.</p>
+          <p class="hero-sub">Filmed on a cinema camera and edited vertical for Reels, TikTok and Shorts, with stills from the same day.</p>
+        </div>
+      </div>
+      <p class="cap">Studio 1 · first light</p>
+      <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+    </div>
+    <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+  </figure>
+
+  <div class="hero-foot">
+    <p>Prepared for Art on Main · Old East Dallas</p>
+    <p>Taylormade Creative · Dallas–Fort Worth</p>
+  </div>
+</header>
+
+<main>
+
+<section id="read">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow"><b>01</b>The read</p>
+      <h2 class="brush">Something here is always drying.</h2>
+    </div>
+    <div class="cols">
+      <div class="measure fade">
+        <p>Andrea — I'm Nelson Taylor, a creative director and shooter in Dallas–Fort Worth. I've spent some time with your site, your calendar and your Instagram, and the new exhibition opening in your gallery on Nov. 5 is what brought me to Art on Main. Congratulations on the show.</p>
+        <p>What I noticed is how much happens under one roof. Your about page describes artist studios, an exhibition space for group and solo shows, room for classes, artist talks and art education, and a gallery of contemporary work by your studio artists and local artists. Around all of it, a two-story brick building with high ceilings, polished concrete and large windows that let the light in all day.</p>
+        <p>Your Instagram bio says it in one line:</p>
+        <blockquote>“Connecting with our community through art.”<cite>Art on Main, on Instagram</cite></blockquote>
+        <p>Exhibitions change on those walls. The working day around them keeps going: colour gets mixed, brushes get rinsed, a wall gets prepared for the next hang, the tables get laid out for a class. That day is the idea. Film the building itself, through materials, hands and light, and leave the work on the walls for people to see in person.</p>
+      </div>
+      <figure class="fig v">
+        <div class="pan sg d2">
+          <div class="pic" style="--ar:3/4;--px:50%;--py:50%"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — a hand swirling a flat brush in a glass jar on a white windowsill, a cloud of orange paint curling through the water, clean brushes in a second jar and a sage rag beside it, soft daylight through a tall window"></div>
+          <p class="cap">Studio 4 · the rinse</p>
+          <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="idea" class="field">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow"><b>02</b>The idea</p>
+      <h2 class="brush">Wet paint.</h2>
+    </div>
+    <div class="cols">
+      <div class="measure fade">
+        <p>One format to carry the quarter, called Wet paint. Each reel opens on the same locked-off shot by the window: a palette knife pulling one fresh stroke of colour across a glass slab. Orange in one, sage in another, the two colours already in the Art on Main mark.</p>
+        <p>Then the cut follows that stroke into the building for a few seconds: a brush clouding the rinse jar, a studio door left ajar, a gallery wall lit and waiting, the class tables set before anyone arrives, the windows going blue at dusk. One line of copy on screen, and out.</p>
+        <p>Same opener, a different corner of the building each time. The feed keeps a steady rhythm between openings, your colours carry every reel, and no one has to step in front of the lens.</p>
+      </div>
+      <figure class="fig v">
+        <div class="pan ig d3">
+          <div class="pic" style="--ar:4/5;--px:50%;--py:50%"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — two hands with a steel palette knife folding a ribbon of orange paint into pale sage on a heavy glass slab, denim-blue sleeves rolled to the forearm, a jar of brushes and a white rag at the edge of the table"></div>
+          <p class="cap">Studio 2 · the mix</p>
+          <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="shoot">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow"><b>03</b>What we'd shoot</p>
+      <h2 class="brush">One day, first light to dusk.</h2>
+      <p class="lede">One day in the building, on whichever day suits the studios; a quiet one gives us the rooms to ourselves. The plan keeps to materials, hands and empty rooms. Every hand on camera belongs to someone who has said yes, and the work on the walls stays off camera.</p>
+    </div>
+
+    <ol class="run" aria-label="The one-day plan, from first light to dusk">
+      <li class="step">
+        <figure class="fig">
+          <div class="pan d2">
+            <div class="pic" style="--ar:4/3;--px:0%;--py:18%;--z:1.9"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — tall industrial windows throwing soft morning light across a polished grey concrete floor and a bare white wall"></div>
+            <p class="cap">Studio 1 · first light</p>
+            <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>First light</h3>
+          <p>Morning across the polished concrete, with the big windows doing the lighting. The same frame again at dusk, lamps on, to close the day.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="fig">
+          <div class="pan sg d3">
+            <div class="pic" style="--ar:4/5;--px:50%;--py:83%;--z:1.3"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — a palette knife folding orange paint into sage on a glass slab, two hands steadying the stroke in raking window light"></div>
+            <p class="cap">Studio 2 · the mix</p>
+            <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>The mix</h3>
+          <p>The Wet paint opener: knife, slab, one stroke, locked off. Shot once per colour, so every opener for the quarter is done by lunch.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="fig">
+          <div class="pan ig">
+            <div class="pic" style="--ar:3/4;--px:55%;--py:35%;--z:2.2"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — the far end of a white gallery floor, plain unmarked studio doors standing open and light falling through the gap"></div>
+            <p class="cap">Studio 3 · doors ajar</p>
+            <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>Doors ajar</h3>
+          <p>The corridor of studio doors as the day finds them, some shut, some open a crack, light falling through the gaps. Nobody in frame.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="fig">
+          <div class="pan d3">
+            <div class="pic" style="--ar:2/3;--px:50%;--py:52%"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — a cloud of orange paint opening through a glass jar of water as a hand swirls a brush, a window bright behind"></div>
+            <p class="cap">Studio 4 · the rinse</p>
+            <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>The rinse</h3>
+          <p>A brush swirled in a jar and a cloud of orange opening through the water. Macro stills on the A7RV, a slow push-in on the FX6.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="fig">
+          <div class="pan sg">
+            <div class="pic" style="--ar:5/4;--px:67%;--py:16%;--z:2.3"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — a bare white gallery wall and a corridor of plain doors under silver ductwork, soft light on the polished concrete, waiting for the next hang"></div>
+            <p class="cap">Studio 5 · between shows</p>
+            <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>Between shows</h3>
+          <p>A gallery wall bare and lit, a level laid on a pedestal, the floor swept. The quiet before a hang.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="fig">
+          <div class="pan ig d2">
+            <div class="pic" style="--ar:1/1;--px:100%;--py:100%;--z:1.5"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — a paint-worn wooden work table laid with glass jars of brushes, a stack of blank paper and a glass slab of orange and sage paint, indigo denim folded on a stool beside it"></div>
+            <p class="cap">Studio 6 · tables set</p>
+            <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+          </div>
+          <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+        </figure>
+        <div class="txt fade">
+          <h3>Tables set</h3>
+          <p>The class tables laid with jars, brushes and paper before anyone arrives. Empty, orderly, ready for the day.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="stills fade">Alongside the reels, the A7RV builds a stills bank from the same day and the same light: the building, the materials and the details, ready for the grid, the site and the next exhibition's announcement.</p>
+  </div>
+</section>
+
+<section id="day" class="dark">
+  <div class="sec">
+    <div class="fade">
+      <p class="eyebrow"><b>04</b>The day</p>
+      <h2 class="brush">What the day includes.</h2>
+      <p class="lede">Kept short and simple.</p>
+    </div>
+    <div class="cols">
+      <div class="fade">
+        <ol class="scope">
+          <li><span class="n">01</span><div><strong>One shoot day at Art on Main</strong><span class="d">Directed and shot by me, in your building.</span></div></li>
+          <li><span class="n">02</span><div><strong>Sony FX6 + Sony A7RV</strong><span class="d">Cinema motion on the FX6; stills and hybrid on the A7RV.</span></div></li>
+          <li><span class="n">03</span><div><strong>Vertical first</strong><span class="d">Every deliverable is cut 9:16 for Reels, TikTok and Shorts.</span></div></li>
+          <li><span class="n">04</span><div><strong>Edited vertical videos and a stills bank</strong><span class="d">From the same day, built to run for a quarter.</span></div></li>
+          <li><span class="n">05</span><div><strong>Two rounds of edits</strong><span class="d">About two weeks from the shoot to delivery.</span></div></li>
+        </ol>
+        <p class="after">Anything past that is something we'd talk through together on a call.</p>
+      </div>
+      <figure class="fig">
+        <div class="pan">
+          <div class="pic" style="--ar:4/3;--px:50%;--py:70%;--z:1.3"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — close on the edge of a palette knife drawing a fresh stroke of orange through sage paint on glass"></div>
+          <p class="cap">Studio 2 · the stroke</p>
+          <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="who" class="field">
+  <div class="sec">
+    <div class="cols">
+      <div class="measure fade">
+        <p class="eyebrow"><b>05</b>Behind the camera</p>
+        <h2 class="brush">Who's behind the lens.</h2>
+        <p style="margin-top:30px">I'm Nelson Taylor. Taylormade Creative is my studio in Dallas–Fort Worth. I've spent fourteen years in design and creative direction, and these days most of it goes into brand content that I direct, shoot on the FX6 and the A7RV, and edit myself.</p>
+        <p>Recent work includes TONI&amp;GUY Academy and Dreamcatchers Hair, and over the years client work has included Lava Cantina and KFC.</p>
+        <p>Design came first for me, so I frame for colour and light before anything else. The same pair of hands composes each shot and cuts it, so the plan on this page is what the edit is built from.</p>
+        <ul class="facts">
+          <li><b>14 years</b>design and creative direction</li>
+          <li><b>FX6 · A7RV</b>cinema motion and stills</li>
+          <li><b>9:16</b>cut for the phone first</li>
+          <li><b>Shoot to edit</b>one person, start to finish</li>
+        </ul>
+      </div>
+      <figure class="fig v">
+        <div class="pan ig d3">
+          <div class="pic" style="--ar:4/5;--px:100%;--py:65%;--z:1.8"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — clean brushes standing in a glass jar on a white windowsill beside a folded sage rag, soft daylight on the glass"></div>
+          <p class="cap">Studio 4 · the jar</p>
+          <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+        </div>
+        <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="close" class="close">
+  <div class="close-band">
+    <figure class="fig">
+      <div class="pan sg d2">
+        <div class="pic" style="--px:50%;--py:56%"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — the whole room at first light: bare white walls, polished concrete, tall windows, studio doors at the far end and a work table set with paint and brushes, indigo denim folded on a stool"></div>
+        <p class="cap">Studio 5 · the room</p>
+        <i class="drips" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+      </div>
+      <figcaption class="tf">Creative direction — treatment frames, not final footage.</figcaption>
+    </figure>
+  </div>
+  <div class="sec">
+    <div class="fade" style="max-width:920px">
+      <p class="eyebrow"><b>06</b>Whenever it suits</p>
+      <h2 class="brush">At the gallery's own pace. <small>Read it when there's a quiet hour between hangs.</small></h2>
+      <p style="margin-top:30px">If Wet paint feels like Art on Main, I'd be glad to walk the day through on a short call: the opener, the six shots, what to cut and what I've missed.</p>
+      <p>If the timing isn't right, “not yet” is an easy answer, and the concept will keep.</p>
+      <a class="cta" href="mailto:taylormademd@gmail.com?subject=Art%20on%20Main%20%C3%97%20Taylormade%20Creative">Email Nelson</a>
+      <div class="sig">
+        <b>Nelson Taylor</b><br>
+        Founder &amp; Creative Director · Taylormade Creative<br>
+        (817) 707‑1291 · taylormademd@gmail.com<br>
+        www.taylormadecreative.net · @taylormade_creative
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p>Prepared for Art on Main by Taylormade Creative · Dallas–Fort Worth</p>
+  <p class="disc">All imagery on this page is creative direction — treatment frames, not final footage. None of it is a photograph of Art on Main, its building, studios or gallery, of anyone who works or exhibits there, or of anyone's artwork.</p>
+</footer>
+
+<script>
+/* THE BRUSH HAND. Each display heading (h1/h2) arrives in Recursive's linear cut, "CASL" 0, and loosens into its
+   casual single-stroke brush cut, "CASL" 1, over 1000ms ease-out, one heading at a time (a queue). Weight, slant,
+   spacing and size never change; images, panels, bands and drips never move. Body text only fades.
+   Reduced motion or no IntersectionObserver: everything is in its finished state from the start.
+   If the observer never reports, a timer finishes everything. If this never runs, CSS does it at 4.5s. */
+(function(){
+  var root = document.documentElement;
+  root.classList.add('live');
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fades = [].slice.call(document.querySelectorAll('.fade'));
+  var heads = [].slice.call(document.querySelectorAll('.brush'));
+
+  function finish(){
+    fades.forEach(function(n){ n.classList.add('on'); });
+    heads.forEach(function(h){ h.classList.add('done'); });
+  }
+  if(calm || !('IntersectionObserver' in window)){ finish(); return; }
+
+  var queue = [], busy = false, heard = false;
+  function next(){
+    if(!queue.length){ busy = false; return; }
+    busy = true;
+    queue.shift().classList.add('done');
+    window.setTimeout(next, 1050);
+  }
+  try {
+    var io = new IntersectionObserver(function(entries){
+      heard = true;
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var n = e.target;
+        io.unobserve(n);
+        if(n.classList.contains('brush')) queue.push(n); else n.classList.add('on');
+      });
+      queue.sort(function(a, b){ return a.getBoundingClientRect().top - b.getBoundingClientRect().top; });
+      if(!busy) next();
+    }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
+    fades.concat(heads).forEach(function(n){ io.observe(n); });
+  } catch(err) {
+    finish();
+    return;
+  }
+
+  /* timed fallback: if the observer never reports, finish everything */
+  window.setTimeout(function(){ if(!heard){ finish(); } }, 2500);
+})();
+</script>
+</body>
+</html>
