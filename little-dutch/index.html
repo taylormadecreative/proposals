@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta name="tc-build" content="00a99864806b">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Little Dutch × Taylormade Creative — Light, then fire</title>
+<meta name="description" content="A content-day concept for Little Dutch on Main Street in Grapevine: sun through the atrium glass, hands at work, the ovens and the chandeliers at dusk, cut vertical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,slnt,wdth,wght,GRAD,ROND@6..144,-10..0,25..151,1..1000,0..100,0..100&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+<style>
+:root{
+  --plaster:#F4EFE6; --plaster-deep:#ECE5D9;
+  --ink:#231C17; --ink-72:rgba(35,28,23,.72); --ink-line:rgba(35,28,23,.16);
+  --bottle:#2F5B47; --bottle-deep:#22453A;
+  --brass:#BE9646; --brass-lt:#EBD49A; --brass-dk:#8C6B2E;
+  --matrix:#E2DBCF; --carrara:#F1EEE8; --verde:#6E8A74; --rosso:#8E2E38; --nero:#2B2A28;
+  --on-ink:#F4EFE6; --on-ink-76:rgba(244,239,230,.76);
+  --disp:'Google Sans Flex','Arial Narrow',Arial,sans-serif;
+  --body:'Gowun Batang',Georgia,'Times New Roman',serif;
+  --edge:clamp(20px,5.6vw,96px);
+  --upright:"wdth" 70,"wght" 380,"ROND" 0,"GRAD" 0,"slnt" 0;
+  --leaned:"wdth" 70,"wght" 380,"ROND" 0,"GRAD" 0,"slnt" -10;
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden}
+body{margin:0;background:var(--plaster);color:var(--ink);font-family:var(--body);font-weight:400;font-size:18px;line-height:1.66;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+p{margin:0 0 18px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--bottle);outline-offset:4px}
+
+/* display type: Google Sans Flex, narrow and light; width, weight, roundness and grade never change */
+h1,h2,h3{margin:0;font-family:var(--disp);font-weight:380;font-stretch:70%;font-optical-sizing:auto;letter-spacing:-.012em}
+h1,h2{font-variation-settings:var(--leaned)}
+h3{font-variation-settings:var(--upright)}
+h1{font-size:clamp(50px,8vw,132px);line-height:.98}
+h2{font-size:clamp(42px,5.8vw,96px);line-height:1.02}
+h3{font-size:clamp(25px,2.3vw,32px);line-height:1.15}
+
+.label{margin:0 0 20px;font-family:var(--body);font-weight:700;font-size:12.5px;line-height:1.45;letter-spacing:.2em;text-transform:uppercase}
+.label i{font-style:normal;color:var(--bottle);margin-right:12px}
+.ink .label i{color:var(--brass-lt)}
+
+/* ---------- THE LEAN: display headings arrive upright and lean into their italic slant ---------- */
+.js .lean{font-variation-settings:var(--upright);transition:font-variation-settings 1000ms cubic-bezier(.2,.75,.3,1)}
+.js .lean.set{font-variation-settings:var(--leaned)}
+.js:not(.live) .lean{animation:lean-end 0s linear 4.5s forwards}
+@keyframes lean-end{to{font-variation-settings:var(--leaned)}}
+/* body copy only fades */
+.js .fade{opacity:0;transition:opacity .9s ease-out}
+.js .fade.on{opacity:1}
+.js:not(.live) .fade{animation:fade-end 0s linear 4.5s forwards}
+@keyframes fade-end{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .js .lean{font-variation-settings:var(--leaned);transition:none;animation:none}
+  .js .fade{opacity:1;transition:none;animation:none}
+}
+
+/* ---------- TERRAZZO: every image inlaid in a poured slab, a brass strip between stone and picture ---------- */
+.fig{position:relative;z-index:2;margin:0}
+.slab{--k1:var(--carrara);--k2:var(--verde);--k3:var(--rosso);--k4:var(--nero);--k5:var(--carrara);
+  --ta:97px 83px;--tb:71px 113px;--rim:18px;
+  position:relative;z-index:2;padding:var(--rim);
+  background:
+    linear-gradient(158deg,rgba(255,255,255,.34) 0%,rgba(255,255,255,0) 38%,rgba(35,28,23,0) 70%,rgba(35,28,23,.07) 100%),
+    radial-gradient(3.4px 2.3px at 8% 14%,var(--k2) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(2.2px 3px at 10% 17%,var(--k2) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(1.5px 1.1px at 23% 61%,var(--k4) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(4.4px 3px at 37% 29%,var(--k1) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(3px 4px at 39.5% 32%,var(--k1) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(1.4px 1.8px at 52% 83%,var(--k3) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(2.8px 2px at 66% 12%,var(--k3) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(1.8px 2.6px at 68% 15%,var(--k3) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(1.2px 1px at 74% 47%,var(--k4) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(4.8px 3.3px at 86% 72%,var(--k5) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(2.9px 4.2px at 88.5% 69%,var(--k5) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(1.6px 1.1px at 18% 88%,var(--k2) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(2.4px 1.7px at 48% 52%,var(--k4) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(1px 1.4px at 58% 38%,var(--k2) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(2px 1.5px at 94% 22%,var(--k1) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(1.3px 1px at 29% 6%,var(--k3) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(3.5px 2.5px at 15% 42%,var(--k1) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(2.2px 3px at 16.5% 45%,var(--k1) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(1.1px 1.5px at 79% 93%,var(--k4) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(2.6px 2px at 33% 77%,var(--k5) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(1.5px 1.2px at 62% 66%,var(--k1) 86%,#0000) 0 0/var(--ta),
+    radial-gradient(2px 1.4px at 21% 27%,var(--k4) 86%,#0000) 0 0/var(--tb),
+    radial-gradient(3.8px 2.6px at 44% 9%,var(--k2) 86%,#0000) 0 0/var(--tb),
+    radial-gradient(2.5px 3.5px at 46% 12%,var(--k2) 86%,#0000) 0 0/var(--tb),
+    radial-gradient(1.2px 1.6px at 71% 57%,var(--k3) 86%,#0000) 0 0/var(--tb),
+    radial-gradient(4px 2.9px at 82% 38%,var(--k1) 86%,#0000) 0 0/var(--tb),
+    radial-gradient(1.4px 1px at 6% 71%,var(--k5) 86%,#0000) 0 0/var(--tb),
+    radial-gradient(2.2px 1.6px at 57% 91%,var(--k3) 86%,#0000) 0 0/var(--tb),
+    radial-gradient(1px 1.2px at 35% 49%,var(--k1) 86%,#0000) 0 0/var(--tb),
+    radial-gradient(3px 2.1px at 91% 84%,var(--k4) 86%,#0000) 0 0/var(--tb),
+    radial-gradient(1.7px 2.3px at 13% 96%,var(--k2) 86%,#0000) 0 0/var(--tb),
+    radial-gradient(1.3px 1px at 63% 21%,var(--k5) 86%,#0000) 0 0/var(--tb),
+    radial-gradient(2.1px 1.5px at 28% 66%,var(--k1) 86%,#0000) 0 0/var(--tb),
+    var(--matrix);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(35,28,23,.08),0 20px 34px -26px rgba(35,28,23,.6)}
+/* four pours: chip order, tile sizes, matrix tone and rim width all differ */
+.mx-b{--k1:var(--rosso);--k2:var(--carrara);--k3:var(--nero);--k4:var(--verde);--k5:var(--rosso);--ta:89px 107px;--tb:113px 67px;--rim:20px;--matrix:#E5DED2}
+.mx-c{--k1:var(--nero);--k2:var(--rosso);--k3:var(--carrara);--k4:var(--carrara);--k5:var(--verde);--ta:103px 79px;--tb:61px 97px;--rim:16px;--matrix:#DFD8CB}
+.mx-d{--k1:var(--verde);--k2:var(--nero);--k3:var(--verde);--k4:var(--rosso);--k5:var(--carrara);--ta:83px 101px;--tb:107px 73px;--rim:22px;--matrix:#E4DCCE}
+/* the brass divider strip between stone and picture */
+.inlay{position:relative;z-index:2;padding:2px;
+  background:linear-gradient(128deg,var(--brass-dk) 0%,var(--brass-lt) 17%,var(--brass) 36%,#F2E1AE 52%,var(--brass-dk) 74%,var(--brass) 88%,var(--brass-lt) 100%)}
+.pic{position:relative;z-index:2;overflow:hidden;aspect-ratio:var(--ar,3/2);background:var(--ink)}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--ink);color:var(--on-ink);font-size:13px;
+  object-position:var(--px,50%) var(--py,50%);transform:scale(var(--z,1));transform-origin:var(--px,50%) var(--py,50%)}
+.cap{position:relative;z-index:2;display:block;margin:0;padding:12px 2px 0;font-family:var(--body);font-weight:700;font-size:11.5px;line-height:1.35;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--ink-72)}
+.tf{position:relative;z-index:2;display:block;margin:7px 2px 0;font-family:var(--body);font-size:13.5px;line-height:1.45;font-style:italic;color:var(--ink-72)}
+.ink .cap,.ink .tf{color:var(--on-ink-76)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;z-index:2;overflow:hidden;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;gap:18px;
+  padding:20px var(--edge) 26px;background:var(--plaster)}
+.hero > *{position:relative;z-index:2}
+.nav{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;font-weight:700;font-size:12px;line-height:1.55;
+  letter-spacing:.2em;text-transform:uppercase}
+.nav .meta{text-align:right;color:var(--ink-72)}
+.hero-fig{flex:1;display:flex;flex-direction:column}
+.hero-fig .slab{flex:1;display:flex;flex-direction:column}
+.hero-fig .inlay{flex:1;display:flex;flex-direction:column}
+.hero-pic{position:relative;z-index:2;flex:1;min-height:460px;min-height:clamp(460px,64svh,800px);overflow:hidden;background:var(--ink);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(22px,3.8vw,60px)}
+.hero-pic img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:46% 50%;background:var(--ink);color:var(--on-ink)}
+.hero-pic::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(35,28,23,.04) 0%,rgba(35,28,23,.16) 34%,rgba(35,28,23,.86) 100%),
+             linear-gradient(90deg,rgba(35,28,23,.55) 0%,rgba(35,28,23,0) 70%)}
+.hero-copy{position:relative;z-index:2;color:var(--on-ink)}
+.hero-copy .label{color:rgba(244,239,230,.9)}
+.hero-copy .label i{color:var(--brass-lt)}
+.hero-copy h1{max-width:12ch}
+.hero-tag{font-size:clamp(17px,1.6vw,22px);line-height:1.55;margin:22px 0 0;max-width:660px;color:var(--on-ink)}
+.hero-sub{font-size:15px;line-height:1.55;margin:10px 0 0;max-width:560px;color:rgba(244,239,230,.84)}
+.hero-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 28px;font-weight:700;font-size:12px;letter-spacing:.17em;
+  text-transform:uppercase;color:var(--ink-72)}
+.hero-foot p{margin:0}
+
+/* ---------- sections ---------- */
+.sec{position:relative;z-index:2;overflow:hidden;padding:clamp(78px,9vw,150px) var(--edge)}
+.sec > *{position:relative;z-index:2}
+.deep{background:var(--plaster-deep)}
+.ink{background:var(--ink);color:var(--on-ink)}
+.ink p{color:var(--on-ink-76)}
+.lede{font-size:clamp(19px,1.7vw,23px);line-height:1.55;max-width:820px;margin-top:26px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr);gap:56px;margin-top:46px;align-items:center}
+@media (min-width:960px){.cols{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(56px,6vw,120px)}}
+.measure{position:relative;z-index:2;max-width:660px}
+.fig.tall{width:min(100%,460px);justify-self:center}
+blockquote{margin:6px 0 24px;padding:4px 0 4px 20px;border-left:2px solid var(--brass);font-family:var(--disp);font-weight:380;
+  font-variation-settings:var(--leaned);font-size:clamp(25px,2.4vw,34px);line-height:1.2}
+blockquote cite{display:block;margin-top:10px;font-family:var(--body);font-style:normal;font-weight:700;font-size:11.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink-72)}
+
+/* ---------- 03 the run of slabs ---------- */
+.run{list-style:none;margin:62px 0 0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:68px}
+@media (min-width:900px){
+  .run{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(48px,6vw,120px);row-gap:90px}
+  .run > li:nth-child(even){margin-top:150px}
+}
+.step{position:relative}
+.step .fig{max-width:var(--w,600px)}
+.step .txt{position:relative;z-index:2;margin-top:18px;max-width:520px}
+.step h3{margin-bottom:8px}
+.step p{margin:0;font-size:16.5px;line-height:1.6;color:var(--ink-72)}
+.stills{position:relative;z-index:2;margin:80px 0 0;max-width:860px;font-size:clamp(18px,1.6vw,21px);line-height:1.55}
+
+/* ---------- 04 the day ---------- */
+.scope{list-style:none;margin:0;padding:0}
+.scope li{display:grid;grid-template-columns:46px minmax(0,1fr);gap:4px 16px;padding:20px 0 22px;border-bottom:1px solid rgba(244,239,230,.18)}
+.scope .n{font-family:var(--disp);font-weight:380;font-variation-settings:var(--upright);font-size:26px;line-height:1.1;color:var(--brass-lt)}
+.scope strong{display:block;font-family:var(--disp);font-weight:380;font-variation-settings:var(--upright);font-size:clamp(23px,2vw,28px);
+  line-height:1.18;margin-bottom:4px;color:var(--on-ink)}
+.scope .d{display:block;color:var(--on-ink-76)}
+.after{margin:28px 0 0;font-weight:700}
+
+/* ---------- 05 who ---------- */
+.facts{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px}
+.facts li{padding:14px 0 15px;border-top:1px solid var(--ink-line);font-size:15px;line-height:1.4;color:var(--ink-72)}
+.facts b{display:block;font-family:var(--disp);font-weight:380;font-variation-settings:var(--upright);font-size:24px;line-height:1.15;
+  color:var(--ink);margin-bottom:3px}
+
+/* ---------- 06 close ---------- */
+.close-band{position:relative;z-index:2;overflow:hidden;padding:clamp(70px,7vw,116px) var(--edge) 0}
+.close-band .pic{--ar:4/3}
+@media (min-width:760px){.close-band .pic{--ar:21/8}}
+.close h2 small{display:block;margin-top:16px;font-family:var(--body);font-weight:400;font-style:italic;font-size:clamp(19px,1.8vw,24px);
+  line-height:1.4;letter-spacing:0;color:var(--ink-72)}
+.cta{display:inline-block;margin:30px 0 38px;padding:17px 30px 16px;border-radius:2px;background:var(--bottle);color:var(--on-ink);
+  text-decoration:none;font-weight:700;font-size:14.5px;letter-spacing:.18em;text-transform:uppercase;
+  box-shadow:inset 0 0 0 1px rgba(235,212,154,.45),0 14px 24px -16px rgba(34,69,58,.9)}
+.cta:hover{background:var(--bottle-deep)}
+.sig{font-size:16px;line-height:1.85;color:var(--ink-72)}
+.sig b{font-family:var(--disp);font-weight:380;font-variation-settings:var(--upright);font-size:26px;color:var(--ink)}
+
+/* ---------- footer ---------- */
+.foot{position:relative;z-index:2;padding:36px var(--edge) 42px;background:var(--ink);color:var(--on-ink-76);font-weight:700;font-size:12.5px;
+  letter-spacing:.14em;text-transform:uppercase}
+.foot p{margin:8px 0}
+.foot .disc{text-transform:none;letter-spacing:0;font-weight:400;font-style:italic;font-size:15px;line-height:1.6;max-width:860px}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="nav">
+    <div>Taylormade Creative</div>
+    <div class="meta">Little Dutch · Grapevine<br>A content-day concept</div>
+  </div>
+
+  <figure class="fig hero-fig">
+    <div class="slab">
+      <div class="inlay">
+        <div class="hero-pic">
+          <img src="images/hero.png" width="1536" height="1024" alt="Treatment frame — an empty glass-roofed dining room in early morning: unlit crystal chandeliers under an arched glass roof on gilded frames, a crimson velvet banquette along the windows with green plants behind it, marble-topped tables set with white plates and linen, lavender chairs, a black and white checkerboard floor, and low sun laying window shadows across the tables">
+          <div class="hero-copy fade">
+            <p class="label"><i>For</i>Noti Krasniqi · Little Dutch</p>
+            <h1 class="lean">Under glass, by hand.</h1>
+            <p class="hero-tag">One day at Little Dutch on Main Street in Grapevine, told in light and hands: sun through the atrium onto set tables, linen laid, pasta cut on the counter, the ovens glowing, and the chandeliers coming up at dusk.</p>
+            <p class="hero-sub">Filmed on a cinema camera and cut vertical for Reels, TikTok and Shorts, with stills from the same day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <figcaption class="cap">Slab 1 · the atrium</figcaption>
+    <span class="tf">Creative direction — treatment frames, not final footage.</span>
+  </figure>
+
+  <div class="hero-foot">
+    <p>Prepared for Little Dutch · Main Street, Grapevine</p>
+    <p>Taylormade Creative · Dallas–Fort Worth</p>
+  </div>
+</header>
+
+<main>
+
+<section id="read">
+  <div class="sec">
+    <div class="fade">
+      <p class="label"><i>01</i>The read</p>
+      <h2 class="lean">A room with two lights.</h2>
+    </div>
+    <div class="cols">
+      <div class="measure fade">
+        <p>Noti — I'm Nelson Taylor, a creative director and shooter in Dallas–Fort Worth. The City of Grapevine's announcement is how I found Little Dutch, and Community Impact's piece filled in the picture. Congratulations on the opening.</p>
+        <p>Both describe the same room: a glass atrium with crystal chandeliers and a green glass bar, and a private dining room set apart from the main dining room. Your careers page adds what happens in the kitchen: live-fire charcoal ovens, and pasta and pizza made by hand. It also puts the house in one sentence:</p>
+        <blockquote>“We are a guest-first hospitality team focused on modern Italian food.”<cite>Little Dutch, careers page</cite></blockquote>
+        <p>So the room has two lights. By day it's the glass, with sun coming through the atrium and across the tables. By night it's fire: charcoal in the ovens, then the chandeliers. People meet a new room on their phones first, and one day of filming can give Little Dutch a season of motion, from the first sun on the glass to the last chandelier.</p>
+      </div>
+      <figure class="fig tall">
+        <div class="slab mx-b">
+          <div class="inlay">
+            <div class="pic" style="--ar:3/4;--px:55%;--py:62%;--z:1.5"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — close on a hand setting a sprig of basil onto a plate of fresh pasta, steam rising, an oven fire glowing orange out of focus behind"></div>
+          </div>
+        </div>
+        <figcaption class="cap">Slab 5 · the pass</figcaption>
+        <span class="tf">Creative direction — treatment frames, not final footage.</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="idea" class="deep">
+  <div class="sec">
+    <div class="fade">
+      <p class="label"><i>02</i>The idea</p>
+      <h2 class="lean">Light, then fire.</h2>
+    </div>
+    <div class="cols">
+      <div class="measure fade">
+        <p>One format to carry the quarter. Every reel opens on the same locked-off frame: morning sun crossing a set table under the atrium glass, the chandeliers still dark overhead.</p>
+        <p>Then the cut moves to hands for a few seconds: dough folded and cut on the counter, linen laid, a plate finished at the pass, charcoal glowing in the ovens. It ends on the room at dusk with the chandeliers up, and one line of copy on screen.</p>
+        <p>Same opener, a different hour of the day each time. The glass gives every reel the same first light, the fire gives it the same last one, and no one has to step in front of the lens.</p>
+      </div>
+      <figure class="fig tall">
+        <div class="slab mx-c">
+          <div class="inlay">
+            <div class="pic" style="--ar:4/5"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — two hands cutting a golden sheet of fresh pasta into wide ribbons on a floured white marble counter, a wooden rolling pin and a heap of flour beside them, window light from the left"></div>
+          </div>
+        </div>
+        <figcaption class="cap">Slab 3 · the dough</figcaption>
+        <span class="tf">Creative direction — treatment frames, not final footage.</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="shoot">
+  <div class="sec">
+    <div class="fade">
+      <p class="label"><i>03</i>What we'd shoot</p>
+      <h2 class="lean">One day, sun to chandeliers.</h2>
+      <p class="lede">One day at Little Dutch, on whichever day suits the kitchen; a quiet morning before service gives us the room to ourselves. Hands, food and the room only. Every hand on camera belongs to someone on your team who has said yes, and guests stay off camera.</p>
+    </div>
+
+    <ol class="run" aria-label="The one-day plan, from first light to dusk">
+      <li class="step">
+        <figure class="fig">
+          <div class="slab">
+            <div class="inlay">
+              <div class="pic" style="--ar:4/5;--px:85%;--py:50%"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — low sun through tall arched glass panes falling across a marble-topped table set with a white plate and a folded napkin, a crimson velvet banquette and green plants behind it"></div>
+            </div>
+          </div>
+          <figcaption class="cap">Slab 1 · first light</figcaption>
+          <span class="tf">Creative direction — treatment frames, not final footage.</span>
+        </figure>
+        <div class="txt fade">
+          <h3>First light</h3>
+          <p>Sun through the atrium glass across set tables, chandeliers dark. Locked off on the FX6, then the same frame at dusk with everything lit: the opener and the end card for every reel.</p>
+        </div>
+      </li>
+      <li class="step" style="--w:540px">
+        <figure class="fig">
+          <div class="slab mx-d">
+            <div class="inlay">
+              <div class="pic" style="--ar:1/1;--px:75%;--py:74%;--z:2.2"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — close on a grey-veined marble table set with a white plate, silver cutlery and a folded white napkin, the crimson velvet banquette behind"></div>
+            </div>
+          </div>
+          <figcaption class="cap">Slab 2 · the linen</figcaption>
+          <span class="tf">Creative direction — treatment frames, not final footage.</span>
+        </figure>
+        <div class="txt fade">
+          <h3>The linen</h3>
+          <p>White linen folded and laid, cutlery set, plates placed by hand. Quiet, close and slow.</p>
+        </div>
+      </li>
+      <li class="step" style="--w:460px">
+        <figure class="fig">
+          <div class="slab mx-c">
+            <div class="inlay">
+              <div class="pic" style="--ar:2/3"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — two hands folding and cutting fresh pasta dough on a floured marble counter, a wooden rolling pin and a brass-handled knife beside them"></div>
+            </div>
+          </div>
+          <figcaption class="cap">Slab 3 · the dough</figcaption>
+          <span class="tf">Creative direction — treatment frames, not final footage.</span>
+        </figure>
+        <div class="txt fade">
+          <h3>The dough</h3>
+          <p>Pasta rolled, folded and cut by hand, flour hanging in the side light. Macro stills on the A7RV, slow motion on the FX6.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="fig">
+          <div class="slab mx-b">
+            <div class="inlay">
+              <div class="pic" style="--ar:5/4;--px:40%;--py:12%;--z:1.7"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — the arched mouth of an oven glowing deep orange with embers and flame, softly out of focus"></div>
+            </div>
+          </div>
+          <figcaption class="cap">Slab 4 · the fire</figcaption>
+          <span class="tf">Creative direction — treatment frames, not final footage.</span>
+        </figure>
+        <div class="txt fade">
+          <h3>The fire</h3>
+          <p>The live-fire ovens coming up to heat: embers, flame and glow. A slow push in on the fire itself.</p>
+        </div>
+      </li>
+      <li class="step" style="--w:480px">
+        <figure class="fig">
+          <div class="slab mx-d">
+            <div class="inlay">
+              <div class="pic" style="--ar:3/4;--px:50%;--py:70%;--z:1.15"><img src="images/frame-02.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — a single hand placing basil on a plate of fresh pasta at a walnut pass with a brass edge, a wisp of steam rising and a folded linen towel beside it"></div>
+            </div>
+          </div>
+          <figcaption class="cap">Slab 5 · the pass</figcaption>
+          <span class="tf">Creative direction — treatment frames, not final footage.</span>
+        </figure>
+        <div class="txt fade">
+          <h3>The pass</h3>
+          <p>A plate finished at the pass by hand, the ovens glowing out of focus behind it. One plate, one hand, one breath of steam.</p>
+        </div>
+      </li>
+      <li class="step">
+        <figure class="fig">
+          <div class="slab mx-c">
+            <div class="inlay">
+              <div class="pic" style="--ar:4/3;--px:70%;--py:60%;--z:1.5"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — a long crimson velvet banquette and marble-topped tables set and empty, lavender chairs drawn up, green plants against the glass behind"></div>
+            </div>
+          </div>
+          <figcaption class="cap">Slab 6 · set and waiting</figcaption>
+          <span class="tf">Creative direction — treatment frames, not final footage.</span>
+        </figure>
+        <div class="txt fade">
+          <h3>The private room</h3>
+          <p>The private dining room set and empty in the afternoon, ready for a group. A slow pan for the reels, wide stills for the site.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="stills fade">Alongside the reels, the A7RV builds a stills bank from the same day and the same light: the room, the plates and the details, ready for the grid, the site and the private dining page.</p>
+  </div>
+</section>
+
+<section id="day" class="ink">
+  <div class="sec">
+    <div class="fade">
+      <p class="label"><i>04</i>The day</p>
+      <h2 class="lean">What the day includes.</h2>
+      <p class="lede">Short and plain.</p>
+    </div>
+    <div class="cols">
+      <div class="fade">
+        <ol class="scope">
+          <li><span class="n">01</span><div><strong>One shoot day at Little Dutch</strong><span class="d">Directed and shot by me, in your room on Main Street.</span></div></li>
+          <li><span class="n">02</span><div><strong>Sony FX6 + Sony A7RV</strong><span class="d">Cinema motion on the FX6; stills and hybrid on the A7RV.</span></div></li>
+          <li><span class="n">03</span><div><strong>Vertical first</strong><span class="d">Every deliverable is cut 9:16 for Reels, TikTok and Shorts.</span></div></li>
+          <li><span class="n">04</span><div><strong>Edited vertical videos and a stills bank</strong><span class="d">From the same day, built to run for a quarter.</span></div></li>
+          <li><span class="n">05</span><div><strong>Two rounds of edits</strong><span class="d">About two weeks from the shoot to delivery.</span></div></li>
+        </ol>
+        <p class="after">Everything else is a conversation for a call.</p>
+      </div>
+      <figure class="fig">
+        <div class="slab mx-b">
+          <div class="inlay">
+            <div class="pic" style="--ar:4/3;--px:55%;--py:62%;--z:1.25"><img src="images/frame-01.png" width="1024" height="1536" loading="lazy" alt="Treatment frame — close on two floured hands and a brass-handled knife cutting fresh pasta into ribbons on marble"></div>
+          </div>
+        </div>
+        <figcaption class="cap">Slab 3 · the cut</figcaption>
+        <span class="tf">Creative direction — treatment frames, not final footage.</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="who" class="deep">
+  <div class="sec">
+    <div class="cols">
+      <div class="measure fade">
+        <p class="label"><i>05</i>Behind the camera</p>
+        <h2 class="lean">The person behind the lens.</h2>
+        <p style="margin-top:30px">I'm Nelson Taylor. Taylormade Creative is my studio in Dallas–Fort Worth, with fourteen years of design and creative direction behind it. These days most of my work is brand content that I direct, shoot on the FX6 and the A7RV, and cut myself.</p>
+        <p>Client work over the years includes Lava Cantina and KFC, and my recent content work includes TONI&amp;GUY Academy.</p>
+        <p>I came to film through design, so I compose for colour, light and material before anything else. A room of glass, chandeliers and open fire is exactly the kind of place that suits that way of working.</p>
+        <ul class="facts">
+          <li><b>14 years</b>design and creative direction</li>
+          <li><b>FX6 · A7RV</b>cinema motion and stills</li>
+          <li><b>9:16</b>cut for the phone first</li>
+          <li><b>One person</b>from shoot to edit</li>
+        </ul>
+      </div>
+      <figure class="fig tall">
+        <div class="slab mx-d">
+          <div class="inlay">
+            <div class="pic" style="--ar:4/5;--px:40%;--py:10%;--z:1.7"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — crystal chandeliers hanging unlit beneath an arched glass roof on bronze frames, morning sky beyond"></div>
+          </div>
+        </div>
+        <figcaption class="cap">Slab 7 · the chandeliers</figcaption>
+        <span class="tf">Creative direction — treatment frames, not final footage.</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="close" class="close">
+  <div class="close-band">
+    <figure class="fig">
+      <div class="slab mx-b">
+        <div class="inlay">
+          <div class="pic" style="--px:50%;--py:58%"><img src="images/hero.png" width="1536" height="1024" loading="lazy" alt="Treatment frame — the whole glass-roofed dining room in morning light: chandeliers, a crimson banquette, lavender chairs, set marble-topped tables and a checkerboard floor, nobody in the room"></div>
+        </div>
+      </div>
+      <figcaption class="cap">Slab 1 · the room</figcaption>
+      <span class="tf">Creative direction — treatment frames, not final footage.</span>
+    </figure>
+  </div>
+  <div class="sec">
+    <div class="fade" style="max-width:940px">
+      <p class="label"><i>06</i>Whenever it suits</p>
+      <h2 class="lean">At the kitchen's pace. <small>For a slow afternoon between services.</small></h2>
+      <p style="margin-top:30px">If Light, then fire feels like Little Dutch, I'd be glad to talk the day through on a short call: the opener, the six shots, and whatever I've missed about the room.</p>
+      <p>And if the timing isn't right, “not yet” is an easy answer. The concept will keep.</p>
+      <a class="cta" href="mailto:taylormademd@gmail.com?subject=Little%20Dutch%20%C3%97%20Taylormade%20Creative">Email Nelson</a>
+      <div class="sig">
+        <b>Nelson Taylor</b><br>
+        Founder &amp; Creative Director · Taylormade Creative<br>
+        (817) 707-1291 · taylormademd@gmail.com<br>
+        www.taylormadecreative.net · @taylormade_creative
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p>Prepared for Little Dutch by Taylormade Creative · Dallas–Fort Worth</p>
+  <p class="disc">All imagery on this page is creative direction — treatment frames, not final footage. None of it is a photograph of Little Dutch, its atrium, kitchen or dining rooms, its food, or anyone who works or dines there.</p>
+</footer>
+
+<script>
+/* THE LEAN. Each display heading (h1/h2) arrives upright in Google Sans Flex, "slnt" 0, and leans into its italic
+   slant, "slnt" -10, over 1000ms ease-out, one heading at a time (a queue). Width, weight, roundness and grade stay
+   fixed; images, slabs, chips and brass never move. Body copy only fades in.
+   Reduced motion or no IntersectionObserver: the finished state from the start.
+   If the observer never reports, a timer finishes everything. If this script never runs, CSS finishes at 4.5s. */
+(function(){
+  var doc = document.documentElement;
+  doc.classList.add('live');
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var copy = [].slice.call(document.querySelectorAll('.fade'));
+  var heads = [].slice.call(document.querySelectorAll('.lean'));
+
+  function settle(){
+    copy.forEach(function(n){ n.classList.add('on'); });
+    heads.forEach(function(h){ h.classList.add('set'); });
+  }
+  if(still || !('IntersectionObserver' in window)){ settle(); return; }
+
+  var waiting = [], leaning = false, heard = false;
+  function lean(){
+    if(!waiting.length){ leaning = false; return; }
+    leaning = true;
+    waiting.shift().classList.add('set');
+    window.setTimeout(lean, 1050);
+  }
+  try {
+    var io = new IntersectionObserver(function(entries){
+      heard = true;
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var n = e.target;
+        io.unobserve(n);
+        if(n.classList.contains('lean')) waiting.push(n); else n.classList.add('on');
+      });
+      waiting.sort(function(a, b){ return a.getBoundingClientRect().top - b.getBoundingClientRect().top; });
+      if(!leaning) lean();
+    }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+    copy.concat(heads).forEach(function(n){ io.observe(n); });
+  } catch(err) {
+    settle();
+    return;
+  }
+
+  /* timed fallback: if the observer never reports, finish everything */
+  window.setTimeout(function(){ if(!heard){ settle(); } }, 2500);
+})();
+</script>
+</body>
+</html>
